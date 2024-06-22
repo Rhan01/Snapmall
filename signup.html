@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up Page</title>
+  <style>
+      /* Write all necessery css here  */
+      body{
+            background-image: url("https://t4.ftcdn.net/jpg/04/60/71/01/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        form{
+          /* border: 3px solid red; */
+          width: 250px;
+          height: 260px;
+          margin: auto auto;
+          padding: 30px;
+          background: rgb(100, 139, 100);
+          color: white;
+          margin-top: 170px;
+          border-radius: 10px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        form > input{
+          /* line-height: 20px; */
+          display: block;
+          background: rgb(241, 241, 241);
+          border: 1px solid black;
+          margin-top: 20px;
+          padding: 9px;
+          width: 90%;
+          border-radius: 15px;
+          padding-left: 20px;
+        }
+        #btn{
+          width: 50%;
+          margin: auto;
+          margin-top: 30px;
+          font-size: 15px;
+          color: white;
+          background: rgb(61, 101, 61);
+          border: none;
+          transition: all 0.4s;
+        }
+        #btn:hover{
+            transform: scale(1.1);
+        }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <a href="./signup.html"></a>
+    <a href="./signin.html"></a>
+  </div>
+  <div id="signup">
+    <form>
+      <h4>Please Enter Your Details</h4>
+      <input type="text" id="name" placeholder="Enter your name">
+      <input type="email" id="email" placeholder="Enter your email">
+      <input type="password"  id="password" placeholder="Enter your password">
+      <input type="submit" value="Singup" id="btn"/>
+    </form>
+  </div>
+</body>
+<script>
+  let formInp = document.querySelector("form");
+  let email = document.getElementById("email");
+  let password = document.getElementById("password");
+  let signup = JSON.parse(localStorage.getItem("sign-upData")) || [];
+
+  formInp.addEventListener("submit",(e)=> {
+    e.preventDefault();
+    let userData = {
+      name : name.value,
+      email : email.value,
+      password : password.value
+    }
+    signup.push(userData);
+    localStorage.setItem("sign-upData",JSON.stringify(signup));
+    location.href = "signin.html"
+    
+  })
+</script>
+
+</html>

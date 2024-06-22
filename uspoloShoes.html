@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAPMALL | ONLINE SHOPPING</title>
+    <link rel="icon" href="IMG/wolf.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        *{
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        #nav{
+            display: flex;
+            /* border: 3px solid red; */
+            align-items: center;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin: auto;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            font-size: 12px;
+            height: 60px;
+            color: rgb(59, 57, 57);
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        #nav > div{
+            /* border: 1px solid black; */
+            display: flex;
+            
+        }
+        
+        #nav > div > a {
+            /* border: 3px solid red; */
+            text-decoration: none;
+            color: rgb(48, 47, 47);
+        }
+        #nav > div:nth-child(1)
+        {
+            /* border: 1px solid red; */
+            width: 5%;
+        }
+        #nav > div img{
+            /* border: 3px solid red; */
+            width: 70%;
+        }
+        #nav > div > a span{
+            /* border: 3px solid red; */
+            display: flex;
+            align-items: start;
+            font-size: 7px;
+            color: rgb(235, 153, 0);
+            margin-top: -10px;
+            justify-content: end;
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            width: 30%;
+            
+        }
+        .search #search{
+            padding: 4px 8px;
+            border: 1px solid black;
+            background: rgb(249, 249, 249);
+            width: 100%;
+        }
+        
+        #nav > div .fa-solid{
+            /* border: 3px solid red; */
+            margin-left: -25px;
+        }
+        #nav > div .dis{
+            display: block;
+            margin-left: 7px;
+            font-size: 14px; 
+        }
+        #nav .profile{
+            margin-left: 10px;
+        }
+        #nav > div > a:hover{
+            text-decoration: underline;
+            color: orange;
+        }
+        #nav .dis{
+            /* border: 3px solid red;  */
+            display: block;
+            margin-left: 4px;
+            font-size: 14px; 
+        }
+        #nav a{
+            color: rgb(48, 47, 47);
+            text-decoration: none;
+        }
+        #nav a:hover{
+            text-decoration: underline;
+            color: orange;
+        }
+        
+        .abs{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -7%;
+            top: 60px;
+            display: none;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-top: 3px solid orange;
+            padding: 20px;
+        }
+        .absolute:hover .abs{
+            display: block;
+        }
+        .abs1{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -11%;
+            top: 60px;
+            border-top: 3px solid orange;
+            display: none;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute1:hover .abs1{
+            display: block;
+        }
+        .abs2{
+            position: absolute;
+            height: 270px;
+            width: 60%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -17%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute2:hover .abs2{
+            display: block;
+        }
+        .abs3{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -22%;
+            top: 60px;
+            display: none;
+            border-top: 3px solid orange;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute3:hover .abs3{
+            display: block;
+        }
+        .abs4{
+            position: absolute;
+            height: 280px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -30%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute4:hover .abs4{
+            display: block;
+        }
+        .abs5{
+            position: absolute;
+            height: 350px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -40%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute5:hover .abs5{
+            display: block;
+        }
+        .abs6{
+            position: absolute;
+            height: 200px;
+            width: 18%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -8%;
+            top: 60px;
+            display: none;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            /* border-top: 3px solid red; */
+            border-top-width: 3px;
+            padding: 20px;
+            padding: 10px;
+        }
+        .absolute6:hover .abs6{
+            display: block;
+        }
+        .abs6 h2{
+            color: rgb(48, 47, 47);
+        }
+        .abs6 button{
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            background: orange;
+        }
+        #order a{
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+            font-size: 20px;
+            justify-content: space-between;
+        }
+        #bag{
+            margin-right: 10px;
+            /* border: 2px solid black; */
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .fa-heart{
+            display: block;
+            margin-left: 10px;
+            font-size: 17px;
+            
+        }
+        #cont > div:hover{
+            background: #faf9f9;
+        }
+        #cont > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+        #cont > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont{
+         display: flex;
+        }
+        #cont-1 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-1 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-1 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-1 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-1{
+         display: flex;
+        }
+        #cont-2 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-2 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-2 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-2 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-2{
+         display: flex;
+        }
+        #cont-3 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-3 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-3 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-3 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-3{
+         display: flex;
+        }
+        #cont-4 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-4 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-4 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-4 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-4{
+         display: flex;
+        }
+        #cont-5 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-5 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-5 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-5 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-5{
+         display: flex;
+        }
+        #footer{
+            background: rgb(248, 248, 248);
+
+        }
+        #footer > div{
+            margin-top: 80px;
+            width: 70%;
+            margin: auto;
+            padding: 30px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #footer > div p{
+            color: rgb(74, 73, 73);
+            font-size: 13px;
+        }
+        #footer > div a{
+            display: block;
+            text-decoration: none;
+            font-size: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 23px;
+            color: rgb(115, 114, 114);
+        }
+        #popularSearches{
+            width: 70%;
+            color: rgb(90, 88, 88);
+        }
+        #popularSearches > div p{
+            color: rgb(139, 139, 139);
+            /* border: 3px solid red; */
+            font-size: 12px;
+            font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #top{
+            display: flex;
+            padding-right: 30px;
+        }
+        #left-side{
+            font-size: 12px;
+            /* border: 3px solid red; */
+            width: 35%;
+        }
+        .lite-black{
+            color: rgb(80, 80, 80);
+            font-size: 11px;
+        }
+        #filter{
+            display: flex;
+            align-items: center;
+            width: 15%;
+            justify-content: space-between;
+        }
+        .size{
+            font-size: 10px;
+            color: red;
+        }
+        #left-side > div:nth-child(1)
+        {
+            /* border: 3px solid red; */
+            width: 100%;
+            margin-left: 30px;
+        }
+        #left-side > div:nth-child(2)
+        {
+            /* border: 3px solid red; */
+            width: 100%;
+            margin-left: 30px;
+        }
+        #left-side > div:nth-child(3)
+        {
+            width: 85%;
+            margin-left: 30px;
+        }
+        #left-side > .block{
+            border: 1px solid rgb(182, 182, 182);
+            display: block;
+            width: 100%;
+            padding-left: 25px;
+            margin-left: 0px;
+            color: rgb(125, 125, 125);
+            /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+            padding-top: 12px;
+            padding-bottom: 12px;
+            font-size: 11px;
+        }
+        #left-side > .block > p:nth-child(1)
+        {
+            color: rgb(35, 35, 35);
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #right-side{
+            /* border: 3px solid red; */
+            margin-left: 20px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 20px 20px;
+        }
+        #right-side > div{
+            padding: 5px;
+        }
+        #right-side > div img{
+            width: 100%;
+        }
+        #right-side > div p{
+            font-size: 10px;
+            color: rgb(48, 48, 48);
+        }
+        #right-side > div h4{
+            /* border: 3px solid red; */
+            font-size: 12px;
+        }
+        #right-side > div > div{
+            /* border: 3px solid red; */
+            display: flex;
+            justify-content: space-between;
+        }
+        #right-side > div > div{
+            /* border: 3px solid red; */
+            display: flex;
+            justify-content: space-around;
+        }
+        #right-side > div > div > button{
+            border: none;
+            color: white;
+            background: orange;
+            padding: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #right-side > div > div > button:hover{
+            transform: scale(1.1);
+        }
+        #right-side > div > div > button{
+            transition: all 0.2s;
+        }
+        @media only screen and (max-width:500px){
+            #nav .absolute{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute1{
+                display: none;
+            }
+            #nav .absolute2{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute3{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute4{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute5{
+                display: none;
+                margin: auto;
+            }
+            #search{
+                border-radius: 12px;
+            }
+            
+            #nav > div > a img{
+                width: 100%;
+            }
+            
+        }
+        @media only screen and (min-width:501px) and (max-width:950px){
+            #nav .absolute{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute1{
+                display: none;
+            }
+            #nav .absolute2{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute3{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute4{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute5{
+                display: none;
+                margin: auto;
+            }
+            #search{
+                border-radius: 12px;
+            }
+            
+            #nav > div > a img{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            
+            <div><a href="./index.html"><img src="./IMG/logo.jpg" alt="BrandLogo"></a></div>
+            <div class="absolute"><a href="./man.html"  class="absolute">MEN</a>
+            <div class="abs">
+                <div id="cont">
+                   <div>
+                    <p>Topwear</p>
+                    <a href="">All Top Wear</a>
+                    <a href="">Tshirts</a>
+                    <a href="">Shirts</a>
+                </div>
+                <div>
+                    <p>Bottomwear</p>
+                    <a href="">Track pants</a>
+                    <a href="">Jeans</a>
+                    <a href="">Trouser</a>
+                </div>
+                <div>
+                    <p>Men Accessories</p>
+                    <a href="">All Men Accessories</a>
+                    <a href="">Watches</a>
+                    <a href="">Belts</a>
+                    <a href="">Wallets</a>
+                    <a href="">Jewellery</a>
+                    <a href="">Sunglasses</a>
+                    <a href="">Bags</a>
+                </div>
+                <div>
+                    <p>Man Footwear</p>
+                    <a href="">Casuals Shoes</a>
+                    <a href="">Sports Shoes</a>
+                    <a href="">Sandals</a>
+                    <a href="">Formal Shoes</a>
+                </div>
+                <div>
+                    <p>Ethnic Wear</p>
+                    <a href="">Men Kurtas</a>
+                    <a href="">Ethnic Jackets</a>
+                </div>
+                <div>
+                    <p>Inner & Sleepwear</p>
+                    <a href="">All Inner & Sleep Wear</a>
+                    <a href="">Vests</a>
+                </div>  
+                </div>
+               
+            </div></div>
+            <div class="absolute1"><a href="./women.html" >WOMEN</a>
+            <div class="abs1">
+                <div id="cont-1">
+                    <div>
+                     <p>Topwear</p>
+                     <a href="">Tops</a>
+                     <a href="">Dresses</a>
+                     <a href="">Sweaters</a>
+                     <a href="">Jumpsuits</a>
+                 </div>
+                 <div>
+                     <p>Bottomwear</p>
+                     <a href="">Jeans</a>
+                     <a href="">Jaggings</a>
+                     <a href="">Palazzos</a>
+                     <a href="">Shorts</a>
+                     <a href="">Skirts</a>
+                 </div>
+                 <div>
+                     <p>Innerwear</p>
+                     <a href="">Bra</a>
+                     <a href="">Briefs</a>
+                 </div>
+                 <div>
+                     <p>Sleepwear</p>
+                     <a href="">Nightsuits</a>
+                     <a href="">Babydolls</a>
+                 </div>  
+                 </div>
+            </div></div>
+            <div class="absolute2"><a href="./kids.html" >KIDS</a>
+            <div class="abs2">
+                <div id="cont-2">
+                    <div>
+                     <p>Boys & Girls+2 Years</p>
+                     <a href="">Dresses</a>
+                 </div>
+                 <div>
+                     <p>Infant 0-2 Years</p>
+                     <a href="">Rompers</a>
+                 </div>
+                 <div>
+                     <p>Toys & Accessories</p>
+                     <a href="">Soft Toys</a>
+                     <a href="">Footwears</a>
+                     <a href="">Stationaries</a>
+                     <a href="">Watches</a>
+                     <a href="">Bags & Backpacks</a>
+                 </div>
+                 <div>
+                     <p>Baby Care</p>
+                     <a href="">All Baby Care</a>
+                 </div> 
+                 </div>
+            </div></div>
+            <div class="absolute3"><a href="./home&living.html">HOME & LIVING</a>
+            <div class="abs3">
+                <div id="cont-3">
+                    <div>
+                     <p>Home Furnishing</p>
+                     <a href="">Badsheets</a>
+                     <a href="">Doormates</a>
+                     <a href="">Curtains & Sheers</a>
+                     <a href="">Cushions & Cushion Covers</a>
+                     <a href="">Mattress Protectors</a>
+                 </div>
+                 <div>
+                     <p>Home Decor</p>
+                     <a href="">All Home Decor</a>
+                     <a href="">Stickers</a>
+                     <a href="">Clock</a>
+                     <a href="">Showpieces</a>
+                 </div>
+                 <div>
+                     <p>Kitchen & Dining</p>
+                     <a href="">Kitchen Storage</a>
+                     <a href="">Cookware & Bakeware</a>
+                     
+                 </div> 
+                 </div>
+            </div></div>
+            <div class="absolute4"><a href="./beauty.html" >BEAUTY & HEALTH</a>
+            <div class="abs4">
+                <div id="cont-4">
+                    <div>
+                     <p>Make up</p>
+                     <a href="">Face</a>
+                     <a href="">Eyes</a>
+                     <a href="">Lips</a>
+                     <a href="">Nails</a>
+                 </div>
+                 <div>
+                     <p>Wellness</p>
+                     <a href="">Senitizers</a>
+                     <a href="">Oral Care</a>
+                     <a href="">Feminine Hygiene</a>
+                 </div>
+                 <div>
+                     <p>Skincare</p>
+                     <a href="">Deodorants</a>
+                 </div>
+                 </div>
+            </div></div>
+            <div class="absolute5"><a href="./bag&footwear.html"><span>NEW</span>BAGS & FOOTWEAR </a><div class="abs5">
+                <div id="cont-5">
+                    <div>
+                     <p>Men Bags</p>
+                     <a href="">All Women Bags</a>
+                     <a href="">Handbags</a>
+                     <a href="">Clutches</a>
+                     <a href="">Slingbags</a>
+                 </div>
+                 <div>
+                     <p>Woman Bags</p>
+                     <a href="">All Men Bags</a>
+                     <a href="">Men Wallets</a>
+                     
+                 </div>
+                 <div>
+                     <p>Men Footwear</p>
+                     <a href="">Sports Shoes</a>
+                     <a href="">Casual Shoes</a>
+                     <a href="">Formal Shoes</a>
+                     <a href="">Sandals</a>
+                     
+                 </div>
+                 <div>
+                     <p>Woman Footwear</p>
+                     <a href="">Flats</a>
+                     <a href="">Bellies</a>
+                     <a href="">Juttis</a>
+                     
+                 </div>  
+                 </div>
+            </div></div> 
+            
+            
+            <div class="search">
+                <input type="text" id="search"  placeholder="Search for produts,brands & more"><i class="fa-solid fa-magnifying-glass"></i>
+                
+            </div>
+            
+            
+            <div class="absolute6"> <a href="" ><i class="fa-regular fa-user dis profile"></i> Profile</a>
+            <div class="abs6">
+                <h2>Hello User</h2>
+                <p>To access your Snapmall account</p>
+                <a href="./signup.html"><button>Sign Up</button></a>
+                <hr>
+                <div id="order">
+
+                   <a href="./order.html"><i class="fa-solid fa-bag-shopping" id="bag"><span>My Orders</span> </i></a>
+                    
+                </div>
+            </div></div>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping dis"></i>Cart</a>
+             <a href="./wishlist.html"><i class="fa-sharp fa-regular fa-heart"></i>Wishlist</a>
+            </nav>
+    </header>
+
+    <div id="top">
+        <div id="left-side">
+            <div><p><span class="lite-black">Home / Clothing / </span> Mens Apparel</p></div>
+            <div><p>Mens Apparel <span class="lite-black" id="count">0</span><span class="lite-black"> items</span></p></div>
+            <div id="filter"><p>FILTERS</p><span class="size">CLEAR ALL</span></div>
+            <div class="block">
+                <p>CATEGORIES</p>
+                 <p><input type="checkbox">Tshirts</p>
+                 <p><input type="checkbox">Shirts</p>
+                 <p><input type="checkbox">Jeans</p>
+                 <p><input type="checkbox">Sweatshirts</p>
+                 <p><input type="checkbox">Jackets</p>
+                 <p><input type="checkbox">Trousers</p>
+                 <p><input type="checkbox">Sweaters</p>
+                 <p><input type="checkbox">Shorts</p>
+            </div>
+            <div class="block">
+                <p>BRAND</p>
+                 <p><input type="checkbox">Roadster</p>
+                 <p><input type="checkbox">Allen Solly</p>
+                 <p><input type="checkbox">DEYANN</p>
+                 <p><input type="checkbox">Flying Machine</p>
+                 <p><input type="checkbox">HIGHLANDER</p>
+                 <p><input type="checkbox">Mast & Habour</p>
+                 <p><input type="checkbox">HERE&NOW</p>
+                <p><input type="checkbox">SOJANAYA</p>
+            </div>
+            <div class="block">
+                <p>PRICE</p>
+                 <p><input type="checkbox">Rs.249 & Rs.1999</p>
+                 <p><input type="checkbox">Rs.1999 & Rs.3999</p>
+                 <p><input type="checkbox">Rs.3999 & Rs.7999</p>
+                 <p><input type="checkbox">Rs.7999 & Rs.9999</p>
+            </div>
+            <div class="block">
+                <p>COLOR</p>
+                 <p><input type="radio">Blue</p>
+                 <p><input type="radio">Navy Blue</p>
+                 <p><input type="radio">Grey</p>
+                 <p><input type="radio">Black</p>
+                 <p><input type="radio">Red</p>
+                 <p><input type="radio">White</p>
+                 <p><input type="radio">Green</p>
+            </div>
+            <div class="block">
+                <p>DISCOUNT RANGE</p>
+                 <p><input type="checkbox">10% and above</p>
+                 <p><input type="checkbox">20% and above</p>
+                 <p><input type="checkbox">30% and above</p>
+                 <p><input type="checkbox">40% and above</p>
+                 <p><input type="checkbox">50% and above</p>
+                 <p><input type="checkbox">60% and above</p>
+            </div>
+        </div>
+        <div id="right-side">
+            <!-- append all cards here -->
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div>
+          <div>
+               <p>ONLINE SHOPPING</p>
+                <a href="">Men</a>
+                <a href="">Women</a>
+                <a href="">Kids</a>
+                <a href="">Home & Living</a>
+                <a href="">Beauty</a>
+                <a href="">Gift Cards</a>
+                <a href="">Myntra Insider</a>
+            </div>
+            <div>
+                <P>CUSTOMER POLICIES</P>
+                <a href="">Contact Us</a>
+                <a href="">FAQ</a>
+                <a href="">T&C</a>
+                <a href="">Terms Of Use</a>
+                <a href="">Track Orders</a>
+                <a href="">Shipping</a>
+                <a href="">Cancellation</a>
+                <a href="">Returns</a>
+            </div>
+            <div>
+                <p>USEFUL LINKS</p>
+                <a href="">Blog</a>
+                <a href="">Careers</a>
+                <a href="">Site Map</a>
+                <a href="">Corporate Information</a>
+                <a href="">Whitehat</a>
+            </div>  
+        </div>
+        <hr>
+        <div id="popularSearches">
+            <div><H6>POPULAR SEARCHES</H6><p>Makeup | Dresses For Girls | T-Shirts  Sandals | Headphones | Babydolls | Blazers For Men | Handbags | Ladies Watches | Bags | Sport Shoes | Reebok Shoes | Puma Shoes | Boxers | Wallets | Tops | Earrings | Fastrack Watches  Kurtis | Nike  Smart Watches  Titan Watches  Designer Blouse  Gowns  Rings  Cricket Shoes | Forever 21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion Show | Lipstick | Saree | Watches | Dresses | Lehenga | Nike Shoes | Goggles | Bras | Suit  Chinos | Shoes | Adidas Shoes | Woodland Shoes | Jewellery | Designers Sarees</p></div>
+        </div>
+    </footer>
+</body>
+<script>
+    let cont = document.getElementById("right-side");
+    let USPolo = JSON.parse(localStorage.getItem("uspolo")) || [];
+    let count = document.getElementById("count");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let save = JSON.parse(localStorage.getItem("save")) || [];
+
+    let arr = [
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19023166/2023/1/24/7beef3db-e762-4b5d-92cc-0747be9dff021674554787569USPoloAssnMenRedPoloCollarPureCottonSlimFitT-shirtwithEmbroi1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Puffer Jacket",
+            price:"Rs.1385",
+            id:1,
+            category:"jacket"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19166730/2022/10/4/6c2acd88-ae84-4e9e-92a7-d5f5671a88ba1664866713354-U-S-Polo-Assn-Men-Tailored-Fit-Conversational-Printed-Pure-C-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Printed Shirt",
+            price:"Rs.1785",
+            id:2,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19020648/2022/11/8/a5d89ec5-09af-4c8a-a3e4-6e93f4fa7b421667929299487-US-Polo-Assn-Men-Navy-Blue-Solid-Cut--Sew-Puffer-Jacket-4991-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Puffer Jacket",
+            price:"Rs.4885",
+            id:3,
+            category:"jacket"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20259732/2022/11/2/fd055805-88e7-4dda-bbf3-f83c93fbb7c71667365065191-US-Polo-Assn-Men-Green-Tailored-Fit-Checked-Pure-Cotton-Casu-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Chinos",
+            price:"Rs.1707",
+            id:4,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19182178/2022/12/3/56548083-9d81-4001-a701-da927e8eb0371670067566397-U-S-Polo-Assn-Men-Tan-Slim-Fit-Wrinkle-Free-Corduroy-Trouser-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            price:"Rs.1375",
+            id:5,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/20659498/2022/12/5/4197c08c-7480-4870-ab1c-2ca9d438622d1670231390733-U-S-Polo-Assn-Men-Navy-Blue-And-Sea-Green-Tailored-Fit-Check-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            price:"Rs.2015",
+            id:6,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19166664/2022/9/3/bc70adbf-e6f4-411c-b1e7-332a61b3f7551662187373112-U-S-Polo-Assn-Denim-Co-Men-Navy-Blue--Rust-Red-Slim-Fit-Stri-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Striped Casual Shirt",
+            price:"Rs.1385",
+            id:7,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19182528/2022/11/4/3a766efb-9a21-44ca-abe0-c0d90888eb591667545974431-U-S-Polo-Assn-Denim-Co-Men-Black-Printed-Polo-Collar-Slim-Fi-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Printed Slim Fit Cotton T-Shirt",
+            price:"Rs.1199",
+            id:8,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/20603574/2022/12/5/3f189d96-8b7b-49c8-8193-139adb758b121670232715677-US-Polo-Assn-Men-Red--Navy-Blue-Tailored-Fit-Checked-Pure-Co-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            price:"Rs.1439",
+            id:9,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19167132/2022/9/8/62061819-2a5f-4078-ad11-bb98b541ff211662617812586-U-S-Polo-Assn-Denim-Co-Men-Rust-Red-Solid-Slim-Fit-Pure-Cott-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            id:10,
+            category:"shirt",
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19446092/2022/11/2/dd20e5aa-e4eb-4034-8067-a6472987d91d1667365017743-U-S-Polo-Assn-Men-Pink-Tailored-Fit-Solid-Pure-Cotton-Casual-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            price:"Rs.1385",
+            id:11,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19182554/2022/10/31/709f0fa3-812c-484a-b1a7-cd81c68ca9a01667193043039-US-Polo-Assn-Men-White-Polo-Collar-Slim-Fit-Pure-Cotton-T-sh-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton T-Shirt",
+            price:"Rs.1463",
+            id:12,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19022526/2022/11/9/e6e27459-cedf-42f7-8307-8f30f4ce90781667967637939-U-S-Polo-Assn-Denim-Co-Men-Charcoal-Skinny-Fit-Light-Fade-St-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            price:"Rs.1095",
+            id:13,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19023068/2022/8/17/a37033e4-13e0-4e6f-b435-15093a81f2431660728462573-U-S-Polo-Assn-Men-Navy-Blue-Print-Detail-Polo-Collar-Pure-Co-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Skinny Fit Mid-Rise Jeans",
+            price:"Rs.1885",
+            id:14,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19182174/2022/12/3/f8628cd9-81e2-430c-a85e-95af6bd7af931670067558531-U-S-Polo-Assn-Men-Grey-Slim-Fit-Chinos-Trousers-301167006755-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            price:"Rs.1185",
+            id:15,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/19023278/2022/8/17/10d4f430-1b81-4a85-bbca-5f432a302bc61660728477674-U-S-Polo-Assn-Men-White-Print-Detail-Polo-Collar-Pure-Cotton-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Denver Slim Fit Chinos",
+            price:"Rs.1546",
+            id:16,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19023278/2022/8/17/10d4f430-1b81-4a85-bbca-5f432a302bc61660728477674-U-S-Polo-Assn-Men-White-Print-Detail-Polo-Collar-Pure-Cotton-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            price:"Rs.1185",
+            id:17,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17918676/2022/10/6/62789883-c491-4bbe-ac6d-5dafb204b6e11665035081113-U-S-Polo-Assn-Denim-Co-Men-Blue-Brandon-Slim-Tapered-Fit-Hea-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Brandom Slim Tapered Jeans",
+            price:"Rs.1707",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19022052/2022/9/8/92a3817d-0938-4ea4-b40a-962e0ecfff761662637225798USPoloAssnDenimCoMenBlackSkinnyFitLightFadeStretchableJeans1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            price:"Rs.2078",
+            id:19,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19166780/2022/11/2/5e54ad79-c0b6-4cac-ba26-b49e96dadd4f1667364887122-U-S-Polo-Assn-Men-Olive-Green--Navy-Blue-Tailored-Fit-Tartan-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            price:"Rs.1707",
+            id:20,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19023166/2023/1/24/7beef3db-e762-4b5d-92cc-0747be9dff021674554787569USPoloAssnMenRedPoloCollarPureCottonSlimFitT-shirtwithEmbroi1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Puffer Jacket",
+            price:"Rs.1385",
+            id:1,
+            category:"jacket"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19166730/2022/10/4/6c2acd88-ae84-4e9e-92a7-d5f5671a88ba1664866713354-U-S-Polo-Assn-Men-Tailored-Fit-Conversational-Printed-Pure-C-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Printed Shirt",
+            price:"Rs.1785",
+            id:2,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19020648/2022/11/8/a5d89ec5-09af-4c8a-a3e4-6e93f4fa7b421667929299487-US-Polo-Assn-Men-Navy-Blue-Solid-Cut--Sew-Puffer-Jacket-4991-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Puffer Jacket",
+            price:"Rs.4885",
+            id:3,
+            category:"jacket"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20259732/2022/11/2/fd055805-88e7-4dda-bbf3-f83c93fbb7c71667365065191-US-Polo-Assn-Men-Green-Tailored-Fit-Checked-Pure-Cotton-Casu-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Chinos",
+            price:"Rs.1707",
+            id:4,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19182178/2022/12/3/56548083-9d81-4001-a701-da927e8eb0371670067566397-U-S-Polo-Assn-Men-Tan-Slim-Fit-Wrinkle-Free-Corduroy-Trouser-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            price:"Rs.1375",
+            id:5,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/20659498/2022/12/5/4197c08c-7480-4870-ab1c-2ca9d438622d1670231390733-U-S-Polo-Assn-Men-Navy-Blue-And-Sea-Green-Tailored-Fit-Check-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            price:"Rs.2015",
+            id:6,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19166664/2022/9/3/bc70adbf-e6f4-411c-b1e7-332a61b3f7551662187373112-U-S-Polo-Assn-Denim-Co-Men-Navy-Blue--Rust-Red-Slim-Fit-Stri-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Striped Casual Shirt",
+            price:"Rs.1385",
+            id:7,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19182528/2022/11/4/3a766efb-9a21-44ca-abe0-c0d90888eb591667545974431-U-S-Polo-Assn-Denim-Co-Men-Black-Printed-Polo-Collar-Slim-Fi-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Printed Slim Fit Cotton T-Shirt",
+            price:"Rs.1199",
+            id:8,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/20603574/2022/12/5/3f189d96-8b7b-49c8-8193-139adb758b121670232715677-US-Polo-Assn-Men-Red--Navy-Blue-Tailored-Fit-Checked-Pure-Co-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            price:"Rs.1439",
+            id:9,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19167132/2022/9/8/62061819-2a5f-4078-ad11-bb98b541ff211662617812586-U-S-Polo-Assn-Denim-Co-Men-Rust-Red-Solid-Slim-Fit-Pure-Cott-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            id:10,
+            category:"shirt",
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19446092/2022/11/2/dd20e5aa-e4eb-4034-8067-a6472987d91d1667365017743-U-S-Polo-Assn-Men-Pink-Tailored-Fit-Solid-Pure-Cotton-Casual-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            price:"Rs.1385",
+            id:11,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19182554/2022/10/31/709f0fa3-812c-484a-b1a7-cd81c68ca9a01667193043039-US-Polo-Assn-Men-White-Polo-Collar-Slim-Fit-Pure-Cotton-T-sh-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton T-Shirt",
+            price:"Rs.1463",
+            id:12,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19022526/2022/11/9/e6e27459-cedf-42f7-8307-8f30f4ce90781667967637939-U-S-Polo-Assn-Denim-Co-Men-Charcoal-Skinny-Fit-Light-Fade-St-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            price:"Rs.1095",
+            id:13,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19023068/2022/8/17/a37033e4-13e0-4e6f-b435-15093a81f2431660728462573-U-S-Polo-Assn-Men-Navy-Blue-Print-Detail-Polo-Collar-Pure-Co-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Skinny Fit Mid-Rise Jeans",
+            price:"Rs.1885",
+            id:14,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19182174/2022/12/3/f8628cd9-81e2-430c-a85e-95af6bd7af931670067558531-U-S-Polo-Assn-Men-Grey-Slim-Fit-Chinos-Trousers-301167006755-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            price:"Rs.1185",
+            id:15,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/19023278/2022/8/17/10d4f430-1b81-4a85-bbca-5f432a302bc61660728477674-U-S-Polo-Assn-Men-White-Print-Detail-Polo-Collar-Pure-Cotton-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Denver Slim Fit Chinos",
+            price:"Rs.1546",
+            id:16,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19023278/2022/8/17/10d4f430-1b81-4a85-bbca-5f432a302bc61660728477674-U-S-Polo-Assn-Men-White-Print-Detail-Polo-Collar-Pure-Cotton-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            price:"Rs.1185",
+            id:17,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17918676/2022/10/6/62789883-c491-4bbe-ac6d-5dafb204b6e11665035081113-U-S-Polo-Assn-Denim-Co-Men-Blue-Brandon-Slim-Tapered-Fit-Hea-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Brandom Slim Tapered Jeans",
+            price:"Rs.1707",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19022052/2022/9/8/92a3817d-0938-4ea4-b40a-962e0ecfff761662637225798USPoloAssnDenimCoMenBlackSkinnyFitLightFadeStretchableJeans1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            price:"Rs.2078",
+            id:19,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19166780/2022/11/2/5e54ad79-c0b6-4cac-ba26-b49e96dadd4f1667364887122-U-S-Polo-Assn-Men-Olive-Green--Navy-Blue-Tailored-Fit-Tartan-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            price:"Rs.1707",
+            id:20,
+            category:"tshirt"
+        },
+    ]
+
+for(let a = 0; a < arr.length; a++)
+{
+    USPolo.push(arr[a]);
+}
+displayData(USPolo)
+
+
+function displayData(data)
+{
+    data.forEach(product => {
+        let card = document.createElement("div");
+        let img = document.createElement("img");
+        let brand = document.createElement("h3");
+        let title = document.createElement("p");
+        let price = document.createElement("h4");
+        let btnDiv = document.createElement("div");
+        let addtocart = document.createElement("button");
+        let wishlist = document.createElement("button");
+
+        count.textContent = USPolo.length;
+        img.src = product.img;
+        brand.textContent = product.brand;
+        title.textContent = product.title;
+        price.textContent = product.price;
+        addtocart.innerText = "Add To Cart";
+        wishlist.textContent = "Wishlist";
+        
+        wishlist.addEventListener("click",()=> {
+            if(checkDuplicatesave(product))
+            {
+                alert("Product Already in Wishlist")
+            }
+            else
+            {
+                save.push({...product,quantity:1})
+                localStorage.setItem("save",JSON.stringify(save));
+                alert("Product Added to Wishlist")
+            }
+        })
+
+        addtocart.addEventListener("click",()=>{
+            if(checkDuplicate(product))
+            {
+                alert("This porduct already in the Cart")
+            }
+            else
+            {
+              cart.push({...product,quantity:1});
+            localStorage.setItem("cart",JSON.stringify(cart));
+                alert("Product added to the Cart")
+            }
+            
+        })
+
+
+function checkDuplicate(product){
+    for(let a = 0; a < cart.length; a++)
+    {
+        if(cart[a].id === product.id)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+function checkDuplicatesave(product)
+{
+    for(let a = 0; a < save.length; a++)
+    {
+        if(save[a].id === product.id)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+        cont.append(card);
+        card.append(img,brand,title,price,btnDiv)
+        btnDiv.append(addtocart,wishlist)
+    });
+}
+
+
+</script>
+</html>

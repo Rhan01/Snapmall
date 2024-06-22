@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAPMALL | ONLINE SHOPPING</title>
+    <link rel="icon" href="IMG/wolf.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        *{
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        #nav{
+            display: flex;
+            /* border: 3px solid red; */
+            align-items: center;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin: auto;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            font-size: 12px;
+            height: 60px;
+            color: rgb(59, 57, 57);
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        #nav > div{
+            /* border: 1px solid black; */
+            display: flex;
+            
+        }
+        
+        #nav > div > a {
+            /* border: 3px solid red; */
+            text-decoration: none;
+            color: rgb(48, 47, 47);
+        }
+        #nav > div:nth-child(1)
+        {
+            /* border: 1px solid red; */
+            width: 5%;
+        }
+        #nav > div img{
+            /* border: 3px solid red; */
+            width: 70%;
+        }
+        #nav > div > a span{
+            /* border: 3px solid red; */
+            display: flex;
+            align-items: start;
+            font-size: 7px;
+            color: rgb(235, 153, 0);
+            margin-top: -10px;
+            justify-content: end;
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            width: 30%;
+            
+        }
+        .search #search{
+            padding: 4px 8px;
+            border: 1px solid black;
+            background: rgb(249, 249, 249);
+            width: 100%;
+        }
+        
+        #nav > div .fa-solid{
+            /* border: 3px solid red; */
+            margin-left: -25px;
+        }
+        #nav > div .dis{
+            display: block;
+            margin-left: 7px;
+            font-size: 14px; 
+        }
+        #nav .profile{
+            margin-left: 10px;
+        }
+        #nav > div > a:hover{
+            text-decoration: underline;
+            color: orange;
+        }
+        #nav .dis{
+            /* border: 3px solid red;  */
+            display: block;
+            margin-left: 4px;
+            font-size: 14px; 
+        }
+        #nav a{
+            color: rgb(48, 47, 47);
+            text-decoration: none;
+        }
+        #nav a:hover{
+            text-decoration: underline;
+            color: orange;
+        }
+        
+        .abs{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -7%;
+            top: 60px;
+            display: none;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-top: 3px solid orange;
+            padding: 20px;
+        }
+        .absolute:hover .abs{
+            display: block;
+        }
+        .abs1{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -11%;
+            top: 60px;
+            border-top: 3px solid orange;
+            display: none;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute1:hover .abs1{
+            display: block;
+        }
+        .abs2{
+            position: absolute;
+            height: 270px;
+            width: 60%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -17%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute2:hover .abs2{
+            display: block;
+        }
+        .abs3{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -22%;
+            top: 60px;
+            display: none;
+            border-top: 3px solid orange;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute3:hover .abs3{
+            display: block;
+        }
+        .abs4{
+            position: absolute;
+            height: 280px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -30%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute4:hover .abs4{
+            display: block;
+        }
+        .abs5{
+            position: absolute;
+            height: 350px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -40%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute5:hover .abs5{
+            display: block;
+        }
+        .abs6{
+            position: absolute;
+            height: 200px;
+            width: 18%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -8%;
+            top: 60px;
+            display: none;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            /* border-top: 3px solid red; */
+            border-top-width: 3px;
+            padding: 20px;
+            padding: 10px;
+        }
+        .absolute6:hover .abs6{
+            display: block;
+        }
+        .abs6 h2{
+            color: rgb(48, 47, 47);
+        }
+        .abs6 button{
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            background: orange;
+        }
+        #order a{
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+            font-size: 20px;
+            justify-content: space-between;
+        }
+        #bag{
+            margin-right: 10px;
+            /* border: 2px solid black; */
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .fa-heart{
+            display: block;
+            margin-left: 10px;
+            font-size: 17px;
+            
+        }
+        #cont > div:hover{
+            background: #faf9f9;
+        }
+        #cont > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+        #cont > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont{
+         display: flex;
+        }
+        #cont-1 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-1 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-1 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-1 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-1{
+         display: flex;
+        }
+        #cont-2 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-2 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-2 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-2 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-2{
+         display: flex;
+        }
+        #cont-3 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-3 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-3 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-3 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-3{
+         display: flex;
+        }
+        #cont-4 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-4 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-4 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-4 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-4{
+         display: flex;
+        }
+        #cont-5 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-5 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-5 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-5 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-5{
+         display: flex;
+        }
+        #footer{
+            background: rgb(248, 248, 248);
+
+        }
+        #footer > div{
+            margin-top: 80px;
+            width: 70%;
+            margin: auto;
+            padding: 30px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #footer > div p{
+            color: rgb(74, 73, 73);
+            font-size: 13px;
+        }
+        #footer > div a{
+            display: block;
+            text-decoration: none;
+            font-size: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 23px;
+            color: rgb(115, 114, 114);
+        }
+        #popularSearches{
+            width: 70%;
+            color: rgb(90, 88, 88);
+        }
+        #popularSearches > div p{
+            color: rgb(139, 139, 139);
+            /* border: 3px solid red; */
+            font-size: 12px;
+            font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #container{
+            padding-left: 60px;
+            padding-right: 120px;
+        }
+       #top > a > img{
+        width: 100%;
+        margin-top: 30px;
+        height: 370px;
+       }
+       #mid{
+        display: flex;
+        justify-content: space-between;
+       }
+       #left-aside{
+           width: 72%;
+        }
+       #left-aside > h3{
+        color: rgb(71, 71, 71);
+        margin-top: 50px;
+        margin-bottom: 40px;
+        margin-left: 20px;
+       }
+       #left-aside > div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px 10px;
+    }
+    #left-aside > div > a > img{
+        width: 100%;
+    }
+    #left-aside > div > a:hover{
+        transform: scale(1.05);
+    }
+    #left-aside > div > a{
+        transition: all 0.3s;
+    }
+    #right-aside{
+        width: 23%;
+        /* border: 3px solid red; */
+    }
+    #right-aside > div p{
+        font-size: 13px;
+        color: rgb(82, 82, 82);
+       }
+       #right-aside > div > a{
+        text-decoration: none;
+        display: block;
+        font-size: 11px;
+        color: rgb(106, 106, 106);
+        line-height: 20px;
+        font-family:sans-serif;
+       }
+       #right-aside > div > a:hover{
+        text-decoration: underline;
+        color: orange;
+       }
+       #right-side h3{
+            /* border: 3px solid red; */
+            font-size: 16px;
+        }
+        @media only screen and (max-width:500px){
+            #nav .absolute{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute1{
+                display: none;
+            }
+            #nav .absolute2{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute3{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute4{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute5{
+                display: none;
+                margin: auto;
+            }
+            #search{
+                border-radius: 12px;
+            }
+            
+            #nav > div > a img{
+                width: 100%;
+            }
+            
+        }
+        @media only screen and (min-width:501px) and (max-width:950px){
+            #nav .absolute{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute1{
+                display: none;
+            }
+            #nav .absolute2{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute3{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute4{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute5{
+                display: none;
+                margin: auto;
+            }
+            #search{
+                border-radius: 12px;
+            }
+            
+            #nav > div > a img{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            
+            <div><a href="./index.html"><img src="./IMG/logo.jpg" alt="BrandLogo"></a></div>
+            <div class="absolute"><a href="./man.html"  class="absolute">MEN</a>
+            <div class="abs">
+                <div id="cont">
+                   <div>
+                    <p>Topwear</p>
+                    <a href="">All Top Wear</a>
+                    <a href="">Tshirts</a>
+                    <a href="">Shirts</a>
+                </div>
+                <div>
+                    <p>Bottomwear</p>
+                    <a href="">Track pants</a>
+                    <a href="">Jeans</a>
+                    <a href="">Trouser</a>
+                </div>
+                <div>
+                    <p>Men Accessories</p>
+                    <a href="">All Men Accessories</a>
+                    <a href="">Watches</a>
+                    <a href="">Belts</a>
+                    <a href="">Wallets</a>
+                    <a href="">Jewellery</a>
+                    <a href="">Sunglasses</a>
+                    <a href="">Bags</a>
+                </div>
+                <div>
+                    <p>Man Footwear</p>
+                    <a href="">Casuals Shoes</a>
+                    <a href="">Sports Shoes</a>
+                    <a href="">Sandals</a>
+                    <a href="">Formal Shoes</a>
+                </div>
+                <div>
+                    <p>Ethnic Wear</p>
+                    <a href="">Men Kurtas</a>
+                    <a href="">Ethnic Jackets</a>
+                </div>
+                <div>
+                    <p>Inner & Sleepwear</p>
+                    <a href="">All Inner & Sleep Wear</a>
+                    <a href="">Vests</a>
+                </div>  
+                </div>
+               
+            </div></div>
+            <div class="absolute1"><a href="./women.html" >WOMEN</a>
+            <div class="abs1">
+                <div id="cont-1">
+                    <div>
+                     <p>Topwear</p>
+                     <a href="">Tops</a>
+                     <a href="">Dresses</a>
+                     <a href="">Sweaters</a>
+                     <a href="">Jumpsuits</a>
+                 </div>
+                 <div>
+                     <p>Bottomwear</p>
+                     <a href="">Jeans</a>
+                     <a href="">Jaggings</a>
+                     <a href="">Palazzos</a>
+                     <a href="">Shorts</a>
+                     <a href="">Skirts</a>
+                 </div>
+                 <div>
+                     <p>Innerwear</p>
+                     <a href="">Bra</a>
+                     <a href="">Briefs</a>
+                 </div>
+                 <div>
+                     <p>Sleepwear</p>
+                     <a href="">Nightsuits</a>
+                     <a href="">Babydolls</a>
+                 </div>  
+                 </div>
+            </div></div>
+            <div class="absolute2"><a href="./kids.html" >KIDS</a>
+            <div class="abs2">
+                <div id="cont-2">
+                    <div>
+                     <p>Boys & Girls+2 Years</p>
+                     <a href="">Dresses</a>
+                 </div>
+                 <div>
+                     <p>Infant 0-2 Years</p>
+                     <a href="">Rompers</a>
+                 </div>
+                 <div>
+                     <p>Toys & Accessories</p>
+                     <a href="">Soft Toys</a>
+                     <a href="">Footwears</a>
+                     <a href="">Stationaries</a>
+                     <a href="">Watches</a>
+                     <a href="">Bags & Backpacks</a>
+                 </div>
+                 <div>
+                     <p>Baby Care</p>
+                     <a href="">All Baby Care</a>
+                 </div> 
+                 </div>
+            </div></div>
+            <div class="absolute3"><a href="./home&living.html">HOME & LIVING</a>
+            <div class="abs3">
+                <div id="cont-3">
+                    <div>
+                     <p>Home Furnishing</p>
+                     <a href="">Badsheets</a>
+                     <a href="">Doormates</a>
+                     <a href="">Curtains & Sheers</a>
+                     <a href="">Cushions & Cushion Covers</a>
+                     <a href="">Mattress Protectors</a>
+                 </div>
+                 <div>
+                     <p>Home Decor</p>
+                     <a href="">All Home Decor</a>
+                     <a href="">Stickers</a>
+                     <a href="">Clock</a>
+                     <a href="">Showpieces</a>
+                 </div>
+                 <div>
+                     <p>Kitchen & Dining</p>
+                     <a href="">Kitchen Storage</a>
+                     <a href="">Cookware & Bakeware</a>
+                     
+                 </div> 
+                 </div>
+            </div></div>
+            <div class="absolute4"><a href="./beauty.html" >BEAUTY & HEALTH</a>
+            <div class="abs4">
+                <div id="cont-4">
+                    <div>
+                     <p>Make up</p>
+                     <a href="">Face</a>
+                     <a href="">Eyes</a>
+                     <a href="">Lips</a>
+                     <a href="">Nails</a>
+                 </div>
+                 <div>
+                     <p>Wellness</p>
+                     <a href="">Senitizers</a>
+                     <a href="">Oral Care</a>
+                     <a href="">Feminine Hygiene</a>
+                 </div>
+                 <div>
+                     <p>Skincare</p>
+                     <a href="">Deodorants</a>
+                 </div>
+                 </div>
+            </div></div>
+            <div class="absolute5"><a href="./bag&footwear.html"><span>NEW</span>BAGS & FOOTWEAR </a><div class="abs5">
+                <div id="cont-5">
+                    <div>
+                     <p>Men Bags</p>
+                     <a href="">All Women Bags</a>
+                     <a href="">Handbags</a>
+                     <a href="">Clutches</a>
+                     <a href="">Slingbags</a>
+                 </div>
+                 <div>
+                     <p>Woman Bags</p>
+                     <a href="">All Men Bags</a>
+                     <a href="">Men Wallets</a>
+                     
+                 </div>
+                 <div>
+                     <p>Men Footwear</p>
+                     <a href="">Sports Shoes</a>
+                     <a href="">Casual Shoes</a>
+                     <a href="">Formal Shoes</a>
+                     <a href="">Sandals</a>
+                     
+                 </div>
+                 <div>
+                     <p>Woman Footwear</p>
+                     <a href="">Flats</a>
+                     <a href="">Bellies</a>
+                     <a href="">Juttis</a>
+                     
+                 </div>  
+                 </div>
+            </div></div> 
+            
+            
+            <div class="search">
+                <input type="text" id="search"  placeholder="Search for produts,brands & more"><i class="fa-solid fa-magnifying-glass"></i>
+                
+            </div>
+            
+            
+            <div class="absolute6"> <a href="" ><i class="fa-regular fa-user dis profile"></i> Profile</a>
+            <div class="abs6">
+                <h2>Hello User</h2>
+                <p>To access your Snapmall account</p>
+                <a href="./signup.html"><button>Sign Up</button></a>
+                <hr>
+                <div id="order">
+
+                   <a href="./order.html"><i class="fa-solid fa-bag-shopping" id="bag"><span>My Orders</span> </i></a>
+                    
+                </div>
+            </div></div>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping dis"></i>Cart</a>
+             <a href="./wishlist.html"><i class="fa-sharp fa-regular fa-heart"></i>Wishlist</a>
+            </nav>
+    </header>
+
+<div id="container">
+    <div id="top">
+        <a href="">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/6/8/eff01060-f706-468d-b97c-95cdf43174f91528443826867-Desktop-Home-Banner.jpg" alt="">
+        </a>
+    </div>
+    <div id="mid">
+        <div id="left-aside">
+        <h3>NICE TO SEE YOU, COME ON IN!</h3>
+        <div>
+            <a href="./bedsheet.html"><img src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563660020-bed.jpg" alt="error"></a>
+            <a href="./sofa.html"><img src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563782565-furnishings.jpg" alt="error"></a>
+            <a href=""><img src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563810789-art-n-decor.jpg" alt="error"></a>
+            <a href=""><img src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563866590-lamps.jpg" alt="error"></a>
+            <a href=""><img src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563925069-kitchen.jpg" alt="error"></a>
+            <a href=""><img src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563958962-bath.jpg" alt="error"></a>
+        </div>
+    </div>
+    <div id="right-aside">
+        <div>
+           <p>Furnishings & Bed Linen</p> 
+           <a href="">Bed Sheets</a>
+           <a href="">Bedding Sets & Bed Covers</a>
+           <a href="">Blankets, Quilts & Dohars</a>
+           <a href="">Pillow & Pillow Vovers</a>
+           <a href="">Curtains</a>
+           <a href="">Mats & Dhurries</a>
+           <a href="">Curtains</a>
+           <a href="">Carpets</a>
+        </div>
+        <div>
+            <p>Bath & Bed Linen</p>
+            <a href="">Towels & Towel Sets</a>
+            <a href="">Bath Robes</a>
+            <a href="">Bathroom Accessories</a>
+            <a href="">Shower Curtains</a>
+            <a href="">Bath Rugs</a>
+        </div>
+        <div>
+            <p>Home Decor</p>
+            <a href="">Pooja Essentials</a>
+            <a href="">Laptop Table</a>
+            <a href="">Ottomans</a>
+            <a href="">Articicial Flowers & Plants</a>
+            <a href="">Candle & Candle Holders</a>
+            <a href="">Clock</a>
+            <a href="">Planters & Garden</a>
+            <a href="">Accessories</a>
+            <a href="">Home Fragrances</a>
+            <a href="">Mirrors</a>
+            <a href="">Wall Art</a>
+            <a href="">Wall Decor</a>
+            <a href="">Wall Shelves</a>
+            <a href="">Showpieces & Vases</a>
+        </div>
+        <div>
+            <p>Lamps & Lighting</p>
+            <a href="">Floor Lamps</a>
+            <a href="">Table Lamps</a>
+            <a href="">Wall Lamp & String Lights</a>
+            <a href="">Bathroom Light & Outdoor</a>
+            <a href="">Lamps</a>
+            <a href="">Ceiling Lamps</a>
+        </div>
+        <div>
+            <p>Kitchen & Table</p>
+            <a href="">Dinnerware</a>
+            <a href="">Cups & Mugs</a>
+            <a href="">Water Bottles</a>
+            <a href="">Bakeware</a>
+            <a href="">Trays & Serveware</a>
+            <a href="">Bar & Drinkware</a>
+            <a href="">Cookware & Kitchen Tools</a>
+            
+        </div>
+        
+    </div>
+    </div>
+    
+    <div id="bottom">
+
+    </div>
+</div>
+    <footer id="footer">
+        <div>
+          <div>
+               <p>ONLINE SHOPPING</p>
+                <a href="">Men</a>
+                <a href="">Women</a>
+                <a href="">Kids</a>
+                <a href="">Home & Living</a>
+                <a href="">Beauty</a>
+                <a href="">Gift Cards</a>
+                <a href="">Myntra Insider</a>
+            </div>
+            <div>
+                <P>CUSTOMER POLICIES</P>
+                <a href="">Contact Us</a>
+                <a href="">FAQ</a>
+                <a href="">T&C</a>
+                <a href="">Terms Of Use</a>
+                <a href="">Track Orders</a>
+                <a href="">Shipping</a>
+                <a href="">Cancellation</a>
+                <a href="">Returns</a>
+            </div>
+            <div>
+                <p>USEFUL LINKS</p>
+                <a href="">Blog</a>
+                <a href="">Careers</a>
+                <a href="">Site Map</a>
+                <a href="">Corporate Information</a>
+                <a href="">Whitehat</a>
+            </div>  
+        </div>
+        <hr>
+        <div id="popularSearches">
+            <div><H6>POPULAR SEARCHES</H6><p>Makeup | Dresses For Girls | T-Shirts  Sandals | Headphones | Babydolls | Blazers For Men | Handbags | Ladies Watches | Bags | Sport Shoes | Reebok Shoes | Puma Shoes | Boxers | Wallets | Tops | Earrings | Fastrack Watches  Kurtis | Nike  Smart Watches  Titan Watches  Designer Blouse  Gowns  Rings  Cricket Shoes | Forever 21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion Show | Lipstick | Saree | Watches | Dresses | Lehenga | Nike Shoes | Goggles | Bras | Suit  Chinos | Shoes | Adidas Shoes | Woodland Shoes | Jewellery | Designers Sarees</p></div>
+        </div>
+    </footer>
+</body>
+
+</html>

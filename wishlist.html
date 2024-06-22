@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAPMALL | ONLINE SHOPPING</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            /* color: rgb(210, 30, 30); */
+            background: rgb(244, 244, 244);
+        }
+        *{
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        #nav{
+            display: flex;
+            /* border: 3px solid red; */
+            align-items: center;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin: auto;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            font-size: 12px;
+            height: 60px;
+            color: rgb(59, 57, 57);
+            justify-content: space-between;
+            margin-bottom: 30px;
+            background: white;
+        }
+        #nav > div{
+            /* border: 1px solid black; */
+            display: flex;
+            
+        }
+        
+        #nav > div > a {
+            /* border: 3px solid red; */
+            text-decoration: none;
+            color: rgb(48, 47, 47);
+        }
+        #nav > div:nth-child(1)
+        {
+            /* border: 1px solid red; */
+            width: 5%;
+        }
+        #nav > div img{
+            /* border: 3px solid red; */
+            width: 70%;
+        }
+        #nav > div > a span{
+            /* border: 3px solid red; */
+            display: flex;
+            align-items: start;
+            font-size: 7px;
+            color: rgb(235, 153, 0);
+            margin-top: -10px;
+            justify-content: end;
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            width: 30%;
+            
+        }
+        .search #search{
+            padding: 4px 8px;
+            border: 1px solid black;
+            background: rgb(249, 249, 249);
+            width: 100%;
+        }
+        
+        #nav > div .fa-solid{
+            /* border: 3px solid red; */
+            margin-left: -25px;
+        }
+        #nav > div .dis{
+            display: block;
+            margin-left: 7px;
+            font-size: 14px; 
+        }
+        #nav .profile{
+            margin-left: 10px;
+        }
+        #nav > div > a:hover{
+            text-decoration: none;
+            color: orange;
+        }
+        #nav .dis{
+            /* border: 3px solid red;  */
+            display: block;
+            margin-left: 4px;
+            font-size: 14px; 
+        }
+        #nav a{
+            color: rgb(48, 47, 47);
+            text-decoration: none;
+        }
+        #nav a:hover{
+            text-decoration: none;
+            color: orange;
+        }
+        
+        .abs{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -7%;
+            top: 60px;
+            display: none;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-top: 3px solid orange;
+            padding: 20px;
+        }
+        .absolute:hover .abs{
+            display: block;
+        }
+        .abs1{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -11%;
+            top: 60px;
+            border-top: 3px solid orange;
+            display: none;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute1:hover .abs1{
+            display: block;
+        }
+        .abs2{
+            position: absolute;
+            height: 270px;
+            width: 60%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -17%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute2:hover .abs2{
+            display: block;
+        }
+        .abs3{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -22%;
+            top: 60px;
+            display: none;
+            border-top: 3px solid orange;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute3:hover .abs3{
+            display: block;
+        }
+        .abs4{
+            position: absolute;
+            height: 280px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -30%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute4:hover .abs4{
+            display: block;
+        }
+        .abs5{
+            position: absolute;
+            height: 350px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -40%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute5:hover .abs5{
+            display: block;
+        }
+        .abs6{
+            position: absolute;
+            height: 200px;
+            width: 18%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -8%;
+            top: 60px;
+            display: none;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            /* border-top: 3px solid red; */
+            border-top-width: 3px;
+            padding: 20px;
+            padding: 10px;
+        }
+        .absolute6:hover .abs6{
+            display: block;
+        }
+        .abs6 h2{
+            color: rgb(48, 47, 47);
+        }
+        .abs6 button{
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            background: orange;
+        }
+        #order a{
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+            font-size: 20px;
+            justify-content: space-between;
+        }
+        #bag{
+            margin-right: 10px;
+            /* border: 2px solid black; */
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .fa-heart{
+            display: block;
+            margin-left: 10px;
+            font-size: 17px;
+            
+        }
+        #cont > div:hover{
+            background: #faf9f9;
+        }
+        #cont > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+        #cont > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont{
+         display: flex;
+        }
+        #cont-1 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-1 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-1 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-1 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-1{
+         display: flex;
+        }
+        #cont-2 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-2 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-2 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-2 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-2{
+         display: flex;
+        }
+        #cont-3 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-3 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-3 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-3 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-3{
+         display: flex;
+        }
+        #cont-4 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-4 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-4 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-4 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-4{
+         display: flex;
+        }
+        #cont-5 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-5 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-5 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-5 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-5{
+         display: flex;
+        }
+        #container {
+            width: 90%;
+            margin: auto;
+            /* border: 3px solid red; */
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            /* gap: 10px; */
+            margin-bottom: 50px;
+        }
+        #container > div{
+            padding: 8px;
+            border: 1px solid rgb(227, 227, 227);
+            background: rgb(245, 245, 245);
+        }
+        #container > div img{
+            width: 100%;
+        }
+        #container p{
+            /* border: 3px solid red; */
+            font-size: 10px;
+        }
+        #container > div > div{
+            /* border: 3px solid red; */
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: auto;
+        }
+        #container > div > div button{
+            background: orange;
+            border: none;
+            padding: 9px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            
+            <div><a href="./index.html"><img src="./IMG/logo.jpg" alt="BrandLogo"></a></div>
+            <div class="absolute"><a href="./man.html"  class="absolute">MEN</a>
+            <div class="abs">
+                <div id="cont">
+                   <div>
+                    <p>Topwear</p>
+                    <a href="">All Top Wear</a>
+                    <a href="">Tshirts</a>
+                    <a href="">Shirts</a>
+                </div>
+                <div>
+                    <p>Bottomwear</p>
+                    <a href="">Track pants</a>
+                    <a href="">Jeans</a>
+                    <a href="">Trouser</a>
+                </div>
+                <div>
+                    <p>Men Accessories</p>
+                    <a href="">All Men Accessories</a>
+                    <a href="">Watches</a>
+                    <a href="">Belts</a>
+                    <a href="">Wallets</a>
+                    <a href="">Jewellery</a>
+                    <a href="">Sunglasses</a>
+                    <a href="">Bags</a>
+                </div>
+                <div>
+                    <p>Man Footwear</p>
+                    <a href="">Casuals Shoes</a>
+                    <a href="">Sports Shoes</a>
+                    <a href="">Sandals</a>
+                    <a href="">Formal Shoes</a>
+                </div>
+                <div>
+                    <p>Ethnic Wear</p>
+                    <a href="">Men Kurtas</a>
+                    <a href="">Ethnic Jackets</a>
+                </div>
+                <div>
+                    <p>Inner & Sleepwear</p>
+                    <a href="">All Inner & Sleep Wear</a>
+                    <a href="">Vests</a>
+                </div>  
+                </div>
+               
+            </div></div>
+            <div class="absolute1"><a href="./women.html" >WOMEN</a>
+            <div class="abs1">
+                <div id="cont-1">
+                    <div>
+                     <p>Topwear</p>
+                     <a href="">Tops</a>
+                     <a href="">Dresses</a>
+                     <a href="">Sweaters</a>
+                     <a href="">Jumpsuits</a>
+                 </div>
+                 <div>
+                     <p>Bottomwear</p>
+                     <a href="">Jeans</a>
+                     <a href="">Jaggings</a>
+                     <a href="">Palazzos</a>
+                     <a href="">Shorts</a>
+                     <a href="">Skirts</a>
+                 </div>
+                 <div>
+                     <p>Innerwear</p>
+                     <a href="">Bra</a>
+                     <a href="">Briefs</a>
+                 </div>
+                 <div>
+                     <p>Sleepwear</p>
+                     <a href="">Nightsuits</a>
+                     <a href="">Babydolls</a>
+                 </div>  
+                 </div>
+            </div></div>
+            <div class="absolute2"><a href="./kids.html" >KIDS</a>
+            <div class="abs2">
+                <div id="cont-2">
+                    <div>
+                     <p>Boys & Girls+2 Years</p>
+                     <a href="">Dresses</a>
+                 </div>
+                 <div>
+                     <p>Infant 0-2 Years</p>
+                     <a href="">Rompers</a>
+                 </div>
+                 <div>
+                     <p>Toys & Accessories</p>
+                     <a href="">Soft Toys</a>
+                     <a href="">Footwears</a>
+                     <a href="">Stationaries</a>
+                     <a href="">Watches</a>
+                     <a href="">Bags & Backpacks</a>
+                 </div>
+                 <div>
+                     <p>Baby Care</p>
+                     <a href="">All Baby Care</a>
+                 </div> 
+                 </div>
+            </div></div>
+            <div class="absolute3"><a href="./home&living.html">HOME & LIVING</a>
+            <div class="abs3">
+                <div id="cont-3">
+                    <div>
+                     <p>Home Furnishing</p>
+                     <a href="">Badsheets</a>
+                     <a href="">Doormates</a>
+                     <a href="">Curtains & Sheers</a>
+                     <a href="">Cushions & Cushion Covers</a>
+                     <a href="">Mattress Protectors</a>
+                 </div>
+                 <div>
+                     <p>Home Decor</p>
+                     <a href="">All Home Decor</a>
+                     <a href="">Stickers</a>
+                     <a href="">Clock</a>
+                     <a href="">Showpieces</a>
+                 </div>
+                 <div>
+                     <p>Kitchen & Dining</p>
+                     <a href="">Kitchen Storage</a>
+                     <a href="">Cookware & Bakeware</a>
+                     
+                 </div> 
+                 </div>
+            </div></div>
+            <div class="absolute4"><a href="./beauty.html" >BEAUTY & HEALTH</a>
+            <div class="abs4">
+                <div id="cont-4">
+                    <div>
+                     <p>Make up</p>
+                     <a href="">Face</a>
+                     <a href="">Eyes</a>
+                     <a href="">Lips</a>
+                     <a href="">Nails</a>
+                 </div>
+                 <div>
+                     <p>Wellness</p>
+                     <a href="">Senitizers</a>
+                     <a href="">Oral Care</a>
+                     <a href="">Feminine Hygiene</a>
+                 </div>
+                 <div>
+                     <p>Skincare</p>
+                     <a href="">Deodorants</a>
+                 </div>
+                 </div>
+            </div></div>
+            <div class="absolute5"><a href="./bag&footwear.html"><span>NEW</span>BAGS & FOOTWEAR </a><div class="abs5">
+                <div id="cont-5">
+                    <div>
+                     <p>Men Bags</p>
+                     <a href="">All Women Bags</a>
+                     <a href="">Handbags</a>
+                     <a href="">Clutches</a>
+                     <a href="">Slingbags</a>
+                 </div>
+                 <div>
+                     <p>Woman Bags</p>
+                     <a href="">All Men Bags</a>
+                     <a href="">Men Wallets</a>
+                     
+                 </div>
+                 <div>
+                     <p>Men Footwear</p>
+                     <a href="">Sports Shoes</a>
+                     <a href="">Casual Shoes</a>
+                     <a href="">Formal Shoes</a>
+                     <a href="">Sandals</a>
+                     
+                 </div>
+                 <div>
+                     <p>Woman Footwear</p>
+                     <a href="">Flats</a>
+                     <a href="">Bellies</a>
+                     <a href="">Juttis</a>
+                     
+                 </div>  
+                 </div>
+            </div></div> 
+            
+            
+            <div class="search">
+                <input type="text" id="search"  placeholder="Search for produts,brands & more"><i class="fa-solid fa-magnifying-glass"></i>
+                
+            </div>
+            
+            
+            <div class="absolute6"> <a href="" ><i class="fa-regular fa-user dis profile"></i> Profile</a>
+            <div class="abs6">
+                <h2>Hello User</h2>
+                <p>To access your Snapmall account</p>
+                <a href="./signup.html"><button>Sign Up</button></a>
+                <hr>
+                <div id="order">
+
+                   <a href="./order.html"><i class="fa-solid fa-bag-shopping" id="bag"><span>My Orders</span> </i></a>
+                    
+                </div>
+            </div></div>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping dis"></i>Cart</a>
+             <a href="./wishlist.html"><i class="fa-sharp fa-regular fa-heart"></i>Wishlist</a>
+            </nav>
+    </header>
+
+    <div id="top">
+        <div id="container">
+            <!-- apppend all product here -->
+        </div>
+    </div>
+</body>
+<script>
+
+let cont = document.getElementById("container");
+    let save = JSON.parse(localStorage.getItem("save")) || [];
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let view =  [];
+    
+displayData(save)
+    function displayData(data)
+{
+    cont.innerHTML = null;
+    data.forEach((product,index) => {
+        let card = document.createElement("div");
+        let img = document.createElement("img");
+        let brand = document.createElement("h3");
+        let title = document.createElement("p");
+        let price = document.createElement("h4");
+        let btnDiv = document.createElement("div");
+        let addtocart = document.createElement("button");
+        let wishlist = document.createElement("button");
+
+        
+        img.src = product.img;
+        brand.textContent = product.brand;
+        title.textContent = product.title;
+        price.textContent = product.price;
+        addtocart.innerText = "Add To Cart";
+        wishlist.textContent = "Remove";
+
+        addtocart.addEventListener("click",()=>{
+            if(checkDuplicate(product))
+            {
+                alert("This porduct already in the Cart")
+            }
+            else
+            {
+              cart.push({...product,quantity:1});
+            localStorage.setItem("cart",JSON.stringify(cart));
+                alert("Product added to the Cart")
+            }
+            
+        })
+
+        wishlist.addEventListener("click",()=>{
+            data.splice(index,1);
+            localStorage.setItem("save",JSON.stringify(data));
+            displayData(data)
+        })
+
+        img.addEventListener("click",()=>{
+            view.push(product);
+    localStorage.setItem("view",JSON.stringify(view));
+    location.href = "productview.html"
+})
+
+        function checkDuplicate(product){
+    for(let a = 0; a < cart.length; a++)
+    {
+        if(cart[a].id === product.id)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+        cont.append(card);
+        card.append(img,brand,title,price,btnDiv)
+        btnDiv.append(addtocart,wishlist)
+    });
+}
+
+</script>
+</html>

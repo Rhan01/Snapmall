@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAPMALL | ONLINE SHOPPING</title>
+    <link rel="icon" href="IMG/wolf.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        *{
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        #nav{
+            display: flex;
+            /* border: 3px solid red; */
+            align-items: center;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin: auto;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            font-size: 12px;
+            height: 60px;
+            color: rgb(59, 57, 57);
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        #nav > div{
+            /* border: 1px solid black; */
+            display: flex;
+            
+        }
+        
+        #nav > div > a {
+            /* border: 3px solid red; */
+            text-decoration: none;
+            color: rgb(48, 47, 47);
+        }
+        #nav > div:nth-child(1)
+        {
+            /* border: 1px solid red; */
+            width: 5%;
+        }
+        #nav > div img{
+            /* border: 3px solid red; */
+            width: 70%;
+        }
+        #nav > div > a span{
+            /* border: 3px solid red; */
+            display: flex;
+            align-items: start;
+            font-size: 7px;
+            color: rgb(235, 153, 0);
+            margin-top: -10px;
+            justify-content: end;
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            width: 30%;
+            
+        }
+        .search #search{
+            padding: 4px 8px;
+            border: 1px solid black;
+            background: rgb(249, 249, 249);
+            width: 100%;
+        }
+        
+        #nav > div .fa-solid{
+            /* border: 3px solid red; */
+            margin-left: -25px;
+        }
+        #nav > div .dis{
+            display: block;
+            margin-left: 7px;
+            font-size: 14px; 
+        }
+        #nav .profile{
+            margin-left: 10px;
+        }
+        #nav > div > a:hover{
+            text-decoration: none;
+            color: rgb(0, 143, 200);
+        }
+        #nav .dis{
+            /* border: 3px solid red;  */
+            display: block;
+            margin-left: 4px;
+            font-size: 14px; 
+        }
+        #nav a{
+            color: rgb(48, 47, 47);
+            text-decoration: none;
+        }
+        #nav a:hover{
+            text-decoration: none;
+            color: rgb(0, 143, 200);
+        }
+        
+        .abs{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -7%;
+            top: 60px;
+            display: none;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-top: 3px solid orange;
+            padding: 20px;
+        }
+        .absolute:hover .abs{
+            display: block;
+        }
+        .abs1{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -11%;
+            top: 60px;
+            border-top: 3px solid orange;
+            display: none;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute1:hover .abs1{
+            display: block;
+        }
+        .abs2{
+            position: absolute;
+            height: 270px;
+            width: 60%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -17%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute2:hover .abs2{
+            display: block;
+        }
+        .abs3{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -22%;
+            top: 60px;
+            display: none;
+            border-top: 3px solid orange;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute3:hover .abs3{
+            display: block;
+        }
+        .abs4{
+            position: absolute;
+            height: 280px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -30%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute4:hover .abs4{
+            display: block;
+        }
+        .abs5{
+            position: absolute;
+            height: 350px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -40%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute5:hover .abs5{
+            display: block;
+        }
+        .abs6{
+            position: absolute;
+            height: 200px;
+            width: 18%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -8%;
+            top: 60px;
+            display: none;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            /* border-top: 3px solid red; */
+            border-top-width: 3px;
+            padding: 20px;
+            padding: 10px;
+        }
+        .absolute6:hover .abs6{
+            display: block;
+        }
+        .abs6 h2{
+            color: rgb(48, 47, 47);
+        }
+        .abs6 button{
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            background: orange;
+        }
+        #order a{
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+            font-size: 20px;
+            justify-content: space-between;
+        }
+        #bag{
+            margin-right: 10px;
+            /* border: 2px solid black; */
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .fa-heart{
+            display: block;
+            margin-left: 10px;
+            font-size: 17px;
+            
+        }
+        #cont > div:hover{
+            background: #faf9f9;
+        }
+        #cont > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+        #cont > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont{
+         display: flex;
+        }
+        #cont-1 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-1 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-1 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-1 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-1{
+         display: flex;
+        }
+        #cont-2 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-2 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-2 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-2 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-2{
+         display: flex;
+        }
+        #cont-3 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-3 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-3 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-3 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-3{
+         display: flex;
+        }
+        #cont-4 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-4 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-4 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-4 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-4{
+         display: flex;
+        }
+        #cont-5 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-5 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-5 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-5 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-5{
+         display: flex;
+        }
+        #footer{
+            background: rgb(248, 248, 248);
+
+        }
+        #footer > div{
+            margin-top: 80px;
+            width: 70%;
+            margin: auto;
+            padding: 30px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #footer > div p{
+            color: rgb(74, 73, 73);
+            font-size: 13px;
+        }
+        #footer > div a{
+            display: block;
+            text-decoration: none;
+            font-size: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 23px;
+            color: rgb(115, 114, 114);
+        }
+        #popularSearches{
+            width: 70%;
+            color: rgb(90, 88, 88);
+        }
+        #popularSearches > div p{
+            color: rgb(139, 139, 139);
+            /* border: 3px solid red; */
+            font-size: 12px;
+            font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #top{
+            display: flex;
+            padding-right: 30px;
+        }
+        #left-side{
+            font-size: 12px;
+            /* border: 3px solid red; */
+            width: 35%;
+        }
+        .lite-black{
+            color: rgb(80, 80, 80);
+            font-size: 11px;
+        }
+        #filter{
+            display: flex;
+            align-items: center;
+            width: 15%;
+            justify-content: space-between;
+        }
+        .size{
+            font-size: 10px;
+            color: red;
+        }
+        #left-side > div:nth-child(1)
+        {
+            /* border: 3px solid red; */
+            width: 100%;
+            margin-left: 30px;
+        }
+        #left-side > div:nth-child(2)
+        {
+            /* border: 3px solid red; */
+            width: 100%;
+            margin-left: 30px;
+        }
+        #left-side > div:nth-child(3)
+        {
+            width: 85%;
+            margin-left: 30px;
+        }
+        #left-side > .block{
+            border: 1px solid rgb(182, 182, 182);
+            display: block;
+            width: 100%;
+            padding-left: 25px;
+            margin-left: 0px;
+            color: rgb(125, 125, 125);
+            /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+            padding-top: 12px;
+            padding-bottom: 12px;
+            font-size: 11px;
+        }
+        #left-side > .block > p:nth-child(1)
+        {
+            color: rgb(35, 35, 35);
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #right-side{
+            /* border: 3px solid red; */
+            margin-left: 20px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 20px 20px;
+        }
+        #right-side > div{
+            padding: 5px;
+            transition: all 0.4s;
+        }
+        #right-side > div:hover{
+            transform: scale(1.1);
+            /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+        }
+        #right-side > div img{
+            width: 100%;
+        }
+        #right-side > div p{
+            font-size: 10px;
+            color: rgb(48, 48, 48);
+        }
+        #right-side > div h4{
+            /* border: 3px solid red; */
+            font-size: 12px;
+        }
+        #right-side > div > div{
+            /* border: 3px solid red; */
+            display: flex;
+            justify-content: space-between;
+        }
+        #right-side > div > div{
+            /* border: 3px solid red; */
+            display: flex;
+            justify-content: space-around;
+        }
+        #right-side > div > div > button{
+            border: none;
+            color: white;
+            background: rgb(14, 114, 154);
+            padding: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #right-side > div > div > button:hover{
+            transform: scale(1.1);
+        }
+        #right-side > div > div > button{
+            transition: all 0.2s;
+        }
+        #right-side h3{
+            /* border: 3px solid red; */
+            font-size: 16px;
+        }
+        @media only screen and (max-width:500px){
+            #nav .absolute{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute1{
+                display: none;
+            }
+            #nav .absolute2{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute3{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute4{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute5{
+                display: none;
+                margin: auto;
+            }
+            #search{
+                border-radius: 12px;
+            }
+            #search::placeholder{
+                color:transparent;
+                /* display: none; */
+            }
+            #nav > div > a img{
+                width: 100%;
+            }
+            
+            #left-side{
+                display: none;
+            }
+            #right-side{
+                grid-template-columns: repeat(3,1fr);
+            }
+            #right-side > div > div > button{
+                font-size: 8px;
+                width: 48%;
+            }
+        }
+        @media only screen and (min-width:501px) and (max-width:950px){
+            #nav .absolute{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute1{
+                display: none;
+            }
+            #nav .absolute2{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute3{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute4{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute5{
+                display: none;
+                margin: auto;
+            }
+            #search{
+                border-radius: 12px;
+            }
+            #search::placeholder{
+                color: transparent;
+            }
+            #nav > div > a img{
+                width: 100%;
+            }
+            #left-side{
+                display: none;
+            }
+            #right-side{
+                grid-template-columns: repeat(5,1fr);
+            }
+            #right-side > div > div > button{
+                font-size: 8px;
+                width: 48%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            
+            <div><a href="./index.html"><img src="./IMG/logo.jpg" alt="BrandLogo" id="img"></a></div>
+            <div class="absolute"><a href="./man.html"  class="absolute">MEN</a>
+            <div class="abs">
+                <div id="cont">
+                   <div>
+                    <p>Topwear</p>
+                    <a href="">All Top Wear</a>
+                    <a href="">Tbags</a>
+                    <a href="">bags</a>
+                </div>
+                <div>
+                    <p>Bottomwear</p>
+                    <a href="">Track pants</a>
+                    <a href="">Jeans</a>
+                    <a href="">Trouser</a>
+                </div>
+                <div>
+                    <p>Men Accessories</p>
+                    <a href="">All Men Accessories</a>
+                    <a href="">Watches</a>
+                    <a href="">Belts</a>
+                    <a href="">Wallets</a>
+                    <a href="">Jewellery</a>
+                    <a href="">Sunglasses</a>
+                    <a href="">Bags</a>
+                </div>
+                <div>
+                    <p>Man Footwear</p>
+                    <a href="">Casuals Shoes</a>
+                    <a href="">Sports Shoes</a>
+                    <a href="">Sandals</a>
+                    <a href="">Formal Shoes</a>
+                </div>
+                <div>
+                    <p>Ethnic Wear</p>
+                    <a href="">Men Kurtas</a>
+                    <a href="">Ethnic shoess</a>
+                </div>
+                <div>
+                    <p>Inner & Sleepwear</p>
+                    <a href="">All Inner & Sleep Wear</a>
+                    <a href="">Vests</a>
+                </div>  
+                </div>
+               
+            </div></div>
+            <div class="absolute1"><a href="./women.html" >WOMEN</a>
+            <div class="abs1">
+                <div id="cont-1">
+                    <div>
+                     <p>Topwear</p>
+                     <a href="">Tops</a>
+                     <a href="">Dresses</a>
+                     <a href="">Sweaters</a>
+                     <a href="">Jumpsuits</a>
+                 </div>
+                 <div>
+                     <p>Bottomwear</p>
+                     <a href="">Jeans</a>
+                     <a href="">Jaggings</a>
+                     <a href="">Palazzos</a>
+                     <a href="">Shorts</a>
+                     <a href="">Skirts</a>
+                 </div>
+                 <div>
+                     <p>Innerwear</p>
+                     <a href="">Bra</a>
+                     <a href="">Briefs</a>
+                 </div>
+                 <div>
+                     <p>Sleepwear</p>
+                     <a href="">Nightsuits</a>
+                     <a href="">Babydolls</a>
+                 </div>  
+                 </div>
+            </div></div>
+            <div class="absolute2"><a href="./kids.html" >KIDS</a>
+            <div class="abs2">
+                <div id="cont-2">
+                    <div>
+                     <p>Boys & Girls+2 Years</p>
+                     <a href="">Dresses</a>
+                 </div>
+                 <div>
+                     <p>Infant 0-2 Years</p>
+                     <a href="">Rompers</a>
+                 </div>
+                 <div>
+                     <p>Toys & Accessories</p>
+                     <a href="">Soft Toys</a>
+                     <a href="">Footwears</a>
+                     <a href="">Stationaries</a>
+                     <a href="">Watches</a>
+                     <a href="">Bags & Backpacks</a>
+                 </div>
+                 <div>
+                     <p>Baby Care</p>
+                     <a href="">All Baby Care</a>
+                 </div> 
+                 </div>
+            </div></div>
+            <div class="absolute3"><a href="./home&living.html">HOME & LIVING</a>
+            <div class="abs3">
+                <div id="cont-3">
+                    <div>
+                     <p>Home Furnishing</p>
+                     <a href="">Badsheets</a>
+                     <a href="">Doormates</a>
+                     <a href="">Curtains & Sheers</a>
+                     <a href="">Cushions & Cushion Covers</a>
+                     <a href="">Mattress Protectors</a>
+                 </div>
+                 <div>
+                     <p>Home Decor</p>
+                     <a href="">All Home Decor</a>
+                     <a href="">Stickers</a>
+                     <a href="">Clock</a>
+                     <a href="">Showpieces</a>
+                 </div>
+                 <div>
+                     <p>Kitchen & Dining</p>
+                     <a href="">Kitchen Storage</a>
+                     <a href="">Cookware & Bakeware</a>
+                     
+                 </div> 
+                 </div>
+            </div></div>
+            <div class="absolute4"><a href="./beauty.html" >BEAUTY & HEALTH</a>
+            <div class="abs4">
+                <div id="cont-4">
+                    <div>
+                     <p>Make up</p>
+                     <a href="">Face</a>
+                     <a href="">Eyes</a>
+                     <a href="">Lips</a>
+                     <a href="">Nails</a>
+                 </div>
+                 <div>
+                     <p>Wellness</p>
+                     <a href="">Senitizers</a>
+                     <a href="">Oral Care</a>
+                     <a href="">Feminine Hygiene</a>
+                 </div>
+                 <div>
+                     <p>Skincare</p>
+                     <a href="">Deodorants</a>
+                 </div>
+                 </div>
+            </div></div>
+            <div class="absolute5"><a href="./bag&footwear.html"><span>NEW</span>BAGS & FOOTWEAR </a><div class="abs5">
+                <div id="cont-5">
+                    <div>
+                     <p>Men Bags</p>
+                     <a href="">All Women Bags</a>
+                     <a href="">Handbags</a>
+                     <a href="">Clutches</a>
+                     <a href="">Slingbags</a>
+                 </div>
+                 <div>
+                     <p>Woman Bags</p>
+                     <a href="">All Men Bags</a>
+                     <a href="">Men Wallets</a>
+                     
+                 </div>
+                 <div>
+                     <p>Men Footwear</p>
+                     <a href="">Sports Shoes</a>
+                     <a href="">Casual Shoes</a>
+                     <a href="">Formal Shoes</a>
+                     <a href="">Sandals</a>
+                     
+                 </div>
+                 <div>
+                     <p>Woman Footwear</p>
+                     <a href="">Flats</a>
+                     <a href="">Bellies</a>
+                     <a href="">Juttis</a>
+                     
+                 </div>  
+                 </div>
+            </div></div> 
+            
+            
+            <div class="search">
+                <input type="text" id="search"  placeholder="Search for produts,brands & more"><i class="fa-solid fa-magnifying-glass" id="searchbtn"></i>
+                
+            </div>
+            
+            
+            <div class="absolute6"> <a href="" ><i class="fa-regular fa-user dis profile"></i> Profile</a>
+            <div class="abs6">
+                <h2>Hello User</h2>
+                <p>To access your Snapmall account</p>
+                <a href="./signup.html"><button>Sign Up</button></a>
+                <hr>
+                <div id="order">
+
+                   <a href="./order.html"><i class="fa-solid fa-bag-shopping" id="bag"><span>My Orders</span> </i></a>
+                    
+                </div>
+            </div></div>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping dis"></i>Cart</a>
+             <a href="./wishlist.html"><i class="fa-sharp fa-regular fa-heart"></i>Wishlist</a>
+            </nav>
+    </header>
+
+    <div id="top">
+        <div id="left-side">
+            <div><p><span class="lite-black">Home / Clothing / </span> Mens Apparel</p></div>
+            <div><p>Mens Apparel <span class="lite-black" id="count">0</span><span class="lite-black"> items</span></p></div>
+            <div id="filter"><p>FILTERS</p><span class="size">CLEAR ALL</span></div>
+            <div class="block">
+                <p>CATEGORIES</p>
+                 <p><input type="checkbox">Flip Flops</p>
+                 <p><input type="checkbox">Casual Shoes</p>
+                 <p><input type="checkbox">Flats</p>
+                 <p><input type="checkbox">Sports Sandals</p>
+            </div>
+            <div class="block">
+                <p>BRAND</p>
+                 <p><input type="checkbox">Puma</p>
+                 <p><input type="checkbox">Inc 5</p>
+                 <p><input type="checkbox">Mochi</p>
+                 <p><input type="checkbox">Metro</p>
+                 <p><input type="checkbox">DressBerry</p>
+                 <p><input type="checkbox">Campus</p>
+                 <p><input type="checkbox">FAUSTO</p>
+                <p><input type="checkbox">Carlton London</p>
+            </div>
+            <div class="block">
+                <p>prices:
+   ,
+                    PRICE</p>
+                 <p><input type="checkbox">Rs.249 & Rs.1999</p>
+                 <p><input type="checkbox">Rs.1999 & Rs.3999</p>
+                 <p><input type="checkbox">Rs.3999 & Rs.7999</p>
+                 <p><input type="checkbox">Rs.7999 & Rs.9999</p>
+            </div>
+            <div class="block">
+                <p>COLOR</p>
+                 <p><input type="radio">Blue</p>
+                 <p><input type="radio">Navy Blue</p>
+                 <p><input type="radio">Grey</p>
+                 <p><input type="radio">Black</p>
+                 <p><input type="radio">Red</p>
+                 <p><input type="radio">White</p>
+                 <p><input type="radio">Green</p>
+            </div>
+            <div class="block">
+                <p>DISCOUNT RANGE</p>
+                 <p><input type="checkbox">10% and above</p>
+                 <p><input type="checkbox">20% and above</p>
+                 <p><input type="checkbox">30% and above</p>
+                 <p><input type="checkbox">40% and above</p>
+                 <p><input type="checkbox">50% and above</p>
+                 <p><input type="checkbox">60% and above</p>
+            </div>
+        </div>
+        <div id="right-side">
+            <!-- append all cards here -->
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div>
+          <div>
+               <p>ONLINE SHOPPING</p>
+                <a href="">Men</a>
+                <a href="">Women</a>
+                <a href="">Kids</a>
+                <a href="">Home & Living</a>
+                <a href="">Beauty</a>
+                <a href="">Gift Cards</a>
+                <a href="">Myntra Insider</a>
+            </div>
+            <div>
+                <P>CUSTOMER POLICIES</P>
+                <a href="">Contact Us</a>
+                <a href="">FAQ</a>
+                <a href="">T&C</a>
+                <a href="">Terms Of Use</a>
+                <a href="">Track Orders</a>
+                <a href="">Shipping</a>
+                <a href="">Cancellation</a>
+                <a href="">Returns</a>
+            </div>
+            <div>
+                <p>USEFUL LINKS</p>
+                <a href="">Blog</a>
+                <a href="">Careers</a>
+                <a href="">Site Map</a>
+                <a href="">Corporate Information</a>
+                <a href="">Whitehat</a>
+            </div>  
+        </div>
+        <hr>
+        <div id="popularSearches">
+            <div><H6>POPULAR SEARCHES</H6><p>Makeup | Dresses For Girls | T-bags  Sandals | Headphones | Babydolls | Blazers For Men | Handbags | Ladies Watches | Bags | Sport Shoes | Reebok Shoes | Puma Shoes | Boxers | Wallets | Tops | Earrings | Fastrack Watches  Kurtis | Nike  Smart Watches  Titan Watches  Designer Blouse  Gowns  Rings  Cricket Shoes | Forever 21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion Show | Lipstick | Saree | Watches | Dresses | Lehenga | Nike Shoes | Goggles | Bras | Suit  Chinos | Shoes | Adidas Shoes | Woodland Shoes | Jewellery | Designers Sarees</p></div>
+        </div>
+    </footer>
+</body>
+<script>
+    let cont = document.getElementById("right-side");
+    let USPolo = JSON.parse(localStorage.getItem("uspolo")) || [];
+    let count = document.getElementById("count");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let save = JSON.parse(localStorage.getItem("save")) || [];
+    let view = [];
+
+    let arr = [
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/12/30/88a3d345-84f1-4e41-a37e-64b89932a9671609335974998-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"slipper"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9137557/2019/4/24/5ff8d9b7-b517-4a81-9a69-9282490c70e41556107194454-Tommy-Hilfiger-Printed-Bold-branding-with-signature-tape-992-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Printed bag",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16682388/2022/1/5/742a1a02-77a4-4a97-91fd-956b1d57ef431641372615551CarltonLondonsportsWomenBlackBallerinaswithBowsFlats1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15197988/2021/10/1/d9be02e3-9761-43f0-b78c-1fe86bc84dbe1633067201409-Tommy-Hilfiger-Unisex-Trolley-Bag-8751633067201056-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Tommy Hilfiger  bag",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15770552/2021/10/7/abe2efbf-32cd-4a48-89fc-ac1baeda88e81633625091889CarltonLondonsportsWomenGreySolid1.jpg",
+            brand:"Puma",
+            title:"Women sandal sport",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13800844/2021/10/25/95beb287-3b9f-4e7b-9d4d-ef1c3eef29a01635162681161-Tommy-Hilfiger-Unisex-Trolley-Bag-3641635162680763-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Tommy Hilfiger Trolly bag",
+            prices:2015,
+            price:"Rs.2015",
+            id:6,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13410812/2021/11/16/522e889d-a44a-4d7e-9c29-b6d5e4155cef1637064504692-Carlton-London-sports-Women-Grey--White-Printed-Sliders-2081-1.jpg",
+            brand:"Puma",
+            title:"Women Slim Striped Casual sandal",
+            prices:1385,
+            price:"Rs.1385",
+            id:7,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9137517/2019/4/24/3faa54a1-0dd6-47fd-9027-40c4f8e77c0c1556107187029-Tommy-Hilfiger-Branded-fine-lining-Water-resistance-77215561-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Printed Slim T-bag",
+            prices:1199,
+            price:"Rs.1199",
+            id:8,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/12/19/e02c1fca-1a1b-4a4f-b37e-6a500b1bcb731608353365874-1.jpg",
+            brand:"Puma",
+            title:"Men Casual slipper",
+            prices:1439,
+            price:"Rs.1439",
+            id:9,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/13/3381916c-ea30-4db4-b053-eaa9e8c0c59c1602543651733-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Casual slipper",
+            id:10,
+            category:"bag",
+            prices:1345,
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20170404/2022/9/26/d12333d1-fcac-42b3-935d-f1bd47b0b3831664180822865Handbags1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1385,
+            price:"Rs.1385",
+            id:11,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16006064/2021/11/3/487adef2-7527-4cbf-b7f7-a9ae02a0c6b11635945196569CarltonLondonsportsMenGreySolid1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Pure Cotton T-bag",
+            prices:1463,
+            price:"Rs.1463",
+            id:12,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13512466/2023/1/25/dfdc6374-c668-4e50-a364-d7757cdf1cc21674639423330GearUnisexBlackGreyColourblockedCross-TrainingDuffelBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1095,
+            price:"Rs.1095",
+            id:13,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15176298/2021/8/17/8205640d-a6ed-4e0f-b1bd-e7c01f6d3fec1629223351147CarltonLondonsportsWomenGreySolid1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Skinny Fit Mid-Rise Jeans",
+            prices:1885,
+            price:"Rs.1885",
+            id:14,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/8376999/2022/7/13/88f9f214-664f-4ebe-8676-0a306efbe6b11657702306426-Lino-Perros-Off-White-Quilted-Handheld-Bag-1691657702305546-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1185,
+            price:"Rs.1185",
+            id:15,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20011570/2022/9/17/baa82fe4-22e3-4005-adae-6f5dafe6ac441663387938675CarltonLondonsportsWomenWhitePrintedSneakers1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Denver Slim Fit Chinos",
+            prices:1546,
+            price:"Rs.1546",
+            id:16,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10281957/2023/1/25/564e612d-5184-4333-82f1-161f8c16b9bd1674639188038WildcraftUnisexGreenPrintedFlipDuf2DuffelBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1185,
+            price:"Rs.1185",
+            id:17,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/1/11/474f1a3e-73b9-4716-aa00-e8f01e2f3e721610364676924-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Brandom Slim Tapered Jeans",
+            prices:1707,
+            price:"Rs.1707",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13171870/2021/1/19/aef71636-3fad-4a06-9dff-25179997dea61611038593172-Safari-Unisex-Printed-Hardsided-Super-Size-Trolley-Bag-26816-7.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/21683812/2023/1/25/11ecb486-1722-4c63-a0c5-bd351d2986291674622633637ASTRIDDuffleTravelBagForMenWithSlingRegularSize1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1707,
+            price:"Rs.1707",
+            id:20,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10186487/2022/11/7/d2524182-5a38-49b5-bc40-f178fb26de841667825440582LavieWomenMintGreenSolidStructuredHandheldBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19230164/2022/7/23/812b9cfb-ebab-48e2-9c8d-2ff7ac2c1e801658555273412DuffelBag1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Printed bag",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2453349/2021/11/16/a030e6c6-b1b1-4af9-99fb-ff46493b4eb41637061961368-HRX-by-Hrithik-Roshan-Unisex-Black-Solid-Training-Duffel-Bag-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20011564/2022/9/16/d231bc0a-d1c0-4ac8-bc1e-c6e7bff235e91663332929446CarltonLondonsportsWomenWhiteSneakers1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Chinos",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18059100/2022/4/27/18207c76-bec4-4289-bcbb-dee37b95bf0c1651066412789CarltonLondonsportsWomenLavenderFlipFlops1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/12/30/88a3d345-84f1-4e41-a37e-64b89932a9671609335974998-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9137557/2019/4/24/5ff8d9b7-b517-4a81-9a69-9282490c70e41556107194454-Tommy-Hilfiger-Printed-Bold-branding-with-signature-tape-992-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Printed bag",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16682388/2022/1/5/742a1a02-77a4-4a97-91fd-956b1d57ef431641372615551CarltonLondonsportsWomenBlackBallerinaswithBowsFlats1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15197988/2021/10/1/d9be02e3-9761-43f0-b78c-1fe86bc84dbe1633067201409-Tommy-Hilfiger-Unisex-Trolley-Bag-8751633067201056-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Chinos",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15770552/2021/10/7/abe2efbf-32cd-4a48-89fc-ac1baeda88e81633625091889CarltonLondonsportsWomenGreySolid1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13800844/2021/10/25/95beb287-3b9f-4e7b-9d4d-ef1c3eef29a01635162681161-Tommy-Hilfiger-Unisex-Trolley-Bag-3641635162680763-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Pure Cotton Casual bag",
+            prices:2015,
+            price:"Rs.2015",
+            id:6,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13410812/2021/11/16/522e889d-a44a-4d7e-9c29-b6d5e4155cef1637064504692-Carlton-London-sports-Women-Grey--White-Printed-Sliders-2081-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Striped Casual bag",
+            prices:1385,
+            price:"Rs.1385",
+            id:7,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9137517/2019/4/24/3faa54a1-0dd6-47fd-9027-40c4f8e77c0c1556107187029-Tommy-Hilfiger-Branded-fine-lining-Water-resistance-77215561-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Printed Slim Fit Cotton T-bag",
+            prices:1199,
+            price:"Rs.1199",
+            id:8,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/12/19/e02c1fca-1a1b-4a4f-b37e-6a500b1bcb731608353365874-1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1439,
+            price:"Rs.1439",
+            id:9,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/13/3381916c-ea30-4db4-b053-eaa9e8c0c59c1602543651733-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Pure Cotton Casual bag",
+            id:10,
+            category:"bag",
+            prices:1345,
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20170404/2022/9/26/d12333d1-fcac-42b3-935d-f1bd47b0b3831664180822865Handbags1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1385,
+            price:"Rs.1385",
+            id:11,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16006064/2021/11/3/487adef2-7527-4cbf-b7f7-a9ae02a0c6b11635945196569CarltonLondonsportsMenGreySolid1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Pure Cotton T-bag",
+            prices:1463,
+            price:"Rs.1463",
+            id:12,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13512466/2023/1/25/dfdc6374-c668-4e50-a364-d7757cdf1cc21674639423330GearUnisexBlackGreyColourblockedCross-TrainingDuffelBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1095,
+            price:"Rs.1095",
+            id:13,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15176298/2021/8/17/8205640d-a6ed-4e0f-b1bd-e7c01f6d3fec1629223351147CarltonLondonsportsWomenGreySolid1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Skinny Fit Mid-Rise Jeans",
+            prices:1885,
+            price:"Rs.1885",
+            id:14,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/8376999/2022/7/13/88f9f214-664f-4ebe-8676-0a306efbe6b11657702306426-Lino-Perros-Off-White-Quilted-Handheld-Bag-1691657702305546-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1185,
+            price:"Rs.1185",
+            id:15,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20011570/2022/9/17/baa82fe4-22e3-4005-adae-6f5dafe6ac441663387938675CarltonLondonsportsWomenWhitePrintedSneakers1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Denver Slim Fit Chinos",
+            prices:1546,
+            price:"Rs.1546",
+            id:16,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10281957/2023/1/25/564e612d-5184-4333-82f1-161f8c16b9bd1674639188038WildcraftUnisexGreenPrintedFlipDuf2DuffelBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1185,
+            price:"Rs.1185",
+            id:17,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/1/11/474f1a3e-73b9-4716-aa00-e8f01e2f3e721610364676924-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Brandom Slim Tapered Jeans",
+            prices:1707,
+            price:"Rs.1707",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13171870/2021/1/19/aef71636-3fad-4a06-9dff-25179997dea61611038593172-Safari-Unisex-Printed-Hardsided-Super-Size-Trolley-Bag-26816-7.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/21683812/2023/1/25/11ecb486-1722-4c63-a0c5-bd351d2986291674622633637ASTRIDDuffleTravelBagForMenWithSlingRegularSize1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1707,
+            price:"Rs.1707",
+            id:20,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10186487/2022/11/7/d2524182-5a38-49b5-bc40-f178fb26de841667825440582LavieWomenMintGreenSolidStructuredHandheldBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19230164/2022/7/23/812b9cfb-ebab-48e2-9c8d-2ff7ac2c1e801658555273412DuffelBag1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Printed bag",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2453349/2021/11/16/a030e6c6-b1b1-4af9-99fb-ff46493b4eb41637061961368-HRX-by-Hrithik-Roshan-Unisex-Black-Solid-Training-Duffel-Bag-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20011564/2022/9/16/d231bc0a-d1c0-4ac8-bc1e-c6e7bff235e91663332929446CarltonLondonsportsWomenWhiteSneakers1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Chinos",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18059100/2022/4/27/18207c76-bec4-4289-bcbb-dee37b95bf0c1651066412789CarltonLondonsportsWomenLavenderFlipFlops1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"bag"
+        },
+    ]
+
+for(let a = 0; a < arr.length; a++)
+{
+    USPolo.push(arr[a]);
+}
+displayData(USPolo)
+
+
+function displayData(data)
+{
+    cont.innerHTML= null;
+    data.forEach(product => {
+        let card = document.createElement("div");
+        let img = document.createElement("img");
+        let brand = document.createElement("h3");
+        let title = document.createElement("p");
+       
+        price = document.createElement("h4");
+        let btnDiv = document.createElement("div");
+        let addtocart = document.createElement("button");
+        let wishlist = document.createElement("button");
+
+        count.textContent = USPolo.length;
+        img.src = product.img;
+        brand.textContent = product.brand;
+        title.textContent = product.title;
+        
+        price.textContent = product. price;
+           
+        addtocart.innerText = "Add To Cart";
+        wishlist.textContent = "Wishlist";
+        
+        wishlist.addEventListener("click",()=> {
+            if(checkDuplicatesave(product))
+            {
+                alert("Product Already in Wishlist")
+            }
+            else
+            {
+                save.push({...product,quantity:1})
+                localStorage.setItem("save",JSON.stringify(save));
+                alert("Product Added to Wishlist")
+            }
+        })
+
+        addtocart.addEventListener("click",()=>{
+            if(checkDuplicate(product))
+            {
+                alert("This porduct already in the Cart")
+            }
+            else
+            {
+              cart.push({...product,quantity:1});
+            localStorage.setItem("cart",JSON.stringify(cart));
+                alert("Product added to the Cart")
+            }
+            
+        })
+
+    img.addEventListener("click",()=>{
+        localStorage.removeItem("view")
+
+    view.push(product);
+    localStorage.setItem("view",JSON.stringify(view));
+    location.href = "productview.html"
+})
+
+function checkDuplicate(product){
+    for(let a = 0; a < cart.length; a++)
+    {
+        if(cart[a].id === product.id)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+function checkDuplicatesave(product)
+{
+    for(let a = 0; a < save.length; a++)
+    {
+        if(save[a].id === product.id)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+        cont.append(card);
+       card.append(img,brand,title,price,btnDiv)
+        
+        btnDiv.append(addtocart,wishlist)
+    });
+}
+
+let searchInp = document.getElementById("search")
+let searchbtn = document.getElementById("searchbtn");
+searchbtn.addEventListener("click",()=> {
+    if(searchInp.value === "")return false
+    else{
+       let filteredData = USPolo.filter((product)=> {
+        if(product.title.toUpperCase().includes(searchInp.value.toUpperCase()))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    })
+    displayData(filteredData) 
+    }
+    
+})
+
+</script>
+</html>

@@ -2,10 +2,3070 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SNAPMALL | ONLINE SHOPPING</title>
+    <link rel="icon" href="IMG/wolf.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        *{
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        #nav{
+            display: flex;
+            /* border: 3px solid red; */
+            align-items: center;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin: auto;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            font-size: 12px;
+            height: 60px;
+            color: rgb(59, 57, 57);
+            justify-content: space-between;
+            /* margin-bottom: 0px; */
+        }
+        #nav {
+            position: fixed;
+            /* top: 0px; */
+            width: 100%;
+            background: orange;
+            /* margin-bottom: 50px; */
+        }
+        #nav > div{
+            /* border: 1px solid black; */
+            display: flex;
+            
+        }
+        
+        #nav > div > a {
+            /* border: 3px solid red; */
+            text-decoration: none;
+            color: white;
+        }
+        #nav > div:nth-child(1)
+        {
+            /* border: 1px solid red; */
+            width: 5%;
+        }
+        #nav > div img{
+            /* border: 3px solid red; */
+            width: 70%;
+        }
+        #nav > div > a span{
+            display: flex;
+            align-items: start;
+            font-size: 7px;
+            color: rgb(235, 153, 0);
+            margin-top: -10px;
+            justify-content: end;
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            width: 30%;
+            outline: none;
+            /* border: 3px solid red */
+        }
+        .search #search{
+            padding: 4px 8px;
+            border: 1px solid black;
+            background: rgb(249, 249, 249);
+            width: 100%;
+            outline: none;
+        }
+        
+        #nav > div .fa-solid{
+            /* border: 3px solid red; */
+            margin-left: -25px;
+        }
+        #nav > div .dis{
+            display: block;
+            margin-left: 7px;
+            font-size: 14px; 
+        }
+        #nav .profile{
+            margin-left: 10px;
+        }
+        #nav > div > a:hover{
+            text-decoration: none;
+            color: black;
+        }
+        #nav .dis{
+            /* border: 3px solid red;  */
+            display: block;
+            margin-left: 4px;
+            font-size: 14px; 
+        }
+        #nav a{
+            color: white;
+            text-decoration: none;
+        }
+        #nav a:hover{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .abs{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -7%;
+            top: 60px;
+            display: none;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-top: 3px solid black;
+            padding: 20px;
+        }
+        .absolute:hover .abs{
+            display: block;
+        }
+        .abs1{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -11%;
+            top: 60px;
+            border-top: 3px solid black;
+            display: none;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute1:hover .abs1{
+            display: block;
+        }
+        .abs2{
+            position: absolute;
+            height: 270px;
+            width: 60%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -17%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid black;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute2:hover .abs2{
+            display: block;
+        }
+        .abs3{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -22%;
+            top: 60px;
+            display: none;
+            border-top: 3px solid black;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute3:hover .abs3{
+            display: block;
+        }
+        .abs4{
+            position: absolute;
+            height: 280px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -30%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid black;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute4:hover .abs4{
+            display: block;
+        }
+        .abs5{
+            position: absolute;
+            height: 350px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -40%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid black;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute5:hover .abs5{
+            display: block;
+        }
+        .abs6{
+            position: absolute;
+            height: 200px;
+            width: 20%;
+            background: transparent;
+            /* border: 3px solid black; */
+            margin-left: -8%;
+            top: 40px;
+            display: none;
+            /* border-top: 3px solid black; */
+            /* border-top: 3px solid red; */
+            border-top-width: 3px;
+            padding: 20px;
+            padding: 10px;
+        }
+        #abs62{
+            background: white;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        .absolute6:hover .abs6{
+            display: block;
+        }
+        .abs6 h2{
+            color: rgb(48, 47, 47);
+        }
+        .abs6 button{
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            background: orange;
+            transition: all 0.4s;
+        }
+        .abs6 button:hover{
+            transform: scale(1.1);
+        }
+        #order a{
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+            font-size: 20px;
+            justify-content: space-between;
+        }
+        #bag{
+            margin-right: 10px;
+            /* border: 2px solid black; */
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            color: black;
+        }
+        #bag:hover{
+            color: orange;
+        }
+        .fa-heart{
+            display: block;
+            margin-left: 10px;
+            font-size: 17px;
+            
+        }
+        #cont > div:hover{
+            background: #faf9f9;
+        }
+        #cont a:hover{
+            color: orange;
+        }
+        #cont-1 a:hover{
+            color: orange;
+        }
+        #cont-2 a:hover{
+            color: orange;
+        }
+        #cont-3 a:hover{
+            color: orange;
+        }
+        #cont-4 a:hover{
+            color: orange;
+        }
+        #cont-5 a:hover{
+            color: orange;
+        }
+        #cont > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+        #cont > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont{
+         display: flex;
+        }
+        #cont-1 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-1 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-1 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-1 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-1{
+         display: flex;
+        }
+        #cont-2 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-2 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-2 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-2 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-2{
+         display: flex;
+        }
+        #cont-3 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-3 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-3 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-3 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-3{
+         display: flex;
+        }
+        #cont-4 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-4 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-4 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-4 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-4{
+         display: flex;
+        }
+        #cont-5 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-5 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-5 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-5 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-5{
+         display: flex;
+        }
+        #container{
+         width: 100%;
+         /* padding-top: 200px; */
+        }
+        #container img{
+            height: 0%;
+            width: 100%;
+            /* margin: auto; */
+            display: block;
+            margin-top: 80px;
+        }
+        /* #mid-content > div{
+            
+        } */
+        #mid-content > div h1{
+            /* border: 3px solid red; */
+            width: 95%;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 50px;
+            font-size: 22px;
+            color: rgb(35, 34, 34);
+        }
+        #mid-content > div div{
+            display: grid;
+            grid-template-columns: repeat(8,1fr);
+        }
+        #mid-content > div > div img{
+            width: 100%;
+        }
+        #mid-content > div > .four-grid{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        #footer{
+            background: rgb(248, 248, 248);
+
+        }
+        #footer > div{
+            margin-top: 80px;
+            width: 70%;
+            margin: auto;
+            padding: 30px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #footer > div p{
+            color: rgb(74, 73, 73);
+            font-size: 13px;
+        }
+        #footer > div a{
+            display: block;
+            text-decoration: none;
+            font-size: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 23px;
+            color: rgb(115, 114, 114);
+        }
+        #popularSearches{
+            width: 70%;
+            color: rgb(90, 88, 88);
+        }
+        #popularSearches > div p{
+            color: rgb(139, 139, 139);
+            /* border: 3px solid red; */
+            font-size: 12px;
+            font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #search-data{
+            /* border: 3px solid red; */
+            width: 95%;
+            margin: auto;
+            display: grid;
+            margin-top: 30px;
+            grid-template-columns: repeat(4,1fr);
+            gap: 40px 20px;
+        }
+        #search-data > div{
+            /* border: 3px solid red; */
+            padding: 5px;
+            margin-top: 50px;
+        }
+        #search-data > div img{
+            width: 100%;
+        }
+        #search-data > div p{
+            font-size: 10px;
+            color: rgb(48, 48, 48);
+        }
+        #search-data > div h4{
+            font-size: 12px;
+        }
+        #search-data > div > div{
+            /* border: 3px solid red; */
+            display: flex;
+            justify-content: space-between;
+        }
+        #search-data > div > div{
+            /* border: 3px solid red; */
+            display: flex;
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 15px;
+        }
+        #search-data > div > div > button{
+            border: none;
+            color: white;
+            background: orange;
+            padding: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #search-data > div > div > button:hover{
+            transform: scale(1.1);
+        }
+        #search-data > div > div > button{
+            transition: all 0.2s;
+        }
+        #right-side h3{
+            /* border: 3px solid red; */
+            font-size: 16px;
+        }
+        @media only screen and (max-width:500px){
+            #nav .absolute{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute1{
+                display: none;
+            }
+            #nav .absolute2{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute3{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute4{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute5{
+                display: none;
+                margin: auto;
+            }
+            #search{
+                border-radius: 12px;
+                
+            }
+            #search::placeholder{
+                color:transparent;
+                /* display: none; */
+            }
+            .abs6{width: 50%;}
+            #nav > div > a img{
+                width: 100%;
+            }
+            #mid-content > div > div {
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+        @media only screen and (min-width:501px) and (max-width:950px){
+            #nav .absolute{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute1{
+                display: none;
+            }
+            #nav .absolute2{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute3{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute4{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute5{
+                display: none;
+                margin: auto;
+            }
+            #search{
+                border-radius: 12px;
+            }
+            #search::placeholder{
+                color:transparent;
+                /* display: none; */
+            }
+            #nav > div > a img{
+                width: 100%;
+            }
+            #mid-content > div > div {
+                grid-template-columns: repeat(4,1fr);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2>hello</h2>
+    <header>
+        <nav id="nav">
+            
+            <div><a href="./index.html"><img src="./IMG/logo new.jpg" alt="BrandLogo"></a></div>
+            <div class="absolute"><a href="./man.html"  class="absolute">MEN</a>
+            <div class="abs">
+                <div id="cont">
+                   <div>
+                    <p>Topwear</p>
+                    <a href="">All Top Wear</a>
+                    <a href="">Tshirts</a>
+                    <a href="">Shirts</a>
+                </div>
+                <div>
+                    <p>Bottomwear</p>
+                    <a href="">Track pants</a>
+                    <a href="">Jeans</a>
+                    <a href="">Trouser</a>
+                </div>
+                <div>
+                    <p>Men Accessories</p>
+                    <a href="">All Men Accessories</a>
+                    <a href="">Watches</a>
+                    <a href="">Belts</a>
+                    <a href="">Wallets</a>
+                    <a href="">Jewellery</a>
+                    <a href="">Sunglasses</a>
+                    <a href="">Bags</a>
+                </div>
+                <div>
+                    <p>Man Footwear</p>
+                    <a href="">Casuals Shoes</a>
+                    <a href="">Sports Shoes</a>
+                    <a href="">Sandals</a>
+                    <a href="">Formal Shoes</a>
+                </div>
+                <div>
+                    <p>Ethnic Wear</p>
+                    <a href="">Men Kurtas</a>
+                    <a href="">Ethnic Jackets</a>
+                </div>
+                <div>
+                    <p>Inner & Sleepwear</p>
+                    <a href="">All Inner & Sleep Wear</a>
+                    <a href="">Vests</a>
+                </div>  
+                </div>
+               
+            </div></div>
+            <div class="absolute1"><a href="./women.html" >WOMEN</a>
+            <div class="abs1">
+                <div id="cont-1">
+                    <div>
+                     <p>Topwear</p>
+                     <a href="">Tops</a>
+                     <a href="">Dresses</a>
+                     <a href="">Sweaters</a>
+                     <a href="">Jumpsuits</a>
+                 </div>
+                 <div>
+                     <p>Bottomwear</p>
+                     <a href="">Jeans</a>
+                     <a href="">Jaggings</a>
+                     <a href="">Palazzos</a>
+                     <a href="">Shorts</a>
+                     <a href="">Skirts</a>
+                    </div>
+                 <div>
+                     <p>Innerwear</p>
+                     <a href="">Bra</a>
+                     <a href="">Briefs</a>
+                 </div>
+                 <div>
+                     <p>Sleepwear</p>
+                     <a href="">Nightsuits</a>
+                     <a href="">Babydolls</a>
+                 </div>  
+                 </div>
+            </div></div>
+            <div class="absolute2"><a href="./kids.html" >KIDS</a>
+            <div class="abs2">
+                <div id="cont-2">
+                    <div>
+                     <p>Boys & Girls+2 Years</p>
+                     <a href="">Dresses</a>
+                 </div>
+                 <div>
+                     <p>Infant 0-2 Years</p>
+                     <a href="">Rompers</a>
+                 </div>
+                 <div>
+                     <p>Toys & Accessories</p>
+                     <a href="">Soft Toys</a>
+                     <a href="">Footwears</a>
+                     <a href="">Stationaries</a>
+                     <a href="">Watches</a>
+                     <a href="">Bags & Backpacks</a>
+                 </div>
+                 <div>
+                     <p>Baby Care</p>
+                     <a href="">All Baby Care</a>
+                 </div> 
+                 </div>
+            </div></div>
+            <div class="absolute3"><a href="./home&living.html">HOME & LIVING</a>
+            <div class="abs3">
+                <div id="cont-3">
+                    <div>
+                        <p>Home Furnishing</p>
+                     <a href="">Badsheets</a>
+                     <a href="">Doormates</a>
+                     <a href="">Curtains & Sheers</a>
+                     <a href="">Cushions & Cushion Covers</a>
+                     <a href="">Mattress Protectors</a>
+                 </div>
+                 <div>
+                     <p>Home Decor</p>
+                     <a href="">All Home Decor</a>
+                     <a href="">Stickers</a>
+                     <a href="">Clock</a>
+                     <a href="">Showpieces</a>
+                 </div>
+                 <div>
+                     <p>Kitchen & Dining</p>
+                     <a href="">Kitchen Storage</a>
+                     <a href="">Cookware & Bakeware</a>
+                     
+                 </div> 
+                 </div>
+                </div></div>
+            <div class="absolute4"><a href="./beauty.html" >BEAUTY & HEALTH</a>
+            <div class="abs4">
+                <div id="cont-4">
+                    <div>
+                     <p>Make up</p>
+                     <a href="">Face</a>
+                     <a href="">Eyes</a>
+                     <a href="">Lips</a>
+                     <a href="">Nails</a>
+                 </div>
+                 <div>
+                     <p>Wellness</p>
+                     <a href="">Senitizers</a>
+                     <a href="">Oral Care</a>
+                     <a href="">Feminine Hygiene</a>
+                 </div>
+                 <div>
+                     <p>Skincare</p>
+                     <a href="">Deodorants</a>
+                 </div>
+                 </div>
+                </div></div>
+            <div class="absolute5"><a href="./bag&footwear.html"><span>NEW</span>BAGS & FOOTWEAR </a><div class="abs5">
+                <div id="cont-5">
+                    <div>
+                     <p>Men Bags</p>
+                     <a href="">All Women Bags</a>
+                     <a href="">Handbags</a>
+                     <a href="">Clutches</a>
+                     <a href="">Slingbags</a>
+                 </div>
+                 <div>
+                     <p>Woman Bags</p>
+                     <a href="">All Men Bags</a>
+                     <a href="">Men Wallets</a>
+                     
+                 </div>
+                 <div>
+                     <p>Men Footwear</p>
+                     <a href="">Sports Shoes</a>
+                     <a href="">Casual Shoes</a>
+                     <a href="">Formal Shoes</a>
+                     <a href="">Sandals</a>
+                     
+                 </div>
+                 <div>
+                     <p>Woman Footwear</p>
+                     <a href="">Flats</a>
+                     <a href="">Bellies</a>
+                     <a href="">Juttis</a>
+                     
+                 </div>  
+                 </div>
+            </div></div> 
+            
+            
+            <div class="search">
+                <input autocomplete="off" type="text" id="search"  placeholder="Search for produts,brands & more"><i class="fa-solid fa-magnifying-glass" id="searchbtn"></i>
+                
+            </div>
+            
+            
+            <div class="absolute6"> <a href="" ><i class="fa-regular fa-user dis profile"></i> Profile</a>
+            <div class="abs6">
+                <div id="abs62">
+                <h2>Hello User</h2>
+                <p>To access your Snapmall account</p>
+                <a href="./signup.html"><button>Sign Up</button></a>
+                <hr>
+                <div id="order">
+
+                    <a href="./order.html"><i class="fa-solid fa-bag-shopping" id="bag"><span>My Orders</span> </i></a>
+                    
+                </div>
+            </div>
+            </div></div>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping dis"></i>Cart</a>
+             <a href="./wishlist.html"><i class="fa-sharp fa-regular fa-heart"></i>Wishlist</a>
+            </nav>
+    </header>
+    <br>
+    <div id="search-data">
+        <!-- append all search data here -->
+    </div>
+    <a href="./usPolo.html" id="container"><img id="img" src="https://diesel.gumlet.io/banner/1676630807Website%20Banner%20&%20Ads-01.webp?compress=true&q=70" alt=""></a>
+
+    <div id="mid-content">
+        <div>
+            <h1>DEAL OF THE DAY</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/21/10d40b4f-8ab0-4e9a-b90c-a1d155b90c741676955181273-Min.-50----Extra-20--Off.jpg" alt="error"></a>
+                <a href="./fitnesFashion.html"><img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/44a9b614-4f67-4b5a-89e5-ee50f7d5f8681676819472882-HRX_Activewear_Min_65_off.png" alt="error"></a>
+                <a href="./usPolo.html"><img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/ea799980-8939-4dc3-8bbe-72b3f63ab8e31676819472832-Casual_Shoes_Min_40_Off.png" alt="error"></a>
+                <a href="./campus.html"><img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/06d56cbf-0135-426a-a81a-b637c6f30dac1676819472817-Campus-_Highlander_Starting_499_1299.png" alt="error"></a>
+                <a href="./puma.html"><img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/216f9bdf-e348-4e9d-b108-f22ceafbf4911676819472966-Starting_1299_2499.png" alt="error"></a>
+                <a href="./dashing.html"><img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/6ecb87f9-bd94-4c0a-a64b-4692197d6be21676819472939-Roadster-_Here_-_Now_-_more___Flat_70_off.png" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/18e8fbf9-7702-4f58-95a4-7cdb69850e641676819472892-Mango_Man-_Levi-s-____Flat_50_off.png" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/d3ab2a84-91c5-4137-b3b3-807b540bcc531676819472859-H-M-_USPA___STarting_399.png" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>BEST OF SNAPMALL EXCLUSIVE BRANDS</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2022/3/10/b25f89eb-fbeb-4013-829e-32ee5b5daaa01646895183668-Roadster-HRX_Unisex.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/bfa5c871-a5a5-4d81-b46e-18aedccfdc9b1644407437913-Kurta_sets-_Anouk-_AAY_-_more.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/046147d1-1874-4c10-adb9-6dbd88b606e71644407437923-Kurtas-_Anouk-_Sangria_-_more.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/76acf345-fc62-4b49-8b2c-9c0fc9c925311644407437977-Tops_-_Dressberry-_AAY_-_more.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/3923c0c1-2260-4f0e-9598-15b6f9d7731c1644407437960-Roadster_and_H-N_Shirts.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/eb70855e-98c4-412d-bf20-50804546d57e1644407437883-Dresses_-_Dressberry-_Chemistry_-_more.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/eff5a33f-ea24-4e70-84e5-ec4d25ee5c7b1644407437968-Roadster_and_KnK_Tshirts.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/667a71f0-c24b-4a00-a98c-cc6a54a815e91644407437985-Tshirts_-_Roadster-_KnK_-_more.jpg" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>TOP PICKS</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/062cea23-9a6a-44b9-bdd4-87cae6a462311645602543339-Kurta-sets.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/8d65d400-decd-4f42-902c-a40350a16ed11645602543346-Kurtas.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/398ee53b-5899-4a9a-9d0b-b35d60c01cb41645602543325-Dresses.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/2f410d81-7fae-400e-9ecc-b4a8b6df72b91645602543430-Women-Jeans.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/82a9be01-3032-4725-9500-bcc94366b7931645602543399-Mens-Shirts.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/c6b09c0f-5c57-472c-a3fc-854ec506a90e1645602543387-Men-T-shirt.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/f08e2bac-9bed-4f87-b022-0dce8defeded1645602543380-Men-Trousers.jpg" alt="error"></a>
+                
+            </div>
+        </div>
+        <div>
+            <h1>CATEGORIES TO BAGS</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/aa4658b5-d723-4652-9ea1-00456b355c3a1645602467046-Kurta-Sets.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/aae4be67-e611-47f4-b94e-92a16a36df731645602467007-Hangbags.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/0f0be09e-4155-47bf-82e1-51044e7e7fd11645602467052-Kurtas.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/f9ca5609-b634-42d4-8c08-a8eaebb818b71645602467085-Sarees.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/0b7869d4-f825-4625-b1db-58ad10a45f301645602467093-Shirts.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b34a30a6-504b-4c94-b7e1-61391d536bc51645602467038-Jewellery.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b156f76a-26e7-4bce-9941-8a67d3c16f331645602467120-Teens-Wear.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b827f900-ed61-4467-84fa-a6e357787e761645602467079-Plus-Size-Styles_W.jpg" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>DEAL ON TOP BRANDS</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/3/f0dc0024-a8d3-4aec-9e1b-d9b6873b52d51599144996663-Crocs.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/85d5e2e1-fa21-43b0-a352-438e15f1006e1598892141455-Nike.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/22b908fa-38aa-46a6-a3cd-a5ccd46b04ce1598892141560-Puma.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/26/adc58a2c-fa18-4b94-b2d6-4c692a44123d1601115417606-unnamed--6-.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/8238147e-a86e-4fe4-a830-ab5c2c49beba1598892141840-W.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/1/7d0153c1-2fc4-49ec-ac7c-3c402d1ed45f1598948396008-USPA.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/c6a4ec29-f907-4d54-8ed7-83006938b20c1598892141612-Tommy-Hilfiger.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/26/d1fab403-7742-4a91-a781-2e36bea65a8a1598445950683-Men-s-Apparel---Roadster.png" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>BRANDS AT SLACE PRICES</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/8cd7ec33-78fe-4b40-802d-365238b1376e1644475927229-Sangria.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/8/5809282f-372d-4881-a8dc-95d5958a86be1644338988944-Roadster_HP.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/8/e96d85b8-7a62-4f57-898a-6c291ffb4d7f1644339048429-HRX_HP.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/e8546602-b217-45b0-a2d4-9469ba59938f1644475927176-Chemistry.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/3cbf365e-8027-4aed-859b-6d40886418d21644475927244-Anouk--1-.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/af85f560-cd67-469a-8405-4ec64a33f9971644475927251-Dressberry.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/a0be607a-142c-4433-90ad-d13f22148f111644475927161-All-about-you.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/b55aac85-4eb7-44d0-94bb-5077e8da70001644475927183-House-of-Pataudi.jpg" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>BEST BUYS</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/420ebd43-1270-4954-bad6-e9e50b52384d1645602339422-Heels.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/32f343c6-74e1-45c3-9923-8e161b484a641645602339538-Tops.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/90867e68-f373-4e21-a3ac-bbbb4f199c7f1645602339404-Flats.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/c62327cb-acc8-436b-9350-ac52c86719dd1645602339517-Sports-Shoes.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/1908b009-5fed-4681-add0-62c8a838b72e1645602339504-Shorts.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/c8946606-d520-4ba6-a9df-2e6a6ad70fe91645602339490-Sarees.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/4d7c5595-b7be-42a4-8640-d66d65bd0a2d1645602339441-Innerwear.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b3fa47d6-deba-4568-b49c-1e406bd09ae61645602339531-Sweaters_M.jpg" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>SNAPMALL LUXE</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/8c07792e-bbf9-4935-8d9c-3a6a66eba4f01636726166240-HP-DKNY.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/1cbf16e3-afe2-4013-af4d-4e427f1e30ee1636726166266-HP-Junghans.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/98b141e0-8d71-4e1b-8afa-49d1b7113a141636726166278-HP-Luxe.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/35f5db21-a813-4c1a-81e4-7ca2bc5a08351636726166290-HP-Oris.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/9c262136-abbd-4087-9267-bc1f3b90b3c01636726166303-HP-RaymondWeil.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/5158cd92-89b5-452e-97c5-938bdf63516e1636726166284-HP-Movado.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2021/6/17/9b04f96a-f1ed-4edc-8840-483719055fdb1623940080549-HPCarouselVisibility-MyntraLuxe-ExploreStore.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2021/6/17/bfa35f05-88b3-419f-af88-83c2ea0483f91623933299966-HPCarouselVisibility-MyntraLuxe-Tedbaker.jpg" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>STYLECASTE HOTTEST FINDS</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/15/fe3325dc-3293-4670-96c9-4449be4efad81647330317086-StyleCast-Mar-HP-DesiGirl.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/15/58386d41-5cd6-47f4-874c-d53f83075bf41647330317173-StyleCast-Mar-HP-InternationalBrands.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/15/1dceb1b3-90f5-49f0-8681-e08ee888911c1647330317155-StyleCast-Mar-HP-GlobalBrands.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/15/23b20478-678e-4191-8245-84886f8094df1647330317259-StyleCast-Mar-HP-Urbanic.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/15/47f4c13c-a1a3-42f4-b9f6-02864f364b791647330317103-StyleCast-Mar-HP-EnglishSummer.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/15/ba8e2b64-3701-482a-b059-e1d3e8b96a221647330317190-StyleCast-Mar-HP-KeepItCasual.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_118,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/15/b3c39fe3-9ac4-42f0-b492-8575a2fc8ae21647330317225-StyleCast-Mar-HP-PartyInTheCity.jpg" alt="error"></a>
+                
+            </div>
+        </div>
+        <div>
+            <h1>TRENDS FOR HER</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/fabc0cd1-5535-4ea4-bf36-2b1857f2eb371645776096602-SS22-Trends-Women-Intricate-Threadwork.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/0d98cf21-4407-45e7-9b40-5f1fce278b6d1646753584544-SS22-TrendsForHer-Maxi-_-Mini-Dresses.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/819cc1cd-678b-43d2-aa63-f34b44755e561646753584613-SS22-TrendsForHer-Wide-_-Bootcut-Bottoms.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/2db05e12-4981-470f-a7cf-43355c4c3fb31646753584596-SS22-TrendsForHer-Tie-_-Dye-Sarees.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/1a66b994-5b88-4d40-b8d3-cff57b438d4a1646753584579-SS22-TrendsForHer-Summer-Sandals.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/6eed6ace-940e-47d4-8441-a362c2c4fba11647516398904-SS22-Trends-Women-Blouson-Tops.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/a39069f5-a7c9-4a57-81a0-bd6f5eb65b061645776096638-SS22-Trends-Women-Minimalist-Jewellery.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/a39069f5-a7c9-4a57-81a0-bd6f5eb65b061645776096638-SS22-Trends-Women-Minimalist-Jewellery.jpg" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>TRENDS FOR HIM</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/ad181088-f7c7-4510-b10c-4ca597f9c33d1647516418475-SS22-Trends-Men-Printed-Sliders.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/0df04bdd-853b-42fe-a494-00bc329ed1871645776676864-SS22-Trends-Men-Logo-Mania-Joggers.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/43ed9e78-f1d5-4398-94bd-db22cf7165e41646753693317-SS22-TrendsForHim-Textured-Shoes.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/2bd946cc-34f4-4958-91ed-91fa41eadd231646753693282-SS22-TrendsForHim-Colourblocked-Top-Wear.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/d158792a-f92a-4eac-b9b1-a0f54e8fd59d1647516418438-SS22-Trends-Men-Military-Inspired-Styles.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/bc7b623e-96e5-4811-8aba-679bf0c8ac401646753693245-SS22-TrendsForHim-Character-Tees.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/85821f6f-0cf0-4100-9527-af1e8e080ae31647516418456-SS22-Trends-Men-Multi-Pocket-Nehru-Jackets.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/21975168-2bdd-4f8d-9567-cb04a0132fbb1645776676882-SS22-Trends-Men-Logo-Mania-Tees.jpg" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>NEW IN TOP BRANDS</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/1aaf5e6a-2978-4ed8-9634-1559f530d73b1645860227457-SS22-BestOfBrands-H_M.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/3ce3c5e7-6060-4b15-b80b-6ddcd19d385a1645860227491-SS22-BestOfBrands-Max.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/96b79372-852b-4e41-904a-ffc47f840d171645860227477-SS22-BestOfBrands-Levis.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/ae3f2d8b-4f02-40ab-8233-d9ab9c7be4941645860227438-SS22-BestOfBrands-CKJeans.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/426cb519-be57-4970-b23c-edb9e442cb761645860227551-SS22-BestOfBrands-W.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/823d5fd5-48e6-4eb1-bd66-1ea70306275a1645860227498-SS22-BestOfBrands-Metro.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/fd730d26-ff9d-41e5-af2e-b20f71757b5f1645779089335-BestOfBrands-Nike.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/b69656bd-7766-45db-96ea-d45df19a7a361645860227484-SS22-BestOfBrands-LP.jpg" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>NEWNESS FOR EVERY OCCASION</h1>
+            <div class="four-grid"><a href=""><img src="https://assets.myntassets.com/f_webp,w_206,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/407be362-f208-4d84-a723-f30045e4a6151645784458357-SS22-ShopByOccassion-BackToOffice-1-.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_206,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/4ff811f4-1ece-46dc-baf4-3454c9dc41831645784458532-SS22-ShopByOccassion-PilatesClass-1-.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_206,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/90f48b14-9947-4637-8f92-75e13dbc3a6f1645784458462-SS22-ShopByOccassion-HappyHours-1-.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_206,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/d99b81d4-a71f-406e-9a54-5b14d2800d6d1645784458375-SS22-ShopByOccassion-BackToOffice.jpg" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>LATTEST IN BEUTY & GROOMING</h1>
+            <div class="four-grid"><a href=""><img src="https://assets.myntassets.com/f_webp,w_206,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/2c49ab74-5efa-4104-b71c-cdb4891762931645791174303-SS22-Beauty-Philips.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_206,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/1850cdd3-e1be-47b3-ac4b-f8f395afce491645791174169-SS22-Beauty-Biotique.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_206,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/7f7c368a-fa16-44f9-b7a2-8562ec21ba0a1645791174190-SS22-Beauty-ColorBar.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_206,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/45b5535a-38c4-4c10-a301-3b6f3b56e43f1645791174266-SS22-Beauty-Lakme.jpg" alt="error"></a>
+            </div>
+        </div>
+        <div>
+            <h1>UNMISSABLE THIS SEASON</h1>
+            <div><a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/1ec9ffd5-335f-4ecb-a7e9-ea403da9a7df1645805770868-SS22-SeasonChecklist-PricePoints-CleanBlueDenim.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/a0e60587-5d1e-41f0-9d5f-f42a925a55921645793729467-SS22-SeasonChecklist-Trending-BlockHeels.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/99a29231-2050-4fde-ad40-efa35de66e5b1645805770994-SS22-SeasonChecklist-PricePoints-TrendySneakers.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/bdde4d47-9908-4764-b09e-5a55034e32b01645793729554-SS22-SeasonChecklist-Trending-Loungewera.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/6bcf042c-5f07-47e2-a1cb-3da58c4f94951645793729590-SS22-SeasonChecklist-Trending-SlipOns.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/50c525cc-6724-4d41-9e97-5b931a33631b1645806100291-SS22-SeasonChecklist-AddOns-New-Season-Wallets_.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/1/62ef932d-b023-4c34-b649-bc3b399057a31646114955627-SS22-SeasonChecklist-Styling-Women-Kurtas.jpg" alt="error"></a>
+                <a href=""><img src="https://assets.myntassets.com/f_webp,w_103,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/518f4774-cd01-4076-b2ee-03170d232c161645793729608-SS22-SeasonChecklist-Trending-Stylecast.jpg" alt="error"></a>
+            </div>
+        </div>        
+    </div>
+    <footer id="footer">
+        <div>
+          <div>
+               <p>ONLINE SHOPPING</p>
+                <a href="">Men</a>
+                <a href="">Women</a>
+                <a href="">Kids</a>
+                <a href="">Home & Living</a>
+                <a href="">Beauty</a>
+                <a href="">Gift Cards</a>
+                <a href="">Myntra Insider</a>
+            </div>
+            <div>
+                <P>CUSTOMER POLICIES</P>
+                <a href="">Contact Us</a>
+                <a href="">FAQ</a>
+                <a href="">T&C</a>
+                <a href="">Terms Of Use</a>
+                <a href="">Track Orders</a>
+                <a href="">Shipping</a>
+                <a href="">Cancellation</a>
+                <a href="">Returns</a>
+            </div>
+            <div>
+                <p>USEFUL LINKS</p>
+                <a href="">Blog</a>
+                <a href="">Careers</a>
+                <a href="">Site Map</a>
+                <a href="">Corporate Information</a>
+                <a href="">Whitehat</a>
+            </div>  
+        </div>
+        <hr>
+        <div id="popularSearches">
+            <div><H6>POPULAR SEARCHES</H6><p>Makeup | Dresses For Girls | T-Shirts  Sandals | Headphones | Babydolls | Blazers For Men | Handbags | Ladies Watches | Bags | Sport Shoes | Reebok Shoes | Puma Shoes | Boxers | Wallets | Tops | Earrings | Fastrack Watches  Kurtis | Nike  Smart Watches  Titan Watches  Designer Blouse  Gowns  Rings  Cricket Shoes | Forever 21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion Show | Lipstick | Saree | Watches | Dresses | Lehenga | Nike Shoes | Goggles | Bras | Suit  Chinos | Shoes | Adidas Shoes | Woodland Shoes | Jewellery | Designers Sarees</p></div>
+        </div>
+    </footer>
 </body>
+<script>
+    let wholeImg = [
+        "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/20/f155cbdf-5682-46d4-bb8c-c533e7f450ba1676894572387-MFB_Prebuzz_Main-Banner_2.jpg",
+        
+        "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/31/4031994d-9092-4aa7-aea1-f52f2ae5194f1654006594976-Activewear_DK.jpg",
+        "https://assets.myntassets.com/f_webp,w_976,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/28/0174e4d7-448c-4746-8572-69461ad5be101659020268081-Tops---Tees_Desk.jpg",
+        "https://assets.myntassets.com/f_webp,w_976,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/27/53b4daed-cd2c-4111-86c5-14f737eceb351656325318973-Handbags_Desk.jpg"
+        ,"https://assets.myntassets.com/f_webp,w_976,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/25/9be788ff-39a4-4214-99d0-fc97505aae5a1658752545685-USPA_Desk_Banner.jpg"
+    ];
+    let inc = 0;
+    let img = document.getElementById("img");
+    setInterval(() => {
+        for(let a = 0; a < wholeImg.length; a++)
+        {
+            if(inc == wholeImg.length)
+            {
+                inc = 0;
+            }
+            img.setAttribute("src",wholeImg[inc++]);
+            img.append(img)
+        }
+    }, 2000);
+
+let search = document.querySelector(".serach");
+let searchbtn = document.getElementById("searchbtn");
+let home = JSON.parse(localStorage.getItem("home")) || [];
+let save = JSON.parse(localStorage.getItem("save")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cont = document.getElementById("search-data")
+let searchInp = document.getElementById("search");
+let slide = document.getElementById("container");
+let topData = document.getElementById("mid-content");
+
+let homeData = [
+{
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/12/30/88a3d345-84f1-4e41-a37e-64b89932a9671609335974998-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"slipper"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9137557/2019/4/24/5ff8d9b7-b517-4a81-9a69-9282490c70e41556107194454-Tommy-Hilfiger-Printed-Bold-branding-with-signature-tape-992-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Printed bag",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16682388/2022/1/5/742a1a02-77a4-4a97-91fd-956b1d57ef431641372615551CarltonLondonsportsWomenBlackBallerinaswithBowsFlats1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15197988/2021/10/1/d9be02e3-9761-43f0-b78c-1fe86bc84dbe1633067201409-Tommy-Hilfiger-Unisex-Trolley-Bag-8751633067201056-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Tommy Hilfiger  bag",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15770552/2021/10/7/abe2efbf-32cd-4a48-89fc-ac1baeda88e81633625091889CarltonLondonsportsWomenGreySolid1.jpg",
+            brand:"Puma",
+            title:"Women sandal sport",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13800844/2021/10/25/95beb287-3b9f-4e7b-9d4d-ef1c3eef29a01635162681161-Tommy-Hilfiger-Unisex-Trolley-Bag-3641635162680763-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Tommy Hilfiger Trolly bag",
+            prices:2015,
+            price:"Rs.2015",
+            id:6,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13410812/2021/11/16/522e889d-a44a-4d7e-9c29-b6d5e4155cef1637064504692-Carlton-London-sports-Women-Grey--White-Printed-Sliders-2081-1.jpg",
+            brand:"Puma",
+            title:"Women Slim Striped Casual sandal",
+            prices:1385,
+            price:"Rs.1385",
+            id:7,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9137517/2019/4/24/3faa54a1-0dd6-47fd-9027-40c4f8e77c0c1556107187029-Tommy-Hilfiger-Branded-fine-lining-Water-resistance-77215561-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Printed Slim T-bag",
+            prices:1199,
+            price:"Rs.1199",
+            id:8,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/12/19/e02c1fca-1a1b-4a4f-b37e-6a500b1bcb731608353365874-1.jpg",
+            brand:"Puma",
+            title:"Men Casual slipper",
+            prices:1439,
+            price:"Rs.1439",
+            id:9,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/13/3381916c-ea30-4db4-b053-eaa9e8c0c59c1602543651733-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Casual slipper",
+            id:10,
+            category:"bag",
+            prices:1345,
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10244851/2021/2/10/32c4b366-a522-4d98-91f0-46d413de66031612945921510-Philips-Women-Heated-Straightening-Brush-with-Thermo-Protect-1.jpg",
+            brand:"Philips",
+            title:"Straitching Brush",
+            prices:3235,
+            price:"Rs.3235",
+            id:1,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9374997/2022/10/3/0c3dc3f5-5db1-42cb-84ba-77bf4c9ec2041664801349030-Philips-HP810046-SalonDry-ThermoProtect-1000W-Compact-Hair-D-1.jpg",
+            brand:"Philips",
+            title:"Salondry Hair Dryer",
+            prices:845,
+            price:"Rs.845",
+            id:2,
+
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15853718/2022/7/18/3302ffaf-5ebe-492f-9436-4f92bf5488401658122011957-Minimalist-SPF-50-PA-Multi-Vitamin-Sunscreen-670165812201146-1.jpg",
+            brand:"Minimalist",
+            title:"Sunscreen",
+            prices:399,
+            price:"Rs.399",
+            id:3,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2137201/2022/4/21/0a71957e-30c2-4642-bbe2-dcf65a3511ac1650523077663-Lakme-Sun-Expert-SPF-50-PA-Ultra-Matte-Sunscreen-50-ml-41316-1.jpg",
+            brand:"Lakme",
+            title:"Sun Empert SPF 50 Sunscreen",
+            prices:260,
+            price:"Rs.260",
+            id:4,
+
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11915238/2021/10/11/e97689dd-24fb-4336-bba7-8b1ea7bb302f1633932426722-Philips-Men-BT310115-Series-3000-Beard-Trimmer---White-25616-1.jpg",
+            brand:"Philips",
+            title:"Beared Trimmer",
+            prices:1001,
+            price:"Rs.1001",
+            id:5,
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18723076/2022/10/6/924c6b1b-2b54-4df8-91d3-6bc481ac9ed01665059064476-Allen-Solly-Junior-Girls-Pink--Grey-Conversational-Print-Tie-5.jpg",
+            brand:"Allen Solly Junior",
+            title:"Girls Printed Cotton Top",
+            prices:685,
+            price:"Rs.685",
+            id:1,
+            category:"top"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18724208/2022/10/14/958e2887-aaca-4392-945e-c04c5a5bad781665738163539-Allen-Solly-Junior-Boys-Track-Pants-3721665738163329-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Solid Cotton Joggers",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"cotton"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19844578/2022/9/7/cecdee10-644d-4e81-8626-b628e16e6d521662568215642AllenSollyBlueShirt1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Slim Fit Casual Cotton Shirt",
+            prices:881,
+            price:"Rs.881",
+            id:3,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18724236/2022/10/28/6c786cc7-9e54-4a75-86a8-9fd0c02e8d921666936040500-Allen-Solly-Junior-Boys-Track-Pants-1181666936040239-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Cotton  Solid Joggers",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"cotton"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18793386/2023/2/1/a740980b-525f-4ba0-94d1-8ccfdc0980881675250350959-Allen-Solly-Junior-Boys-Burgundy-Sport-Printed-Casual-Shirt--1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Pure Cotton Shirt",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18718786/2022/11/25/8c1fe16f-03e8-48c1-a5fe-6791984978ef1669356476469-Allen-Solly-Junior-Boys-Jackets-9371669356476291-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Padded Jacket",
+            prices:2015,
+            price:"Rs.2015",
+            id:6,
+            category:"jacket"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18720852/2022/8/25/81e5f70a-59ff-4e5a-ada1-d08fa166ed591661418309451-Allen-Solly-Junior-Boys-Tshirts-7881661418309021-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Printed T-T-shirt",
+            prices:1385,
+            price:"Rs.1385",
+            id:7,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17794300/2022/10/21/0b3110e3-45e2-4023-9ba9-4e4996af6b3d1666333491811AllenSollyJuniorBoysBlackFluorescentGreenBrandLogoPrintedSpo1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Typography Sports Shorts",
+            prices:1199,
+            price:"Rs.1199",
+            id:8,
+            category:"shorts"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17890484/2022/6/7/86b45804-c01f-4d8b-a20a-f5dce8c501271654600735389-Allen-Solly-Junior-Boys-Green-Printed-Chino-Shorts-480165460-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Chinno Shorts",
+            prices:1439,
+            price:"Rs.1439",
+            id:9,
+            category:"shorts"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20755230/2022/11/15/6ea377db-a164-4586-8fd3-1b744f5528bd1668503529169AllenSollyJuniorBoysNavyBlueStripedSingle-BreastedBlazer1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Single-Breasted Blazer",
+            id:10,
+            category:"blazer",
+            prices:1345,
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18794324/2022/10/3/f54f010e-4b9f-410e-a742-97f953196b891664771910635-Allen-Solly-Junior-Boys-Blue-Mid-Rise-Mildly-Distress-Light--5.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Stretchable Mid-Rise Jean",
+            prices:1385,
+            price:"Rs.1385",
+            id:11,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19975766/2022/10/28/11813b75-330b-4750-80b7-8a8c8a11c3091666955521759-Allen-Solly-Junior-Boys-Shirts-1671666955521389-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys printed Casual Shirt",
+            prices:1463,
+            price:"Rs.1463",
+            id:12,
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13947040/2021/4/12/22e7dec9-4502-45e9-b157-d084b28d269a1618217978705-Biba-Women-Kurta-Sets-4251618217977688-1.jpg",
+            brand:"Biba",
+            title:"Printed Kurta with Trousers",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"trouser"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13947028/2021/4/5/5bf3c0b1-fb35-40ec-807e-e3816ea786631617626613829-Biba-Women-Cream-Coloured-Printed-Kurta-with-Palazzos-415161-1.jpg",
+            brand:"Biba",
+            title:"Printed Kurta with Palazzos",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"plazzo"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18198260/2022/10/27/982b4e11-4312-4031-b607-e9588de087811666869250471-Biba-Women-Kurtas-9641666869249953-1.jpg",
+            brand:"Biba",
+            title:"Women Cotton Checked Kurta",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/12950920/2020/12/1/ceb6bdc5-5224-4bee-b6ce-121b80580b9a1606805395582KALINISareesKALINIWomenSareesKALINIWomenSareesKALINIWomenSar1.jpg",
+            brand:"Biba",
+            title:"Printed Kurta",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13946992/2021/6/26/89ea9df7-8662-40fd-a4a9-d2fabd07427e1624709447228SASSAFRASWomenPeach-ColouredBlackGeometricPrintedWrapDressKu1.jpg",
+            brand:"Biba",
+            title:"Women Embroidered Kurta",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19614908/2022/11/14/2bb8d635-6e06-40b7-9f7e-a473f863a1c71668420481281-Biba-Women-Kurta-Sets-9221668420480558-1.jpg",
+            brand:"Biba",
+            title:"Women Yoke Design Kurta",
+            prices:2015,
+            price:"Rs.2015",
+            id:6,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19615460/2022/11/15/b27cddec-2a9a-4ee7-b57a-f43d0921c5f71668491113530-Biba-Women-Kurta-Sets-2881668491112667-1.jpg",
+            brand:"Biba",
+            title:"Women Kurta with Palazzos",
+            prices:1385,
+            price:"Rs.1385",
+            id:7,
+            category:"palazzo"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19615440/2022/11/14/ac09a408-b551-4d03-a7ec-580f9c6d132c1668415168474-Biba-Women-Kurta-Sets-7061668415167830-1.jpg",
+            brand:"Biba",
+            title:"Ethnic Motifs Kurta Set",
+            prices:1199,
+            price:"Rs.1199",
+            id:8,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15054568/2021/8/25/cbb8a7fd-c4bf-4cc3-b4c6-c6d336389fe21629891547273-Biba-Women-Kurta-Sets-1771629891546354-1.jpg",
+            brand:"Biba",
+            title:"Women Ethnic Motifs Kurta",
+            prices:1439,
+            price:"Rs.1439",
+            id:9,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19615918/2022/9/10/a9ced933-6596-4caf-adfe-7ab2378317801662785831841-Biba-Women-Kurta-Sets-5641662785831272-1.jpg",
+            brand:"Biba",
+            title:"Women Printed Kurta with Palazzos",
+            id:10,
+            category:"palazzo",
+            prices:1345,
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17550472/2022/3/16/492ff4cf-fdda-4e30-9fb8-ec4b4b97e8cc1647429425993BibaWomenWhiteEthnicMotifsPanelledPureCottonKurtawithSalwarW1.jpg",
+            brand:"Biba",
+            title:"Women Kurta with Palazzos",
+            prices:1385,
+            price:"Rs.1385",
+            id:11,
+            category:"palazzos"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13946934/2021/4/12/726fa8b2-c748-42c5-8c73-8f3bd54121d01618221348917-Biba-Women-Kurta-Sets-9621618221347614-1.jpg",
+            brand:"Biba",
+            title:"Printed Kurta with Trouser",
+            prices:1463,
+            price:"Rs.1463",
+            id:12,
+            category:"trouser"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17030166/2022/2/3/8f2f4b45-f640-4a22-b92c-5a25d9fda8a51643867915904BibaWomenNavyBlueEthnicMotifsPrintedFlaredSleevesKurta1.jpg",
+            brand:"Biba",
+            title:"Women Cotton Striped Kurta",
+            prices:1095,
+            price:"Rs.1095",
+            id:13,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19614910/2022/10/27/896e5a94-73bb-4369-a524-33775614fd551666873199386-Biba-Women-Kurtas-9681666873198762-1.jpg",
+            prices:1885,
+            price:"Rs.1885",
+            title:"Women Cotton Striped Kurta",
+            brand:"Biba",
+            id:14,
+            category:"plazzo"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18198326/2022/8/25/e08e4b71-8be2-43f0-a3a2-10c16be4dd021661409685662-Biba-Women-Kurta-Sets-3021661409684982-1.jpg",
+            brand:"Biba",
+            title:"Women Cotton Striped Kurta",
+            prices:1185,
+            price:"Rs.1185",
+            id:15,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17550404/2022/3/16/605bab54-646c-400a-9663-3c337022c0351647442525984BibaWomenWhitePrintedPureCottonKurtawithTrousersWithDupatta1.jpg",
+            brand:"Biba",
+            title:"Women Kurti with Salwar",
+            prices:1546,
+            price:"Rs.1546",
+            id:16,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/13947020/2021/4/3/f4270cb4-cf6d-42ea-9f52-b61e9eda16dd1617434138553LehengaCholiSHUBHKALAWomenLehengaCholiSHUBHKALAWomenLehengaC1.jpg",
+            brand:"Biba",
+            title:"Women Cotton Striped Kurta",
+            prices:1185,
+            price:"Rs.1185",
+            id:17,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/18198320/2022/8/1/07f8363a-e33c-4f16-92c9-51edf58a12811659351497863-Biba-Women-Kurtas-5831659351497203-1.jpg",
+            brand:"Biba",
+            title:"Women Kurta Set",
+            prices:1707,
+            price:"Rs.1707",
+            id:18,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/13913182/2021/4/6/c1eaf261-9266-4375-9f07-ee099d77a28d1617708742736-Biba-Women-Off-White--Brown-Pure-Cotton-Striped-Kurta-870161-1.jpg",
+            brand:"Biba",
+            title:"Women Cotton Striped Kurta",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/18200172/2022/6/22/48038975-2a9f-4f39-94e9-a5d530f964b41655897194097-Biba-Women-Kurta-Sets-6341655897193456-1.jpg",
+            brand:"Biba",
+            title:"Women Cotton Striped Kurta",
+            prices:1707,
+            price:"Rs.1707",
+            id:20,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/15126638/2021/11/12/66918c6f-e316-4f79-aa3d-742202e3aa171636693146160-Biba-Women-Dresses-4691636693145617-1.jpg",
+            brand:"Biba",
+            title:"Striped Kurta with Trouser",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"trouser"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/15054530/2021/8/25/08cc337c-0fb6-4172-8085-2cc89c1b1d971629874328014-Biba-Women-Kurta-Sets-5511629874327275-7.jpg",
+            brand:"Biba",
+            title:"Women Printed Kurta with Salwar",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/17550384/2022/3/16/2772724b-0111-41bb-b6a3-bf7155879dbf1647437045106BibaWomenBlackFloralPrintedEmpirePureCottonKurtiwithTrousers1.jpg",
+            brand:"Biba",
+            title:"Men Slim Fit Puffer Jacket",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"jacket"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/15055978/2021/9/16/e3f35a9a-ceb5-49dc-b80c-cacec3f4e6ce1631770687934-Biba-Women-Kurtas-5901631770687343-1.jpg",
+            brand:"Biba",
+            title:"Women Ethnic set",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"set"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/13946860/2021/4/5/9c38735a-0940-487f-89ed-223e7a07719b1617617051663-Biba-Women-Orange--Beige-Printed-Kurta-with-Trousers-5841617-1.jpg",
+            brand:"Biba",
+            title:"Women Ethnic Motifs Kurta",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/13447244/2021/1/21/16891949-6278-4a89-8e7e-e1fd39bb40801611216513129KurtaSetsBibaWomenKurtasBibaWomenKurtaSetsBibaWomenKurtaSets1.jpg",
+            brand:"Biba",
+            title:"Women Ethnic Motifs Kurta",
+            prices:2015,
+            price:"Rs.2015",
+            id:6,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/13947010/2021/4/3/9af811ad-9677-4837-934f-9b89ce801fd91617434109426LehengaCholiSHUBHKALAWomenLehengaCholiSHUBHKALAWomenLehengaC1.jpg",
+            brand:"Biba",
+            title:"Women Kurta with trouser",
+            prices:1385,
+            price:"Rs.1385",
+            id:7,
+            category:"trouser"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/16638776/2022/2/14/8fd0ecd0-7172-4232-94ec-3045190062a91644823504027BibaWomenNavyBlueFloralPrintedLayeredKurtawithChuridarWithDu1.jpg",
+            brand:"Biba",
+            title:"Cotton Printed Straight Kurta",
+            prices:1199,
+            price:"Rs.1199",
+            id:8,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/19614878/2022/10/13/cbc442b1-0a6a-4b54-af0e-472f61b4ef161665656974068-Biba-Women-Kurta-Sets-1231665656973269-1.jpg",
+            brand:"Biba",
+            title:"Women Ethnic Motifs Kurta",
+            prices:1439,
+            price:"Rs.1439",
+            id:9,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/16638588/2021/12/29/4f9acb5b-5786-4f15-84ee-fcfbbe2882b51640776592508BibaWomenWhiteFloralPrintedPureCottonKurtiwithPatiala1.jpg",
+            brand:"Biba",
+            title:"Women Ethnic Motifs Kurta",
+            id:10,
+            category:"kurta",
+            prices:1345,
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/13947000/2021/4/3/94862307-a416-4ff5-b926-34ee098db8e21617434143094LehengaCholiSHUBHKALAWomenLehengaCholiSHUBHKALAWomenLehengaC1.jpg",
+            brand:"Biba",
+            title:"Women Ethnic Motifs Kurta",
+            prices:1385,
+            price:"Rs.1385",
+            id:11,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/18200144/2022/8/22/0fc24e09-dbeb-4627-b04e-416a7c7213de1661165916948-Biba-Women-Kurta-Sets-3601661165916223-1.jpg",
+            brand:"Biba",
+            title:"Printed Kurta with Trouser",
+            prices:1463,
+            price:"Rs.1463",
+            id:12,
+            category:"trouser"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/19614894/2022/11/16/5053485d-a00c-49da-a043-661f54ab2b861668577274641-Biba-Women-Orange--Teal-Ethnic-Motifs-Printed-Kurta-51416685-1.jpg",
+            brand:"Biba",
+            title:"Women Cotton Striped Kurta",
+            prices:1095,
+            price:"Rs.1095",
+            id:13,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/19615916/2023/1/18/780fe14d-2141-44d6-8a1f-b093ad9b8e381674024710988-Biba-Women-Kurta-Sets-5581674024710514-1.jpg",
+            brand:"Biba",
+            title:"Printed Kurta with Plazzos",
+            prices:1885,
+            price:"Rs.1885",
+            id:14,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/13947022/2021/4/3/bcb2ca44-c4ec-4da2-b492-f6c9205c48511617434137880LehengaCholiSHUBHKALAWomenLehengaCholiSHUBHKALAWomenLehengaC1.jpg",
+            brand:"Biba",
+            title:"Women Cotton Striped Kurta",
+            prices:1185,
+            price:"Rs.1185",
+            id:15,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9322599/2019/9/24/2ca33bf5-470b-476b-8051-12a9ae324ba01569315094659-Biba-Women-Dresses-1201569315093361-1.jpg",
+            brand:"Biba",
+            title:"Women Yoke Design Kurta",
+            prices:1546,
+            price:"Rs.1546",
+            id:16,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/17952242/2022/8/22/119fc5db-7f64-4fbe-b689-93208fa707db1661170898991-Biba-Women-Kurta-Sets-41661170898039-1.jpg",
+            brand:"Biba",
+            title:"Women Cotton Striped Kurta",
+            prices:1185,
+            price:"Rs.1185",
+            id:17,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/19615912/2022/9/10/2d1f6b7e-a896-4079-adb7-57545bdb0df21662786387313-Biba-Women-Kurta-Sets-831662786386665-1.jpg",
+            brand:"Biba",
+            title:"Women Kurta Set",
+            prices:1707,
+            price:"Rs.1707",
+            id:18,
+            category:"set"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/12950772/2020/12/1/d3501a89-12cc-4f37-9130-ba0f27c6b1d11606805391413KALINISareesKALINIWomenSareesKALINIWomenSareesKALINIWomenSar1.jpg",
+            brand:"Biba",
+            title:"Women Cotton Striped Kurta",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/19615328/2022/9/10/988d68b5-3d4d-4653-a1da-b489143715cc1662795484234-Biba-Women-Kurta-Sets-9641662795483770-1.jpg",
+            brand:"Biba",
+            title:"Women Cotton Striped Kurta",
+            prices:1707,
+            price:"Rs.1707",
+            id:20,
+            category:"kurta"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16965096/2022/1/28/43c478df-febf-47ae-b6fc-0e53de6b67af1643377371587AllenSollyPink1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Embellished Derss & Hair Band",
+            prices:1095,
+            price:"Rs.1095",
+            id:13,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17794580/2022/8/25/6c39f758-26d5-42f5-8367-ea4c8c1fb44f1661411050019-Allen-Solly-Junior-Boys-Shorts-9111661411049598-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Pure Cotton Shorts",
+            prices:1885,
+            price:"Rs.1885",
+            id:14,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18718608/2022/10/14/5aa87ba9-7f98-4286-bdf3-2746c22e05c41665731719459-Allen-Solly-Junior-Boys-Jackets-3161665731719274-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Sleeveless Padded Jacket",
+            prices:1185,
+            price:"Rs.1185",
+            id:15,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18969996/2022/10/18/e9b800cd-52a5-45a1-b8c7-bc9da99f9bf01666068628415AllenSollyJuniorGirlsGreySlimFitMid-RiseCleanLookLightFadeSt1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Girls Slim Fit Mid-Rise Jeans",
+            prices:1546,
+            price:"Rs.1546",
+            id:16,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20690058/2022/11/10/c9954f3d-b945-4e33-bac3-2031f273b7601668068680613BoysOliveSlimFitSolidTrousers1.jpg",
+            brand:"Allen Solly Junior",
+            title:"BOys Slim Fit Trousers",
+            prices:1185,
+            price:"Rs.1185",
+            id:17,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19023166/2023/1/24/7beef3db-e762-4b5d-92cc-0747be9dff021674554787569USPoloAssnMenRedPoloCollarPureCottonSlimFitT-shirtwithEmbroi1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Puffer Jacket",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"jacket"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16362164/2022/1/7/b5b97933-ea03-4c45-970d-14eca97f86d81641543144868JacketsHERENOWWomenJacketsHERENOWWomenJacketsHERENOWWomenTro4.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Trouser",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"trouser"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19020648/2022/11/8/a5d89ec5-09af-4c8a-a3e4-6e93f4fa7b421667929299487-US-Polo-Assn-Men-Navy-Blue-Solid-Cut--Sew-Puffer-Jacket-4991-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Puffer Jacket",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"jacket"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20259732/2022/11/2/fd055805-88e7-4dda-bbf3-f83c93fbb7c71667365065191-US-Polo-Assn-Men-Green-Tailored-Fit-Checked-Pure-Cotton-Casu-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Chinos",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18974476/2022/7/27/6803c39b-5ade-4ffb-ac1b-3caad710d9b21658925121644-Levis-Men-Pink--White-Slim-Fit-Striped-Casual-Shirt-23516589-1.jpg",
+            brand:"Levis",
+            title:"Men Pure Cotton Casual Shirt",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16362178/2022/1/10/ae05f5aa-03eb-441e-bd54-0a4c52d7593e1641800349082-Tommy-Hilfiger-Men-Track-Pants-5211641800348524-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Pure Cotton Trouser",
+            prices:2015,
+            price:"Rs.2015",
+            id:6,
+            category:"trouser"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19166664/2022/9/3/bc70adbf-e6f4-411c-b1e7-332a61b3f7551662187373112-U-S-Polo-Assn-Denim-Co-Men-Navy-Blue--Rust-Red-Slim-Fit-Stri-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Striped Casual Shirt",
+            prices:1385,
+            price:"Rs.1385",
+            id:7,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18984240/2022/12/9/8a7983da-e81a-4d95-8a76-de14194743001670583230333LevisMenNavyBlueSolidT-shirt1.jpg",
+            brand:"Levis",
+            title:"Men Printed Slim Fit Cotton T-Shirt",
+            prices:1199,
+            price:"Rs.1199",
+            id:8,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/20603574/2022/12/5/3f189d96-8b7b-49c8-8193-139adb758b121670232715677-US-Polo-Assn-Men-Red--Navy-Blue-Tailored-Fit-Checked-Pure-Co-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            prices:1439,
+            price:"Rs.1439",
+            id:9,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19167132/2022/9/8/62061819-2a5f-4078-ad11-bb98b541ff211662617812586-U-S-Polo-Assn-Denim-Co-Men-Rust-Red-Solid-Slim-Fit-Pure-Cott-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            id:10,
+            category:"shirt",
+            prices:1345,
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16803346/2022/6/6/98c36569-59e4-4ea2-8528-a4da64cb853b1654518746889-Levis-Men-Blue-Solid-Denim-Jacket-1521654518746217-1.jpg",
+            brand:"Levis",
+            title:"Men Pure Cotton Casual Shirt",
+            prices:1385,
+            price:"Rs.1385",
+            id:11,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19182554/2022/10/31/709f0fa3-812c-484a-b1a7-cd81c68ca9a01667193043039-US-Polo-Assn-Men-White-Polo-Collar-Slim-Fit-Pure-Cotton-T-sh-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton T-Shirt",
+            prices:1463,
+            price:"Rs.1463",
+            id:12,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18974376/2022/7/27/28d60982-4a8c-4b20-9572-9e5bd9cad0411658919297914-Levis-Men-Red-And-White-Slim-Fit-Floral-Printed-Pure-Cotton--1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Levis",
+            prices:1095,
+            price:"Rs.1095",
+            id:13,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18974120/2022/8/26/bd4b6fbc-91ea-41d9-8846-7508da62a0d51661512076422-Levis-Men-Olive-Green-511-Slim-Fit-Chinos-5771661512075718-1.jpg",
+            brand:"Levis",
+            title:"Men Skinny Fit Mid-Rise Jeans",
+            prices:1885,
+            price:"Rs.1885",
+            id:14,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19182174/2022/12/3/f8628cd9-81e2-430c-a85e-95af6bd7af931670067558531-U-S-Polo-Assn-Men-Grey-Slim-Fit-Chinos-Trousers-301167006755-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            prices:1185,
+            price:"Rs.1185",
+            id:15,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/19023278/2022/8/17/10d4f430-1b81-4a85-bbca-5f432a302bc61660728477674-U-S-Polo-Assn-Men-White-Print-Detail-Polo-Collar-Pure-Cotton-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Denver Slim Fit Chinos",
+            prices:1546,
+            price:"Rs.1546",
+            id:16,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18974056/2022/10/13/a29fe672-8e4a-4eaf-a3ac-27cedae728721665654775783-Levis-Men-Jeans-3271665654775192-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Jeans",
+            prices:1185,
+            price:"Rs.1185",
+            id:17,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17918676/2022/10/6/62789883-c491-4bbe-ac6d-5dafb204b6e11665035081113-U-S-Polo-Assn-Denim-Co-Men-Blue-Brandon-Slim-Tapered-Fit-Hea-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Brandom Slim Tapered Jeans",
+            prices:1707,
+            price:"Rs.1707",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19022052/2022/9/8/92a3817d-0938-4ea4-b40a-962e0ecfff761662637225798USPoloAssnDenimCoMenBlackSkinnyFitLightFadeStretchableJeans1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18973972/2022/7/27/4b9a8df2-d8a5-4070-9c74-0b9327971e951658922719843-Levis-Men-Blue-Relaxed-Fit-Light-Fade-Stretchable-Jeans-8281-1.jpg",
+            brand:"Levis",
+            title:"Men Slim Fit Jeans",
+            prices:1707,
+            price:"Rs.1707",
+            id:20,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19023166/2023/1/24/7beef3db-e762-4b5d-92cc-0747be9dff021674554787569USPoloAssnMenRedPoloCollarPureCottonSlimFitT-shirtwithEmbroi1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Puffer Jacket",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"jacket"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19166730/2022/10/4/6c2acd88-ae84-4e9e-92a7-d5f5671a88ba1664866713354-U-S-Polo-Assn-Men-Tailored-Fit-Conversational-Printed-Pure-C-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Printed Shirt",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/18973786/2022/11/18/3d08c536-e1c1-45e3-9370-544217824e141668755942080-Levis-Men-Blue-512-Slim-Tapered-Mid-Rise-Mildly-Distressed-H-1.jpg",
+            title:"Men Slim Fit Jeans",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20259732/2022/11/2/fd055805-88e7-4dda-bbf3-f83c93fbb7c71667365065191-US-Polo-Assn-Men-Green-Tailored-Fit-Checked-Pure-Cotton-Casu-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Chinos",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19182178/2022/12/3/56548083-9d81-4001-a701-da927e8eb0371670067566397-U-S-Polo-Assn-Men-Tan-Slim-Fit-Wrinkle-Free-Corduroy-Trouser-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/20659498/2022/12/5/4197c08c-7480-4870-ab1c-2ca9d438622d1670231390733-U-S-Polo-Assn-Men-Navy-Blue-And-Sea-Green-Tailored-Fit-Check-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            prices:2015,
+            price:"Rs.2015",
+            id:6,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19166664/2022/9/3/bc70adbf-e6f4-411c-b1e7-332a61b3f7551662187373112-U-S-Polo-Assn-Denim-Co-Men-Navy-Blue--Rust-Red-Slim-Fit-Stri-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Striped Casual Shirt",
+            prices:1385,
+            price:"Rs.1385",
+            id:7,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19182528/2022/11/4/3a766efb-9a21-44ca-abe0-c0d90888eb591667545974431-U-S-Polo-Assn-Denim-Co-Men-Black-Printed-Polo-Collar-Slim-Fi-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Printed Slim Fit Cotton T-Shirt",
+            prices:1199,
+            price:"Rs.1199",
+            id:8,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/20603574/2022/12/5/3f189d96-8b7b-49c8-8193-139adb758b121670232715677-US-Polo-Assn-Men-Red--Navy-Blue-Tailored-Fit-Checked-Pure-Co-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            prices:1439,
+            price:"Rs.1439",
+            id:9,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19167132/2022/9/8/62061819-2a5f-4078-ad11-bb98b541ff211662617812586-U-S-Polo-Assn-Denim-Co-Men-Rust-Red-Solid-Slim-Fit-Pure-Cott-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            id:10,
+            category:"shirt",
+            prices:1345,
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19446092/2022/11/2/dd20e5aa-e4eb-4034-8067-a6472987d91d1667365017743-U-S-Polo-Assn-Men-Pink-Tailored-Fit-Solid-Pure-Cotton-Casual-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton Casual Shirt",
+            prices:1385,
+            price:"Rs.1385",
+            id:11,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19182554/2022/10/31/709f0fa3-812c-484a-b1a7-cd81c68ca9a01667193043039-US-Polo-Assn-Men-White-Polo-Collar-Slim-Fit-Pure-Cotton-T-sh-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Pure Cotton T-Shirt",
+            prices:1463,
+            price:"Rs.1463",
+            id:12,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19022526/2022/11/9/e6e27459-cedf-42f7-8307-8f30f4ce90781667967637939-U-S-Polo-Assn-Denim-Co-Men-Charcoal-Skinny-Fit-Light-Fade-St-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            prices:1095,
+            price:"Rs.1095",
+            id:13,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19023068/2022/8/17/a37033e4-13e0-4e6f-b435-15093a81f2431660728462573-U-S-Polo-Assn-Men-Navy-Blue-Print-Detail-Polo-Collar-Pure-Co-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Skinny Fit Mid-Rise Jeans",
+            prices:1885,
+            price:"Rs.1885",
+            id:14,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19182174/2022/12/3/f8628cd9-81e2-430c-a85e-95af6bd7af931670067558531-U-S-Polo-Assn-Men-Grey-Slim-Fit-Chinos-Trousers-301167006755-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            prices:1185,
+            price:"Rs.1185",
+            id:15,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/19023278/2022/8/17/10d4f430-1b81-4a85-bbca-5f432a302bc61660728477674-U-S-Polo-Assn-Men-White-Print-Detail-Polo-Collar-Pure-Cotton-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Denver Slim Fit Chinos",
+            prices:1546,
+            price:"Rs.1546",
+            id:16,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19023278/2022/8/17/10d4f430-1b81-4a85-bbca-5f432a302bc61660728477674-U-S-Polo-Assn-Men-White-Print-Detail-Polo-Collar-Pure-Cotton-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            prices:1185,
+            price:"Rs.1185",
+            id:17,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17918676/2022/10/6/62789883-c491-4bbe-ac6d-5dafb204b6e11665035081113-U-S-Polo-Assn-Denim-Co-Men-Blue-Brandon-Slim-Tapered-Fit-Hea-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Brandom Slim Tapered Jeans",
+            prices:1707,
+            price:"Rs.1707",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19022052/2022/9/8/92a3817d-0938-4ea4-b40a-962e0ecfff761662637225798USPoloAssnDenimCoMenBlackSkinnyFitLightFadeStretchableJeans1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/19166780/2022/11/2/5e54ad79-c0b6-4cac-ba26-b49e96dadd4f1667364887122-U-S-Polo-Assn-Men-Olive-Green--Navy-Blue-Tailored-Fit-Tartan-1.jpg",
+            brand:"U.S.Polo Assn.",
+            title:"Men Slim Fit Cotton T-Shirt",
+            prices:1707,
+            price:"Rs.1707",
+            id:20,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18723180/2022/11/25/c1ca7e5b-3131-4d5b-8e89-2d08c74e18d21669355764437-Allen-Solly-Junior-Boys-Red-Solid-Round-Neck-Sweatshirt-5191-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Solid Sweatshirt",
+            prices:1707,
+            price:"Rs.1707",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20384110/2022/10/13/141b4c49-b2f3-4efa-9d15-9375aa9f703a1665653948913AllenSollyNavyJeans1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Slim Fit Light Fade Jeans",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17793790/2022/8/25/c43aff3f-6104-4a3e-b1f7-2fc599ed70631661431313232-Allen-Solly-Junior-Boys-Shirts-1631661431313000-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Pure Cotton Casual Shirt",
+            prices:1707,
+            price:"Rs.1707",
+            id:20,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18723208/2022/10/31/6d88d646-4e82-4bd4-8d7a-6ee8693e21e21667205294153-Allen-Solly-Junior-Girls-Peach-Coloured-Printed-Sweatshirt-7-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Men Slim Fit Puffer Jacket",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"jacket"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18720720/2022/10/31/95cbd09a-5ac1-4eb5-b01b-cdcc9c4a8c881667194445094-Allen-Solly-Junior-Boys-Tshirts-3631667194444826-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Girls printed Sweatshirt",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17890388/2022/11/7/07a4e240-e1e9-4673-891a-69fd7e8cce931667820656970-Allen-Solly-Junior-Boys-Red--Navy-Blue-Printed-Pure-Cotton-T-12.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Printed T-T-shirt",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"jacket"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18723928/2022/11/25/3124cfe5-7989-4f29-a07d-80c526a03ee61669355405281-Allen-Solly-Junior-Boys-Purple--Blue-Brand-Logo-Print-Sweats-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Cotton T-shirt Set",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19844584/2022/9/7/510f820c-b715-4625-bbdc-0df1b3fc733c1662574721789AllenSollyGreenShirt1.jpg",
+            brand:"Allen Solly Junior",
+            title:"BOys Printed Sweatshirt",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20690056/2022/11/10/0b08d80c-3b8d-4e1e-a9ca-b987860ed6cd1668065700949BoysOliveSlimFitSolidTrousers1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Slim Fit Casual Shirt",
+            prices:2015,
+            price:"Rs.2015",
+            id:6,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20384106/2022/10/13/84dc2959-b4a6-4c5f-bb07-bfd28ba7f9921665653585581AllenSollyNavyJeans1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Slim Fit Trousers",
+            prices:1385,
+            price:"Rs.1385",
+            id:7,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18720488/2022/8/3/ab12b75b-8a6f-4ea3-987e-4e1b593fc2ff1659523521695-Allen-Solly-Junior-Boys-Shirts-6681659523521201-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Girls Fit & Flare party Dress",
+            prices:1199,
+            price:"Rs.1199",
+            id:8,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/21474688/2023/2/1/2f80b53f-8c34-4ac4-b6d2-d57a476c44771675247426806-Allen-Solly-Junior-Girls-Sequined-Embellished--Fit--Flare-Pa-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Girls Fit & Flare party Dress",
+            prices:1439,
+            price:"Rs.1439",
+            id:9,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18970108/2022/10/28/757bfd73-737b-4e5d-96e9-2efcce2edb9e1666937372653-Allen-Solly-Junior-Girls-Track-Pants-8771666937372380-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Girls Fit & Flare party Dress",
+            id:10,
+            category:"shirt",
+            prices:1345,
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19976034/2023/2/1/00abb2f3-2d2a-42da-b8b0-814428f682441675245358323-Allen-Solly-Junior-Girls-Wide-Leg-Light-Fade-Stretchable-Jea-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Girls Bootleg Track Pants",
+            prices:1385,
+            price:"Rs.1385",
+            id:11,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/21327716/2022/12/28/fd6aabfc-c7a5-44fc-b37a-194dfe4143901672203468385BoysBlueCheckRegularFitWaistcoat1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Checked Waistcoat",
+            prices:1463,
+            price:"Rs.1463",
+            id:12,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20463448/2022/10/19/4d68f3c5-e54b-4fc9-8b2f-d74102dbff261666203618661AllenSollyBlackJeans1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Checked Jeans",
+            prices:1095,
+            price:"Rs.1095",
+            id:13,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17221598/2022/6/16/08c44b01-f205-492e-8e91-3437d660d6341655381071990-Allen-Solly-Junior-Boys-Navy-Blue-Printed-T-shirt-with-Pyjam-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Slim Fit T-shirt",
+            prices:1885,
+            price:"Rs.1885",
+            id:14,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18718502/2022/10/31/9d20eeff-bcd5-4b66-80c8-304abb23d12c1667211285635-Allen-Solly-Junior-Boys-Jackets-301667211285508-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boy Colocblocked Padded Jacket",
+            prices:1185,
+            price:"Rs.1185",
+            id:15,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17891014/2022/9/21/10499ca1-d714-425b-af46-d8513a5be4621663735701954AllenSollyJuniorBoysBlueSlimFitStretchableJeans1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Slim Fit Stretch Jeans",
+            prices:1546,
+            price:"Rs.1546",
+            id:16,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18970300/2022/10/28/bde22492-421f-4286-92af-8681d747d4aa1666947963781-Allen-Solly-Junior-Boys-Shirts-8111666947963281-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Slim Fit Casual Shirt",
+            prices:1185,
+            price:"Rs.1185",
+            id:17,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19844510/2022/9/7/baf9b56c-f66f-469a-ada9-ebc0147641261662575352570AllenSollyPinkShirt1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Slim Fit Casual Cotton Shirt",
+            prices:1707,
+            price:"Rs.1707",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18720844/2022/11/9/b2b0724e-05d0-4a70-ad73-6209cb59c3481667970324287-Allen-Solly-Junior-Girls-Lavender--White-Brand-Logo-Printed--6.jpg",
+            brand:"Allen Solly Junior",
+            title:"Girls Brand Logo Printed Shirt",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18723898/2022/11/25/fbeeea69-730e-4319-995f-760d57290ec21669355487627-Allen-Solly-Junior-Boys-Purple--Blue-Brand-Logo-Print-Sweats-1.jpg",
+            brand:"Allen Solly Junior",
+            title:"Boys Printed Sweatshirt",
+            prices:1707,
+            price:"Rs.1707",
+            id:20,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1954340/2022/8/1/51e97d7c-ddac-4962-8bd3-dad1fd28c1c21659354297144-Ponds-Bright-Beauty-Spot-Less-Glow-Face-Wash-with-Vitamins---1.jpg",
+            brand:"Ponds",
+            title:"Bright Beauty Face Wash 100g",
+            prices:140,
+            price:"Rs.140",
+            id:6,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9548055/2021/11/8/a17b817d-1458-4b86-a83b-8ae7feac6a8e1636364782670-Nova-Men-NHT-1073-USB-Cordless-Trimmer---Black--Blue-5421636-1.jpg",
+            brand:"NOVA",
+            title:"Men NH1 1073 USB Trimmer",
+            prices:529,
+            price:"Rs.529",
+            id:7,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9686499/2022/3/10/53fc95cf-79ef-43f4-98dc-1426899049f01646912705840NiveaMenDarkSpotReductionFaceWashwith10XWhiteningEffect-100g1.jpg",
+            brand:"Nivea",
+            title:"Men Soit Reduction Face Wash",
+            prices:225,
+            price:"Rs.225",
+            id:8,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/365117/2022/7/22/eb4ac3e1-830d-4e76-843a-fb350c7d4eeb1658493717335-Dove-Daily-Shine-Hair-Conditioner-with-Nutritive-Serum-for-S-1.jpg",
+            brand:"Dove",
+            title:"Daily Shine Conditioner",
+            prices:147,
+            price:"Rs.147",
+            id:9,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19469328/2022/11/18/ee1da473-d08a-438b-a21a-8eb6214964c31668773931429-LOreal-Paris-Glycolic-Bright-Skin-Brightening-Serum-to-Reduc-1.jpg",
+            brand:"LOreal",
+            title:"Glycolic Bright Scrum",
+            id:10,
+            prices:279,
+            price:"Rs.279"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10235947/2022/7/22/f1ebc4be-517c-4336-9538-63db299fd3921658491873268-Ponds-Super-Light-Gel-Oil-Free-Moisturiser-With-Hyaluronic-A-1.jpg",
+            brand:"Ponds",
+            title:"Oil Free Moisturiser 73g",
+            prices:85,
+            price:"Rs.85",
+            id:11,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20079820/2022/9/21/047c1e44-6976-4369-a901-409f458749091663743613035FaceMoisturisersLOrealWomenFaceMoisturisersLOrealWomenFaceSe1.jpg",
+            brand:"LOreal Professionnel",
+            title:"Set of Serum-Shampoo-Mask",
+            prices:2380,
+            price:"Rs.2380",
+            id:12,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1444723/2022/4/5/9bc54932-d16a-4679-b4ac-6e60169d3a8e1649151865069-LOreal-Professionnel-Unisex-X-Tenso-Care-Hair-Mask-642164915-1.jpg",
+            brand:"LOreal Professionnel",
+            title:"X-Tenso CAre Hair Mask 196g",
+            prices:612,
+            price:"Rs.612",
+            id:13,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/8979541/2019/6/19/8268aed5-be63-4b62-84d8-f339bcd001031560937473568-Ponds-Women-Makeup-Kit-1481560937473085-1.jpg",
+            brand:"Ponds",
+            title:"Women Magic Talc 400g",
+            prices:296,
+            price:"Rs.296",
+            id:14,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/533234/2022/5/24/46c57c30-1036-41b0-a858-50817fefeb621653393201841-Lotus-Herbals-Sustainable-Safe-Sun-Sunscreen-Breezy-Berry-50-1.jpg",
+            brand:"Lotus Herbals",
+            title:"Sustainable Safe Sun Sunscreen",
+            prices:149,
+            price:"Rs.149",
+            id:15,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/5911028/2021/8/26/3e51e145-aef8-47f6-a580-b31ad37fb3a51629994063490-VEGA-VHSCC-01-3-in-1-Hair-Styler---Black--Gold-Toned-2151629-1.jpg",
+            brand:"VEGA",
+            title:"VHSCC-013-in-1 Hair Styler",
+            prices:1439,
+            price:"Rs.1439",
+            id:16,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2427962/2022/4/19/c51f921d-4e01-4c3e-a838-740146e1d59b1650366020434NeutrogenaUltraSheerDryTouchSunblockSPF501.jpg",
+            brand:"Neutrogena",
+            title:"UltraSheer Dry Touch Sunblock",
+            prices:607,
+            price:"Rs.607",
+            id:17,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10849052/2022/7/1/522008e2-a18c-4a11-a279-719f16e723621656674840302-Maybelline-New-York-Colossal-Volume-Express-Waterproof-Masca-1.jpg",
+            brand:"Maybelline",
+            title:"Waterproof Mascara-Black",
+            prices:296,
+            price:"Rs.296",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11506468/2022/8/22/6b8c938a-6957-470a-9366-3bb953d28f851661177978187AgaroHD-1214HairDryer-Black1.jpg",
+            brand:"Agaro",
+            title:"HD-1214 Hair Dryer",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11855152/2020/6/2/c0071a16-985b-43fc-8b98-9a20cb058a931591092761573-Wahl-79465-224--Extreme-Grip-9591591092760680-1.jpg",
+            brand:"WAHL",
+            title:"Extreme Grip Trimmer",
+            prices:2200,
+            price:"Rs.2200",
+            id:20,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10244851/2021/2/10/32c4b366-a522-4d98-91f0-46d413de66031612945921510-Philips-Women-Heated-Straightening-Brush-with-Thermo-Protect-1.jpg",
+            brand:"Philips",
+            title:"Straitching Brush",
+            prices:3235,
+            price:"Rs.3235",
+            id:1,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9374997/2022/10/3/0c3dc3f5-5db1-42cb-84ba-77bf4c9ec2041664801349030-Philips-HP810046-SalonDry-ThermoProtect-1000W-Compact-Hair-D-1.jpg",
+            brand:"Philips",
+            title:"Salondry Hair Dryer",
+            prices:845,
+            price:"Rs.845",
+            id:2,
+
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15853718/2022/7/18/3302ffaf-5ebe-492f-9436-4f92bf5488401658122011957-Minimalist-SPF-50-PA-Multi-Vitamin-Sunscreen-670165812201146-1.jpg",
+            brand:"Minimalist",
+            title:"Sunscreen",
+            prices:399,
+            price:"Rs.399",
+            id:3,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2137201/2022/4/21/0a71957e-30c2-4642-bbe2-dcf65a3511ac1650523077663-Lakme-Sun-Expert-SPF-50-PA-Ultra-Matte-Sunscreen-50-ml-41316-1.jpg",
+            brand:"Lakme",
+            title:"Sun Empert SPF 50 Sunscreen",
+            prices:260,
+            price:"Rs.260",
+            id:4,
+
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11915238/2021/10/11/e97689dd-24fb-4336-bba7-8b1ea7bb302f1633932426722-Philips-Men-BT310115-Series-3000-Beard-Trimmer---White-25616-1.jpg",
+            brand:"Philips",
+            title:"Beared Trimmer",
+            prices:1001,
+            price:"Rs.1001",
+            id:5,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1954340/2022/8/1/51e97d7c-ddac-4962-8bd3-dad1fd28c1c21659354297144-Ponds-Bright-Beauty-Spot-Less-Glow-Face-Wash-with-Vitamins---1.jpg",
+            brand:"Ponds",
+            title:"Bright Beauty Face Wash 100g",
+            prices:140,
+            price:"Rs.140",
+            id:6,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9548055/2021/11/8/a17b817d-1458-4b86-a83b-8ae7feac6a8e1636364782670-Nova-Men-NHT-1073-USB-Cordless-Trimmer---Black--Blue-5421636-1.jpg",
+            brand:"NOVA",
+            title:"Men NH1 1073 USB Trimmer",
+            prices:529,
+            price:"Rs.529",
+            id:7,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9686499/2022/3/10/53fc95cf-79ef-43f4-98dc-1426899049f01646912705840NiveaMenDarkSpotReductionFaceWashwith10XWhiteningEffect-100g1.jpg",
+            brand:"Nivea",
+            title:"Men Soit Reduction Face Wash",
+            prices:225,
+            price:"Rs.225",
+            id:8,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/365117/2022/7/22/eb4ac3e1-830d-4e76-843a-fb350c7d4eeb1658493717335-Dove-Daily-Shine-Hair-Conditioner-with-Nutritive-Serum-for-S-1.jpg",
+            brand:"Dove",
+            title:"Daily Shine Conditioner",
+            prices:147,
+            price:"Rs.147",
+            id:9,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19469328/2022/11/18/ee1da473-d08a-438b-a21a-8eb6214964c31668773931429-LOreal-Paris-Glycolic-Bright-Skin-Brightening-Serum-to-Reduc-1.jpg",
+            brand:"LOreal",
+            title:"Glycolic Bright Scrum",
+            id:10,
+            prices:279,
+            price:"Rs.279"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10235947/2022/7/22/f1ebc4be-517c-4336-9538-63db299fd3921658491873268-Ponds-Super-Light-Gel-Oil-Free-Moisturiser-With-Hyaluronic-A-1.jpg",
+            brand:"Ponds",
+            title:"Oil Free Moisturiser 73g",
+            prices:85,
+            price:"Rs.85",
+            id:11,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20079820/2022/9/21/047c1e44-6976-4369-a901-409f458749091663743613035FaceMoisturisersLOrealWomenFaceMoisturisersLOrealWomenFaceSe1.jpg",
+            brand:"LOreal Professionnel",
+            title:"Set of Serum-Shampoo-Mask",
+            prices:2380,
+            price:"Rs.2380",
+            id:12,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1444723/2022/4/5/9bc54932-d16a-4679-b4ac-6e60169d3a8e1649151865069-LOreal-Professionnel-Unisex-X-Tenso-Care-Hair-Mask-642164915-1.jpg",
+            brand:"LOreal Professionnel",
+            title:"X-Tenso CAre Hair Mask 196g",
+            prices:612,
+            price:"Rs.612",
+            id:13,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/8979541/2019/6/19/8268aed5-be63-4b62-84d8-f339bcd001031560937473568-Ponds-Women-Makeup-Kit-1481560937473085-1.jpg",
+            brand:"Ponds",
+            title:"Women Magic Talc 400g",
+            prices:296,
+            price:"Rs.296",
+            id:14,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/533234/2022/5/24/46c57c30-1036-41b0-a858-50817fefeb621653393201841-Lotus-Herbals-Sustainable-Safe-Sun-Sunscreen-Breezy-Berry-50-1.jpg",
+            brand:"Lotus Herbals",
+            title:"Sustainable Safe Sun Sunscreen",
+            prices:149,
+            price:"Rs.149",
+            id:15,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/5911028/2021/8/26/3e51e145-aef8-47f6-a580-b31ad37fb3a51629994063490-VEGA-VHSCC-01-3-in-1-Hair-Styler---Black--Gold-Toned-2151629-1.jpg",
+            brand:"VEGA",
+            title:"VHSCC-013-in-1 Hair Styler",
+            prices:1439,
+            price:"Rs.1439",
+            id:16,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2427962/2022/4/19/c51f921d-4e01-4c3e-a838-740146e1d59b1650366020434NeutrogenaUltraSheerDryTouchSunblockSPF501.jpg",
+            brand:"Neutrogena",
+            title:"UltraSheer Dry Touch Sunblock",
+            prices:607,
+            price:"Rs.607",
+            id:17,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10849052/2022/7/1/522008e2-a18c-4a11-a279-719f16e723621656674840302-Maybelline-New-York-Colossal-Volume-Express-Waterproof-Masca-1.jpg",
+            brand:"Maybelline",
+            title:"Waterproof Mascara-Black",
+            prices:296,
+            price:"Rs.296",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11506468/2022/8/22/6b8c938a-6957-470a-9366-3bb953d28f851661177978187AgaroHD-1214HairDryer-Black1.jpg",
+            brand:"Agaro",
+            title:"HD-1214 Hair Dryer",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11855152/2020/6/2/c0071a16-985b-43fc-8b98-9a20cb058a931591092761573-Wahl-79465-224--Extreme-Grip-9591591092760680-1.jpg",
+            brand:"WAHL",
+            title:"Extreme Grip Trimmer",
+            prices:2200,
+            price:"Rs.2200",
+            id:20,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20170404/2022/9/26/d12333d1-fcac-42b3-935d-f1bd47b0b3831664180822865Handbags1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1385,
+            price:"Rs.1385",
+            id:11,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16006064/2021/11/3/487adef2-7527-4cbf-b7f7-a9ae02a0c6b11635945196569CarltonLondonsportsMenGreySolid1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Pure Cotton T-bag",
+            prices:1463,
+            price:"Rs.1463",
+            id:12,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13512466/2023/1/25/dfdc6374-c668-4e50-a364-d7757cdf1cc21674639423330GearUnisexBlackGreyColourblockedCross-TrainingDuffelBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1095,
+            price:"Rs.1095",
+            id:13,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15176298/2021/8/17/8205640d-a6ed-4e0f-b1bd-e7c01f6d3fec1629223351147CarltonLondonsportsWomenGreySolid1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Skinny Fit Mid-Rise Jeans",
+            prices:1885,
+            price:"Rs.1885",
+            id:14,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/8376999/2022/7/13/88f9f214-664f-4ebe-8676-0a306efbe6b11657702306426-Lino-Perros-Off-White-Quilted-Handheld-Bag-1691657702305546-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1185,
+            price:"Rs.1185",
+            id:15,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20011570/2022/9/17/baa82fe4-22e3-4005-adae-6f5dafe6ac441663387938675CarltonLondonsportsWomenWhitePrintedSneakers1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Denver Slim Fit Chinos",
+            prices:1546,
+            price:"Rs.1546",
+            id:16,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10281957/2023/1/25/564e612d-5184-4333-82f1-161f8c16b9bd1674639188038WildcraftUnisexGreenPrintedFlipDuf2DuffelBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1185,
+            price:"Rs.1185",
+            id:17,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/1/11/474f1a3e-73b9-4716-aa00-e8f01e2f3e721610364676924-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Brandom Slim Tapered Jeans",
+            prices:1707,
+            price:"Rs.1707",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13171870/2021/1/19/aef71636-3fad-4a06-9dff-25179997dea61611038593172-Safari-Unisex-Printed-Hardsided-Super-Size-Trolley-Bag-26816-7.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/21683812/2023/1/25/11ecb486-1722-4c63-a0c5-bd351d2986291674622633637ASTRIDDuffleTravelBagForMenWithSlingRegularSize1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1707,
+            price:"Rs.1707",
+            id:20,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10186487/2022/11/7/d2524182-5a38-49b5-bc40-f178fb26de841667825440582LavieWomenMintGreenSolidStructuredHandheldBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19230164/2022/7/23/812b9cfb-ebab-48e2-9c8d-2ff7ac2c1e801658555273412DuffelBag1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Printed bag",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2453349/2021/11/16/a030e6c6-b1b1-4af9-99fb-ff46493b4eb41637061961368-HRX-by-Hrithik-Roshan-Unisex-Black-Solid-Training-Duffel-Bag-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20011564/2022/9/16/d231bc0a-d1c0-4ac8-bc1e-c6e7bff235e91663332929446CarltonLondonsportsWomenWhiteSneakers1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Chinos",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18059100/2022/4/27/18207c76-bec4-4289-bcbb-dee37b95bf0c1651066412789CarltonLondonsportsWomenLavenderFlipFlops1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/12/30/88a3d345-84f1-4e41-a37e-64b89932a9671609335974998-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9137557/2019/4/24/5ff8d9b7-b517-4a81-9a69-9282490c70e41556107194454-Tommy-Hilfiger-Printed-Bold-branding-with-signature-tape-992-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Printed bag",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16682388/2022/1/5/742a1a02-77a4-4a97-91fd-956b1d57ef431641372615551CarltonLondonsportsWomenBlackBallerinaswithBowsFlats1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15197988/2021/10/1/d9be02e3-9761-43f0-b78c-1fe86bc84dbe1633067201409-Tommy-Hilfiger-Unisex-Trolley-Bag-8751633067201056-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Chinos",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15770552/2021/10/7/abe2efbf-32cd-4a48-89fc-ac1baeda88e81633625091889CarltonLondonsportsWomenGreySolid1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13800844/2021/10/25/95beb287-3b9f-4e7b-9d4d-ef1c3eef29a01635162681161-Tommy-Hilfiger-Unisex-Trolley-Bag-3641635162680763-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Pure Cotton Casual bag",
+            prices:2015,
+            price:"Rs.2015",
+            id:6,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13410812/2021/11/16/522e889d-a44a-4d7e-9c29-b6d5e4155cef1637064504692-Carlton-London-sports-Women-Grey--White-Printed-Sliders-2081-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Striped Casual bag",
+            prices:1385,
+            price:"Rs.1385",
+            id:7,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9137517/2019/4/24/3faa54a1-0dd6-47fd-9027-40c4f8e77c0c1556107187029-Tommy-Hilfiger-Branded-fine-lining-Water-resistance-77215561-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Printed Slim Fit Cotton T-bag",
+            prices:1199,
+            price:"Rs.1199",
+            id:8,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/12/19/e02c1fca-1a1b-4a4f-b37e-6a500b1bcb731608353365874-1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1439,
+            price:"Rs.1439",
+            id:9,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/13/3381916c-ea30-4db4-b053-eaa9e8c0c59c1602543651733-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Pure Cotton Casual bag",
+            id:10,
+            category:"bag",
+            prices:1345,
+            price:"Rs.1345"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20170404/2022/9/26/d12333d1-fcac-42b3-935d-f1bd47b0b3831664180822865Handbags1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1385,
+            price:"Rs.1385",
+            id:11,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16006064/2021/11/3/487adef2-7527-4cbf-b7f7-a9ae02a0c6b11635945196569CarltonLondonsportsMenGreySolid1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Pure Cotton T-bag",
+            prices:1463,
+            price:"Rs.1463",
+            id:12,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13512466/2023/1/25/dfdc6374-c668-4e50-a364-d7757cdf1cc21674639423330GearUnisexBlackGreyColourblockedCross-TrainingDuffelBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1095,
+            price:"Rs.1095",
+            id:13,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15176298/2021/8/17/8205640d-a6ed-4e0f-b1bd-e7c01f6d3fec1629223351147CarltonLondonsportsWomenGreySolid1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Skinny Fit Mid-Rise Jeans",
+            prices:1885,
+            price:"Rs.1885",
+            id:14,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/8376999/2022/7/13/88f9f214-664f-4ebe-8676-0a306efbe6b11657702306426-Lino-Perros-Off-White-Quilted-Handheld-Bag-1691657702305546-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1185,
+            price:"Rs.1185",
+            id:15,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20011570/2022/9/17/baa82fe4-22e3-4005-adae-6f5dafe6ac441663387938675CarltonLondonsportsWomenWhitePrintedSneakers1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Denver Slim Fit Chinos",
+            prices:1546,
+            price:"Rs.1546",
+            id:16,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10281957/2023/1/25/564e612d-5184-4333-82f1-161f8c16b9bd1674639188038WildcraftUnisexGreenPrintedFlipDuf2DuffelBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1185,
+            price:"Rs.1185",
+            id:17,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/1/11/474f1a3e-73b9-4716-aa00-e8f01e2f3e721610364676924-1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Brandom Slim Tapered Jeans",
+            prices:1707,
+            price:"Rs.1707",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13171870/2021/1/19/aef71636-3fad-4a06-9dff-25179997dea61611038593172-Safari-Unisex-Printed-Hardsided-Super-Size-Trolley-Bag-26816-7.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/21683812/2023/1/25/11ecb486-1722-4c63-a0c5-bd351d2986291674622633637ASTRIDDuffleTravelBagForMenWithSlingRegularSize1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Cotton T-bag",
+            prices:1707,
+            price:"Rs.1707",
+            id:20,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10186487/2022/11/7/d2524182-5a38-49b5-bc40-f178fb26de841667825440582LavieWomenMintGreenSolidStructuredHandheldBag1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:1385,
+            price:"Rs.1385",
+            id:1,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19230164/2022/7/23/812b9cfb-ebab-48e2-9c8d-2ff7ac2c1e801658555273412DuffelBag1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Printed bag",
+            prices:1785,
+            price:"Rs.1785",
+            id:2,
+            category:"bag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2453349/2021/11/16/a030e6c6-b1b1-4af9-99fb-ff46493b4eb41637061961368-HRX-by-Hrithik-Roshan-Unisex-Black-Solid-Training-Duffel-Bag-1.jpg",
+            brand:"Puma",
+            title:"Men Slim Fit Puffer shoes",
+            prices:4885,
+            price:"Rs.4885",
+            id:3,
+            category:"shoes"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20011564/2022/9/16/d231bc0a-d1c0-4ac8-bc1e-c6e7bff235e91663332929446CarltonLondonsportsWomenWhiteSneakers1.jpg",
+            brand:"Tommy Hilfiger",
+            title:"Men Slim Fit Chinos",
+            prices:1707,
+            price:"Rs.1707",
+            id:4,
+            category:"tbag"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18059100/2022/4/27/18207c76-bec4-4289-bcbb-dee37b95bf0c1651066412789CarltonLondonsportsWomenLavenderFlipFlops1.jpg",
+            brand:"Puma",
+            title:"Men Pure Cotton Casual bag",
+            prices:1375,
+            price:"Rs.1375",
+            id:5,
+            category:"bag"
+        },
+        
+];
+
+for(let a = 0; a < homeData.length; a++)
+{
+    home.push(homeData[a])
+}
+
+
+function displayData(data)
+{
+    cont.innerHTML = null;
+    slide.innerHTML = null;
+    topData.innerHTML = null;
+    data.forEach(product => {
+        let card = document.createElement("div");
+        let img = document.createElement("img");
+        let brand = document.createElement("h3");
+        let title = document.createElement("p");
+        let price = document.createElement("h4");
+        let btnDiv = document.createElement("div");
+        let addtocart = document.createElement("button");
+        let wishlist = document.createElement("button");
+
+        // count.textContent = USPolo.length;
+        img.src = product.img;
+        brand.textContent = product.brand;
+        title.textContent = product.title;
+        price.textContent = product.price;
+        addtocart.innerText = "Add To Cart";
+        wishlist.textContent = "Wishlist";
+        
+        wishlist.addEventListener("click",()=> {
+            if(checkDuplicatesave(product))
+            {
+                alert("Product Already in Wishlist")
+            }
+            else
+            {
+                save.push({...product,quantity:1})
+                localStorage.setItem("save",JSON.stringify(save));
+                alert("Product Added to Wishlist")
+            }
+        })
+
+        addtocart.addEventListener("click",()=>{
+            if(checkDuplicate(product))
+            {
+                alert("This porduct already in the Cart")
+            }
+            else
+            {
+              cart.push({...product,quantity:1});
+            localStorage.setItem("cart",JSON.stringify(cart));
+                alert("Product added to the Cart")
+            }
+            
+        })
+
+
+function checkDuplicate(product){
+    for(let a = 0; a < cart.length; a++)
+    {
+        if(cart[a].id === product.id)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+function checkDuplicatesave(product)
+{
+    for(let a = 0; a < save.length; a++)
+    {
+        if(save[a].id === product.id)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+        cont.append(card);
+        card.append(img,brand,title,price,btnDiv)
+        btnDiv.append(addtocart,wishlist)
+    });
+}
+
+searchbtn.addEventListener("click",()=> {
+    if(searchInp.value === "")return false
+    else{
+       let filteredData = home.filter((product)=> {
+        if(product.title.toUpperCase().includes(searchInp.value.toUpperCase()))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    })
+    displayData(filteredData) 
+    }
+    
+})
+
+searchInp.addEventListener("onkeyup",()=> {
+    if(searchInp.value === "")return false
+    else{
+       let filteredData = home.filter((product)=> {
+        if(product.title.toUpperCase().includes(searchInp.value.toUpperCase()))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    })
+    displayData(filteredData) 
+    }
+    
+})
+</script>
 </html>

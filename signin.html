@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNAPMALL | SIGN-IN</title>
+    <style>
+        body{
+            background-image: url("https://t4.ftcdn.net/jpg/04/60/71/01/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        form{
+          /* border: 3px solid red; */
+          width: 250px;
+          height: 215px;
+          margin: auto auto;
+          padding: 30px;
+          background: rgb(78, 109, 78);
+          color: white;
+          margin-top: 170px;
+          border-radius: 10px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        form > input{
+          /* line-height: 20px; */
+          display: block;
+          background: rgb(241, 241, 241);
+          border: 1px solid black;
+          margin-top: 20px;
+          padding: 9px;
+          width: 90%;
+          border-radius: 15px;
+          padding-left: 20px;
+        }
+        #btn{
+          width: 50%;
+          margin: auto;
+          margin-top: 30px;
+          font-size: 15px;
+          color: white;
+          background: rgb(61, 101, 61);
+          border: none;
+          transition: all 0.4s;
+        }
+        #btn:hover{
+            transform: scale(1.1);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="index.html"></a>
+      <a href="signup.html"></a>
+      <a href="./signin.html"></a>
+    </div>
+    <div id="signin">
+        <form>
+          <h4 id="heading">Please Sign-in</h4>
+        <input type="email" id="email" placeholder="Enter your email" />
+        <input type="password" id="password" placeholder="Enter your password"/>
+        <input type="submit" value="Signin" id="btn" />
+      </form>
+    </div>
+  </body>
+  <script>
+    let data = JSON.parse(localStorage.getItem("sign-upData")) || [];
+    let heading = document.getElementById("heading");
+    let submitbtn = document.querySelector("form");
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    
+
+    submitbtn.addEventListener("submit",(e) => {
+      e.preventDefault();
+      data.forEach(element => {
+        if(email.value === ""  && password.value  === "")
+        {
+            heading.textContent = "Please enter details"
+        }
+       else if(element.email === email.value && element.password === password.value)
+        {
+          location.href = "index.html"
+        }
+        else
+        {
+          heading.innerText = "Please enter valid details"
+          
+        }
+      });
+    })
+    
+  </script>
+</html>

@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAPMALL | ONLINE SHOPPING</title>
+    <link rel="icon" href="IMG/wolf.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        *{
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        #nav{
+            display: flex;
+            /* border: 3px solid red; */
+            align-items: center;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin: auto;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            font-size: 12px;
+            height: 60px;
+            color: rgb(59, 57, 57);
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        #nav > div{
+            /* border: 1px solid black; */
+            display: flex;
+            
+        }
+        
+        #nav > div > a {
+            /* border: 3px solid red; */
+            text-decoration: none;
+            color: rgb(48, 47, 47);
+        }
+        #nav > div:nth-child(1)
+        {
+            /* border: 1px solid red; */
+            width: 5%;
+        }
+        #nav > div img{
+            /* border: 3px solid red; */
+            width: 70%;
+        }
+        #nav > div > a span{
+            /* border: 3px solid red; */
+            display: flex;
+            align-items: start;
+            font-size: 7px;
+            color: rgb(235, 153, 0);
+            margin-top: -10px;
+            justify-content: end;
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            width: 30%;
+            
+        }
+        .search #search{
+            padding: 4px 8px;
+            border: 1px solid black;
+            background: rgb(249, 249, 249);
+            width: 100%;
+        }
+        
+        #nav > div .fa-solid{
+            /* border: 3px solid red; */
+            margin-left: -25px;
+        }
+        #nav > div .dis{
+            display: block;
+            margin-left: 7px;
+            font-size: 14px; 
+        }
+        #nav .profile{
+            margin-left: 10px;
+        }
+        #nav > div > a:hover{
+            text-decoration: none;
+            color: rgb(255, 103, 128);
+        }
+        #nav .dis{
+            /* border: 3px solid red;  */
+            display: block;
+            margin-left: 4px;
+            font-size: 14px; 
+        }
+        #nav a{
+            color: rgb(48, 47, 47);
+            text-decoration: none;
+        }
+        #nav a:hover{
+            text-decoration: none;
+            color: rgb(255, 103, 128);
+        }
+        
+        .abs{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -7%;
+            top: 60px;
+            display: none;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-top: 3px solid orange;
+            padding: 20px;
+        }
+        .absolute:hover .abs{
+            display: block;
+        }
+        .abs1{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -11%;
+            top: 60px;
+            border-top: 3px solid orange;
+            display: none;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute1:hover .abs1{
+            display: block;
+        }
+        .abs2{
+            position: absolute;
+            height: 270px;
+            width: 60%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -17%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute2:hover .abs2{
+            display: block;
+        }
+        .abs3{
+            position: absolute;
+            height: 350px;
+            width: 90%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -22%;
+            top: 60px;
+            display: none;
+            border-top: 3px solid orange;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute3:hover .abs3{
+            display: block;
+        }
+        .abs4{
+            position: absolute;
+            height: 280px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -30%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute4:hover .abs4{
+            display: block;
+        }
+        .abs5{
+            position: absolute;
+            height: 350px;
+            width: 70%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -40%;
+            top: 60px;
+            display: none;
+            padding: 20px;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .absolute5:hover .abs5{
+            display: block;
+        }
+        .abs6{
+            position: absolute;
+            height: 200px;
+            width: 18%;
+            background: white;
+            /* border: 1px solid black; */
+            margin-left: -8%;
+            top: 60px;
+            display: none;
+            border-top: 3px solid orange;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            /* border-top: 3px solid red; */
+            border-top-width: 3px;
+            padding: 20px;
+            padding: 10px;
+        }
+        .absolute6:hover .abs6{
+            display: block;
+        }
+        .abs6 h2{
+            color: rgb(48, 47, 47);
+        }
+        .abs6 button{
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            background: orange;
+        }
+        #order a{
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+            font-size: 20px;
+            justify-content: space-between;
+        }
+        #bag{
+            margin-right: 10px;
+            /* border: 2px solid black; */
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .fa-heart{
+            display: block;
+            margin-left: 10px;
+            font-size: 17px;
+            
+        }
+        #cont > div:hover{
+            background: #faf9f9;
+        }
+        #cont > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+        #cont > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont{
+         display: flex;
+        }
+        #cont-1 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-1 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-1 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-1 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-1{
+         display: flex;
+        }
+        #cont-2 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-2 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-2 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-2 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-2{
+         display: flex;
+        }
+        #cont-3 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-3 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-3 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-3 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-3{
+         display: flex;
+        }
+        #cont-4 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-4 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-4 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-4 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-4{
+         display: flex;
+        }
+        #cont-5 > div:hover{
+            background: #faf9f9;
+        }
+        #cont-5 > div{
+         padding: 20px;
+         /* border: 3px solid red; */
+     }
+     #cont-5 > div p{
+            margin-bottom: 20px;
+            color: orange;
+        }
+        #cont-5 > div a{
+            display: block;
+            line-height: 30px;
+            /* margin-top: 10px; */
+            color: rgb(111, 109, 109);
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        #cont-5{
+         display: flex;
+        }
+        #footer{
+            background: rgb(248, 248, 248);
+
+        }
+        #footer > div{
+            margin-top: 80px;
+            width: 70%;
+            margin: auto;
+            padding: 30px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #footer > div p{
+            color: rgb(74, 73, 73);
+            font-size: 13px;
+        }
+        #footer > div a{
+            display: block;
+            text-decoration: none;
+            font-size: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 23px;
+            color: rgb(115, 114, 114);
+        }
+        #popularSearches{
+            width: 70%;
+            color: rgb(90, 88, 88);
+        }
+        #popularSearches > div p{
+            color: rgb(139, 139, 139);
+            /* border: 3px solid red; */
+            font-size: 12px;
+            font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #top{
+            display: flex;
+            padding-right: 30px;
+        }
+        #left-side{
+            font-size: 12px;
+            /* border: 3px solid red; */
+            width: 35%;
+        }
+        .lite-black{
+            color: rgb(80, 80, 80);
+            font-size: 11px;
+        }
+        #filter{
+            display: flex;
+            align-items: center;
+            width: 15%;
+            justify-content: space-between;
+        }
+        .size{
+            font-size: 10px;
+            color: red;
+        }
+        #left-side > div:nth-child(1)
+        {
+            /* border: 3px solid red; */
+            width: 100%;
+            margin-left: 30px;
+        }
+        #left-side > div:nth-child(2)
+        {
+            /* border: 3px solid red; */
+            width: 100%;
+            margin-left: 30px;
+        }
+        #left-side > div:nth-child(3)
+        {
+            width: 85%;
+            margin-left: 30px;
+        }
+        #left-side > .block{
+            border: 1px solid rgb(182, 182, 182);
+            display: block;
+            width: 100%;
+            padding-left: 25px;
+            margin-left: 0px;
+            color: rgb(125, 125, 125);
+            /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+            padding-top: 12px;
+            padding-bottom: 12px;
+            font-size: 11px;
+        }
+        #left-side > .block > p:nth-child(1)
+        {
+            color: rgb(35, 35, 35);
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #right-side{
+            /* border: 3px solid red; */
+            margin-left: 20px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 20px 20px;
+        }
+        #right-side > div{
+            padding: 5px;
+            transition: all 0.4s;
+        }
+        #right-side > div:hover{
+            transform: scale(1.1);
+            /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+        }
+        #right-side > div img{
+            width: 100%;
+        }
+        #right-side > div p{
+            font-size: 10px;
+            color: rgb(48, 48, 48);
+        }
+        #right-side > div h4{
+            /* border: 3px solid red; */
+            font-size: 12px;
+        }
+        #right-side > div > div{
+            /* border: 3px solid red; */
+            display: flex;
+            justify-content: space-between;
+        }
+        #right-side > div > div{
+            /* border: 3px solid red; */
+            display: flex;
+            justify-content: space-around;
+        }
+        #right-side > div > div > button{
+            border: none;
+            color: white;
+            background: rgb(255, 123, 145);
+            padding: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #right-side > div > div > button:hover{
+            transform: scale(1.1);
+        }
+        #right-side > div > div > button{
+            transition: all 0.2s;
+        }
+        #right-side h3{
+            /* border: 3px solid red; */
+            font-size: 16px;
+        }
+        @media only screen and (max-width:500px){
+            #nav .absolute{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute1{
+                display: none;
+            }
+            #nav .absolute2{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute3{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute4{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute5{
+                display: none;
+                margin: auto;
+            }
+            #search{
+                border-radius: 12px;
+            }
+            #search::placeholder{
+                color:transparent;
+                /* display: none; */
+            }
+            #nav > div > a img{
+                width: 100%;
+            }
+            
+            #left-side{
+                display: none;
+            }
+            #right-side{
+                grid-template-columns: repeat(3,1fr);
+            }
+            #right-side > div > div > button{
+                font-size: 8px;
+                width: 48%;
+            }
+        }
+        @media only screen and (min-width:501px) and (max-width:950px){
+            #nav .absolute{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute1{
+                display: none;
+            }
+            #nav .absolute2{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute3{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute4{
+                margin: auto;
+                display: none;
+            }
+            #nav .absolute5{
+                display: none;
+                margin: auto;
+            }
+            #search{
+                border-radius: 12px;
+            }
+            #search::placeholder{
+                color: transparent;
+            }
+            #nav > div > a img{
+                width: 100%;
+            }
+            #left-side{
+                display: none;
+            }
+            #right-side{
+                grid-template-columns: repeat(5,1fr);
+            }
+            #right-side > div > div > button{
+                font-size: 8px;
+                width: 48%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            
+            <div><a href="./index.html"><img src="./IMG/logo.jpg" alt="BrandLogo"></a></div>
+            <div class="absolute"><a href="./man.html"  class="absolute">MEN</a>
+            <div class="abs">
+                <div id="cont">
+                   <div>
+                    <p>Topwear</p>
+                    <a href="">All Top Wear</a>
+                    <a href="">Tshirts</a>
+                    <a href="">Shirts</a>
+                </div>
+                <div>
+                    <p>Bottomwear</p>
+                    <a href="">Track pants</a>
+                    <a href="">Jeans</a>
+                    <a href="">Trouser</a>
+                </div>
+                <div>
+                    <p>Men Accessories</p>
+                    <a href="">All Men Accessories</a>
+                    <a href="">Watches</a>
+                    <a href="">Belts</a>
+                    <a href="">Wallets</a>
+                    <a href="">Jewellery</a>
+                    <a href="">Sunglasses</a>
+                    <a href="">Bags</a>
+                </div>
+                <div>
+                    <p>Man Footwear</p>
+                    <a href="">Casuals Shoes</a>
+                    <a href="">Sports Shoes</a>
+                    <a href="">Sandals</a>
+                    <a href="">Formal Shoes</a>
+                </div>
+                <div>
+                    <p>Ethnic Wear</p>
+                    <a href="">Men Kurtas</a>
+                    <a href="">Ethnic Jackets</a>
+                </div>
+                <div>
+                    <p>Inner & Sleepwear</p>
+                    <a href="">All Inner & Sleep Wear</a>
+                    <a href="">Vests</a>
+                </div>  
+                </div>
+               
+            </div></div>
+            <div class="absolute1"><a href="./women.html" >WOMEN</a>
+            <div class="abs1">
+                <div id="cont-1">
+                    <div>
+                     <p>Topwear</p>
+                     <a href="">Tops</a>
+                     <a href="">Dresses</a>
+                     <a href="">Sweaters</a>
+                     <a href="">Jumpsuits</a>
+                 </div>
+                 <div>
+                     <p>Bottomwear</p>
+                     <a href="">Jeans</a>
+                     <a href="">Jaggings</a>
+                     <a href="">Palazzos</a>
+                     <a href="">Shorts</a>
+                     <a href="">Skirts</a>
+                 </div>
+                 <div>
+                     <p>Innerwear</p>
+                     <a href="">Bra</a>
+                     <a href="">Briefs</a>
+                 </div>
+                 <div>
+                     <p>Sleepwear</p>
+                     <a href="">Nightsuits</a>
+                     <a href="">Babydolls</a>
+                 </div>  
+                 </div>
+            </div></div>
+            <div class="absolute2"><a href="./kids.html" >KIDS</a>
+            <div class="abs2">
+                <div id="cont-2">
+                    <div>
+                     <p>Boys & Girls+2 Years</p>
+                     <a href="">Dresses</a>
+                 </div>
+                 <div>
+                     <p>Infant 0-2 Years</p>
+                     <a href="">Rompers</a>
+                 </div>
+                 <div>
+                     <p>Toys & Accessories</p>
+                     <a href="">Soft Toys</a>
+                     <a href="">Footwears</a>
+                     <a href="">Stationaries</a>
+                     <a href="">Watches</a>
+                     <a href="">Bags & Backpacks</a>
+                 </div>
+                 <div>
+                     <p>Baby Care</p>
+                     <a href="">All Baby Care</a>
+                 </div> 
+                 </div>
+            </div></div>
+            <div class="absolute3"><a href="./home&living.html">HOME & LIVING</a>
+            <div class="abs3">
+                <div id="cont-3">
+                    <div>
+                     <p>Home Furnishing</p>
+                     <a href="">Badsheets</a>
+                     <a href="">Doormates</a>
+                     <a href="">Curtains & Sheers</a>
+                     <a href="">Cushions & Cushion Covers</a>
+                     <a href="">Mattress Protectors</a>
+                 </div>
+                 <div>
+                     <p>Home Decor</p>
+                     <a href="">All Home Decor</a>
+                     <a href="">Stickers</a>
+                     <a href="">Clock</a>
+                     <a href="">Showpieces</a>
+                 </div>
+                 <div>
+                     <p>Kitchen & Dining</p>
+                     <a href="">Kitchen Storage</a>
+                     <a href="">Cookware & Bakeware</a>
+                     
+                 </div> 
+                 </div>
+            </div></div>
+            <div class="absolute4"><a href="./beauty.html" >BEAUTY & HEALTH</a>
+            <div class="abs4">
+                <div id="cont-4">
+                    <div>
+                     <p>Make up</p>
+                     <a href="">Face</a>
+                     <a href="">Eyes</a>
+                     <a href="">Lips</a>
+                     <a href="">Nails</a>
+                 </div>
+                 <div>
+                     <p>Wellness</p>
+                     <a href="">Senitizers</a>
+                     <a href="">Oral Care</a>
+                     <a href="">Feminine Hygiene</a>
+                 </div>
+                 <div>
+                     <p>Skincare</p>
+                     <a href="">Deodorants</a>
+                 </div>
+                 </div>
+            </div></div>
+            <div class="absolute5"><a href="./bag&footwear.html"><span>NEW</span>BAGS & FOOTWEAR </a><div class="abs5">
+                <div id="cont-5">
+                    <div>
+                     <p>Men Bags</p>
+                     <a href="">All Women Bags</a>
+                     <a href="">Handbags</a>
+                     <a href="">Clutches</a>
+                     <a href="">Slingbags</a>
+                 </div>
+                 <div>
+                     <p>Woman Bags</p>
+                     <a href="">All Men Bags</a>
+                     <a href="">Men Wallets</a>
+                     
+                 </div>
+                 <div>
+                     <p>Men Footwear</p>
+                     <a href="">Sports Shoes</a>
+                     <a href="">Casual Shoes</a>
+                     <a href="">Formal Shoes</a>
+                     <a href="">Sandals</a>
+                     
+                 </div>
+                 <div>
+                     <p>Woman Footwear</p>
+                     <a href="">Flats</a>
+                     <a href="">Bellies</a>
+                     <a href="">Juttis</a>
+                     
+                 </div>  
+                 </div>
+            </div></div> 
+            
+            
+            <div class="search">
+                <input type="text" id="search"  placeholder="Search for produts,brands & more"><i class="fa-solid fa-magnifying-glass" id="searchbtn"></i>
+                
+            </div>
+            
+            
+            <div class="absolute6"> <a href="" ><i class="fa-regular fa-user dis profile"></i> Profile</a>
+            <div class="abs6">
+                <h2>Hello User</h2>
+                <p>To access your Snapmall account</p>
+                <a href="./signup.html"><button>Sign Up</button></a>
+                <hr>
+                <div id="order">
+
+                   <a href="./order.html"><i class="fa-solid fa-bag-shopping" id="bag"><span>My Orders</span> </i></a>
+                    
+                </div>
+            </div></div>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping dis"></i>Cart</a>
+             <a href="./wishlist.html"><i class="fa-sharp fa-regular fa-heart"></i>Wishlist</a>
+            </nav>
+    </header>
+
+    <div id="top">
+        <div id="left-side">
+            <div><p><span class="lite-black">Home / Clothing / </span> Personal Care</p></div>
+            <div><p>Personal Care <span class="lite-black" id="count">0</span><span class="lite-black"> items</span></p></div>
+            <div id="filter"><p>FILTERS</p><span class="size">CLEAR ALL</span></div>
+            <div class="block">
+                <p>CATEGORIES</p>
+                 <p><input type="checkbox">Lipstick</p>
+                 <p><input type="checkbox">Nail Poslish</p>
+                 <p><input type="checkbox">Perfume and Body Mist</p>
+                 <p><input type="checkbox">Beauty Accessory</p>
+                 <p><input type="checkbox">Body Wash and Scrub</p>
+                 <p><input type="checkbox">Body Oil</p>
+                 <p><input type="checkbox">Shampoo & Conditioner</p>
+                 <p><input type="checkbox">Facewash & Cleanser</p>
+            </div>
+            <div class="block">
+                <p>BRAND</p>
+                 <p><input type="checkbox">Deve Herbes</p>
+                 <p><input type="checkbox">Comet Busters</p>
+                 <p><input type="checkbox">MI FASHION</p>
+                 <p><input type="checkbox">SWISS BEAUTY</p>
+                 <p><input type="checkbox">ME-ON</p>
+                 <p><input type="checkbox">BEROMT</p>
+                 <p><input type="checkbox">ROSALIND</p>
+                <p><input type="checkbox">MISS ROSE</p>
+            </div>
+            <div class="block">
+                <p>prices:
+   ,
+                    PRICE</p>
+                 <p><input type="checkbox">Rs.249 & Rs.1999</p>
+                 <p><input type="checkbox">Rs.1999 & Rs.3999</p>
+                 <p><input type="checkbox">Rs.3999 & Rs.7999</p>
+                 <p><input type="checkbox">Rs.7999 & Rs.9999</p>
+            </div>
+            <div class="block">
+                <p>COLOR</p>
+                 <p><input type="radio">Blue</p>
+                 <p><input type="radio">Navy Blue</p>
+                 <p><input type="radio">Grey</p>
+                 <p><input type="radio">Black</p>
+                 <p><input type="radio">Red</p>
+                 <p><input type="radio">White</p>
+                 <p><input type="radio">Green</p>
+            </div>
+            <div class="block">
+                <p>DISCOUNT RANGE</p>
+                 <p><input type="checkbox">10% and above</p>
+                 <p><input type="checkbox">20% and above</p>
+                 <p><input type="checkbox">30% and above</p>
+                 <p><input type="checkbox">40% and above</p>
+                 <p><input type="checkbox">50% and above</p>
+                 <p><input type="checkbox">60% and above</p>
+            </div>
+        </div>
+        <div id="right-side">
+            <!-- append all cards here -->
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div>
+          <div>
+               <p>ONLINE SHOPPING</p>
+                <a href="">Men</a>
+                <a href="">Women</a>
+                <a href="">Kids</a>
+                <a href="">Home & Living</a>
+                <a href="">Beauty</a>
+                <a href="">Gift Cards</a>
+                <a href="">Myntra Insider</a>
+            </div>
+            <div>
+                <P>CUSTOMER POLICIES</P>
+                <a href="">Contact Us</a>
+                <a href="">FAQ</a>
+                <a href="">T&C</a>
+                <a href="">Terms Of Use</a>
+                <a href="">Track Orders</a>
+                <a href="">Shipping</a>
+                <a href="">Cancellation</a>
+                <a href="">Returns</a>
+            </div>
+            <div>
+                <p>USEFUL LINKS</p>
+                <a href="">Blog</a>
+                <a href="">Careers</a>
+                <a href="">Site Map</a>
+                <a href="">Corporate Information</a>
+                <a href="">Whitehat</a>
+            </div>  
+        </div>
+        <hr>
+        <div id="popularSearches">
+            <div><H6>POPULAR SEARCHES</H6><p>Makeup | Dresses For Girls | T-Shirts  Sandals | Headphones | Babydolls | Blazers For Men | Handbags | Ladies Watches | Bags | Sport Shoes | Reebok Shoes | Puma Shoes | Boxers | Wallets | Tops | Earrings | Fastrack Watches  Kurtis | Nike  Smart Watches  Titan Watches  Designer Blouse  Gowns  Rings  Cricket Shoes | Forever 21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion Show | Lipstick | Saree | Watches | Dresses | Lehenga | Nike Shoes | Goggles | Bras | Suit  Chinos | Shoes | Adidas Shoes | Woodland Shoes | Jewellery | Designers Sarees</p></div>
+        </div>
+    </footer>
+</body>
+<script>
+    let cont = document.getElementById("right-side");
+    let beauty = JSON.parse(localStorage.getItem("beauty")) || [];
+    let count = document.getElementById("count");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let save = JSON.parse(localStorage.getItem("save")) || [];
+    let view = [];
+
+    let arr = [
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10244851/2021/2/10/32c4b366-a522-4d98-91f0-46d413de66031612945921510-Philips-Women-Heated-Straightening-Brush-with-Thermo-Protect-1.jpg",
+            brand:"Philips",
+            title:"Straitching Brush",
+            prices:3235,
+            price:"Rs.3235",
+            id:21,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9374997/2022/10/3/0c3dc3f5-5db1-42cb-84ba-77bf4c9ec2041664801349030-Philips-HP810046-SalonDry-ThermoProtect-1000W-Compact-Hair-D-1.jpg",
+            brand:"Philips",
+            title:"Salondry Hair Dryer",
+            prices:845,
+            price:"Rs.845",
+            id:22,
+
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15853718/2022/7/18/3302ffaf-5ebe-492f-9436-4f92bf5488401658122011957-Minimalist-SPF-50-PA-Multi-Vitamin-Sunscreen-670165812201146-1.jpg",
+            brand:"Minimalist",
+            title:"Sunscreen",
+            prices:399,
+            price:"Rs.399",
+            id:23,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2137201/2022/4/21/0a71957e-30c2-4642-bbe2-dcf65a3511ac1650523077663-Lakme-Sun-Expert-SPF-50-PA-Ultra-Matte-Sunscreen-50-ml-41316-1.jpg",
+            brand:"Lakme",
+            title:"Sun Empert SPF 50 Sunscreen",
+            prices:260,
+            price:"Rs.260",
+            id:24,
+
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11915238/2021/10/11/e97689dd-24fb-4336-bba7-8b1ea7bb302f1633932426722-Philips-Men-BT310115-Series-3000-Beard-Trimmer---White-25616-1.jpg",
+            brand:"Philips",
+            title:"Beared Trimmer",
+            prices:1001,
+            price:"Rs.1001",
+            id:25,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1954340/2022/8/1/51e97d7c-ddac-4962-8bd3-dad1fd28c1c21659354297144-Ponds-Bright-Beauty-Spot-Less-Glow-Face-Wash-with-Vitamins---1.jpg",
+            brand:"Ponds",
+            title:"Bright Beauty Face Wash 100g",
+            prices:140,
+            price:"Rs.140",
+            id:26,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9548055/2021/11/8/a17b817d-1458-4b86-a83b-8ae7feac6a8e1636364782670-Nova-Men-NHT-1073-USB-Cordless-Trimmer---Black--Blue-5421636-1.jpg",
+            brand:"NOVA",
+            title:"Men NH1 1073 USB Trimmer",
+            prices:529,
+            price:"Rs.529",
+            id:27,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9686499/2022/3/10/53fc95cf-79ef-43f4-98dc-1426899049f01646912705840NiveaMenDarkSpotReductionFaceWashwith10XWhiteningEffect-100g1.jpg",
+            brand:"Nivea",
+            title:"Men Soit Reduction Face Wash",
+            prices:225,
+            price:"Rs.225",
+            id:28,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/365117/2022/7/22/eb4ac3e1-830d-4e76-843a-fb350c7d4eeb1658493717335-Dove-Daily-Shine-Hair-Conditioner-with-Nutritive-Serum-for-S-1.jpg",
+            brand:"Dove",
+            title:"Daily Shine Conditioner",
+            prices:147,
+            price:"Rs.147",
+            id:29,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19469328/2022/11/18/ee1da473-d08a-438b-a21a-8eb6214964c31668773931429-LOreal-Paris-Glycolic-Bright-Skin-Brightening-Serum-to-Reduc-1.jpg",
+            brand:"LOreal",
+            title:"Glycolic Bright Scrum",
+            id:30,
+            prices:279,
+            price:"Rs.279"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10235947/2022/7/22/f1ebc4be-517c-4336-9538-63db299fd3921658491873268-Ponds-Super-Light-Gel-Oil-Free-Moisturiser-With-Hyaluronic-A-1.jpg",
+            brand:"Ponds",
+            title:"Oil Free Moisturiser 73g",
+            prices:85,
+            price:"Rs.85",
+            id:11,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20079820/2022/9/21/047c1e44-6976-4369-a901-409f458749091663743613035FaceMoisturisersLOrealWomenFaceMoisturisersLOrealWomenFaceSe1.jpg",
+            brand:"LOreal Professionnel",
+            title:"Set of Serum-Shampoo-Mask",
+            prices:2380,
+            price:"Rs.2380",
+            id:12,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1444723/2022/4/5/9bc54932-d16a-4679-b4ac-6e60169d3a8e1649151865069-LOreal-Professionnel-Unisex-X-Tenso-Care-Hair-Mask-642164915-1.jpg",
+            brand:"LOreal Professionnel",
+            title:"X-Tenso CAre Hair Mask 196g",
+            prices:612,
+            price:"Rs.612",
+            id:13,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/8979541/2019/6/19/8268aed5-be63-4b62-84d8-f339bcd001031560937473568-Ponds-Women-Makeup-Kit-1481560937473085-1.jpg",
+            brand:"Ponds",
+            title:"Women Magic Talc 400g",
+            prices:296,
+            price:"Rs.296",
+            id:14,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/533234/2022/5/24/46c57c30-1036-41b0-a858-50817fefeb621653393201841-Lotus-Herbals-Sustainable-Safe-Sun-Sunscreen-Breezy-Berry-50-1.jpg",
+            brand:"Lotus Herbals",
+            title:"Sustainable Safe Sun Sunscreen",
+            prices:149,
+            price:"Rs.149",
+            id:15,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/5911028/2021/8/26/3e51e145-aef8-47f6-a580-b31ad37fb3a51629994063490-VEGA-VHSCC-01-3-in-1-Hair-Styler---Black--Gold-Toned-2151629-1.jpg",
+            brand:"VEGA",
+            title:"VHSCC-013-in-1 Hair Styler",
+            prices:1439,
+            price:"Rs.1439",
+            id:16,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2427962/2022/4/19/c51f921d-4e01-4c3e-a838-740146e1d59b1650366020434NeutrogenaUltraSheerDryTouchSunblockSPF501.jpg",
+            brand:"Neutrogena",
+            title:"UltraSheer Dry Touch Sunblock",
+            prices:607,
+            price:"Rs.607",
+            id:17,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10849052/2022/7/1/522008e2-a18c-4a11-a279-719f16e723621656674840302-Maybelline-New-York-Colossal-Volume-Express-Waterproof-Masca-1.jpg",
+            brand:"Maybelline",
+            title:"Waterproof Mascara-Black",
+            prices:296,
+            price:"Rs.296",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11506468/2022/8/22/6b8c938a-6957-470a-9366-3bb953d28f851661177978187AgaroHD-1214HairDryer-Black1.jpg",
+            brand:"Agaro",
+            title:"HD-1214 Hair Dryer",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11855152/2020/6/2/c0071a16-985b-43fc-8b98-9a20cb058a931591092761573-Wahl-79465-224--Extreme-Grip-9591591092760680-1.jpg",
+            brand:"WAHL",
+            title:"Extreme Grip Trimmer",
+            prices:2200,
+            price:"Rs.2200",
+            id:20,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10244851/2021/2/10/32c4b366-a522-4d98-91f0-46d413de66031612945921510-Philips-Women-Heated-Straightening-Brush-with-Thermo-Protect-1.jpg",
+            brand:"Philips",
+            title:"Straitching Brush",
+            prices:3235,
+            price:"Rs.3235",
+            id:1,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9374997/2022/10/3/0c3dc3f5-5db1-42cb-84ba-77bf4c9ec2041664801349030-Philips-HP810046-SalonDry-ThermoProtect-1000W-Compact-Hair-D-1.jpg",
+            brand:"Philips",
+            title:"Salondry Hair Dryer",
+            prices:845,
+            price:"Rs.845",
+            id:2,
+
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15853718/2022/7/18/3302ffaf-5ebe-492f-9436-4f92bf5488401658122011957-Minimalist-SPF-50-PA-Multi-Vitamin-Sunscreen-670165812201146-1.jpg",
+            brand:"Minimalist",
+            title:"Sunscreen",
+            prices:399,
+            price:"Rs.399",
+            id:3,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2137201/2022/4/21/0a71957e-30c2-4642-bbe2-dcf65a3511ac1650523077663-Lakme-Sun-Expert-SPF-50-PA-Ultra-Matte-Sunscreen-50-ml-41316-1.jpg",
+            brand:"Lakme",
+            title:"Sun Empert SPF 50 Sunscreen",
+            prices:260,
+            price:"Rs.260",
+            id:4,
+
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11915238/2021/10/11/e97689dd-24fb-4336-bba7-8b1ea7bb302f1633932426722-Philips-Men-BT310115-Series-3000-Beard-Trimmer---White-25616-1.jpg",
+            brand:"Philips",
+            title:"Beared Trimmer",
+            prices:1001,
+            price:"Rs.1001",
+            id:5,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1954340/2022/8/1/51e97d7c-ddac-4962-8bd3-dad1fd28c1c21659354297144-Ponds-Bright-Beauty-Spot-Less-Glow-Face-Wash-with-Vitamins---1.jpg",
+            brand:"Ponds",
+            title:"Bright Beauty Face Wash 100g",
+            prices:140,
+            price:"Rs.140",
+            id:6,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9548055/2021/11/8/a17b817d-1458-4b86-a83b-8ae7feac6a8e1636364782670-Nova-Men-NHT-1073-USB-Cordless-Trimmer---Black--Blue-5421636-1.jpg",
+            brand:"NOVA",
+            title:"Men NH1 1073 USB Trimmer",
+            prices:529,
+            price:"Rs.529",
+            id:7,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9686499/2022/3/10/53fc95cf-79ef-43f4-98dc-1426899049f01646912705840NiveaMenDarkSpotReductionFaceWashwith10XWhiteningEffect-100g1.jpg",
+            brand:"Nivea",
+            title:"Men Soit Reduction Face Wash",
+            prices:225,
+            price:"Rs.225",
+            id:8,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/365117/2022/7/22/eb4ac3e1-830d-4e76-843a-fb350c7d4eeb1658493717335-Dove-Daily-Shine-Hair-Conditioner-with-Nutritive-Serum-for-S-1.jpg",
+            brand:"Dove",
+            title:"Daily Shine Conditioner",
+            prices:147,
+            price:"Rs.147",
+            id:9,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19469328/2022/11/18/ee1da473-d08a-438b-a21a-8eb6214964c31668773931429-LOreal-Paris-Glycolic-Bright-Skin-Brightening-Serum-to-Reduc-1.jpg",
+            brand:"LOreal",
+            title:"Glycolic Bright Scrum",
+            id:10,
+            prices:279,
+            price:"Rs.279"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10235947/2022/7/22/f1ebc4be-517c-4336-9538-63db299fd3921658491873268-Ponds-Super-Light-Gel-Oil-Free-Moisturiser-With-Hyaluronic-A-1.jpg",
+            brand:"Ponds",
+            title:"Oil Free Moisturiser 73g",
+            prices:85,
+            price:"Rs.85",
+            id:11,
+            category:"shirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20079820/2022/9/21/047c1e44-6976-4369-a901-409f458749091663743613035FaceMoisturisersLOrealWomenFaceMoisturisersLOrealWomenFaceSe1.jpg",
+            brand:"LOreal Professionnel",
+            title:"Set of Serum-Shampoo-Mask",
+            prices:2380,
+            price:"Rs.2380",
+            id:12,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1444723/2022/4/5/9bc54932-d16a-4679-b4ac-6e60169d3a8e1649151865069-LOreal-Professionnel-Unisex-X-Tenso-Care-Hair-Mask-642164915-1.jpg",
+            brand:"LOreal Professionnel",
+            title:"X-Tenso CAre Hair Mask 196g",
+            prices:612,
+            price:"Rs.612",
+            id:13,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/8979541/2019/6/19/8268aed5-be63-4b62-84d8-f339bcd001031560937473568-Ponds-Women-Makeup-Kit-1481560937473085-1.jpg",
+            brand:"Ponds",
+            title:"Women Magic Talc 400g",
+            prices:296,
+            price:"Rs.296",
+            id:14,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/533234/2022/5/24/46c57c30-1036-41b0-a858-50817fefeb621653393201841-Lotus-Herbals-Sustainable-Safe-Sun-Sunscreen-Breezy-Berry-50-1.jpg",
+            brand:"Lotus Herbals",
+            title:"Sustainable Safe Sun Sunscreen",
+            prices:149,
+            price:"Rs.149",
+            id:15,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/5911028/2021/8/26/3e51e145-aef8-47f6-a580-b31ad37fb3a51629994063490-VEGA-VHSCC-01-3-in-1-Hair-Styler---Black--Gold-Toned-2151629-1.jpg",
+            brand:"VEGA",
+            title:"VHSCC-013-in-1 Hair Styler",
+            prices:1439,
+            price:"Rs.1439",
+            id:16,
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2427962/2022/4/19/c51f921d-4e01-4c3e-a838-740146e1d59b1650366020434NeutrogenaUltraSheerDryTouchSunblockSPF501.jpg",
+            brand:"Neutrogena",
+            title:"UltraSheer Dry Touch Sunblock",
+            prices:607,
+            price:"Rs.607",
+            id:17,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10849052/2022/7/1/522008e2-a18c-4a11-a279-719f16e723621656674840302-Maybelline-New-York-Colossal-Volume-Express-Waterproof-Masca-1.jpg",
+            brand:"Maybelline",
+            title:"Waterproof Mascara-Black",
+            prices:296,
+            price:"Rs.296",
+            id:18,
+            category:"jeans"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11506468/2022/8/22/6b8c938a-6957-470a-9366-3bb953d28f851661177978187AgaroHD-1214HairDryer-Black1.jpg",
+            brand:"Agaro",
+            title:"HD-1214 Hair Dryer",
+            prices:2078,
+            price:"Rs.2078",
+            id:19,
+            category:"tshirt"
+        },
+        {
+            img:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11855152/2020/6/2/c0071a16-985b-43fc-8b98-9a20cb058a931591092761573-Wahl-79465-224--Extreme-Grip-9591591092760680-1.jpg",
+            brand:"WAHL",
+            title:"Extreme Grip Trimmer",
+            prices:2200,
+            price:"Rs.2200",
+            id:20,
+            category:"tshirt"
+        },
+    ]
+
+for(let a = 0; a < arr.length; a++)
+{
+    beauty.push(arr[a]);
+}
+displayData(beauty)
+
+
+function displayData(data)
+{
+    cont.innerHTML= null;
+    data.forEach(product => {
+        let card = document.createElement("div");
+        let img = document.createElement("img");
+        let brand = document.createElement("h3");
+        let title = document.createElement("p");
+       
+        price = document.createElement("h4");
+        let btnDiv = document.createElement("div");
+        let addtocart = document.createElement("button");
+        let wishlist = document.createElement("button");
+
+        count.textContent = beauty.length;
+        img.src = product.img;
+        brand.textContent = product.brand;
+        title.textContent = product.title;
+       price.textContent = product.price;
+            
+        addtocart.innerText = "Add To Cart";
+        wishlist.textContent = "Wishlist";
+        
+        wishlist.addEventListener("click",()=> {
+            if(checkDuplicatesave(product))
+            {
+                alert("Product Already in Wishlist")
+            }
+            else
+            {
+                save.push({...product,quantity:1})
+                localStorage.setItem("save",JSON.stringify(save));
+                alert("Product Added to Wishlist")
+            }
+        })
+
+        addtocart.addEventListener("click",()=>{
+            if(checkDuplicate(product))
+            {
+                alert("This porduct already in the Cart")
+            }
+            else
+            {
+              cart.push({...product,quantity:1});
+            localStorage.setItem("cart",JSON.stringify(cart));
+                alert("Product added to the Cart")
+            }
+            
+        })
+
+        img.addEventListener("click",()=>{
+            localStorage.removeItem("view")
+    view.push(product);
+    localStorage.setItem("view",JSON.stringify(view));
+    location.href = "productview.html"
+})
+
+function checkDuplicate(product){
+    for(let a = 0; a < cart.length; a++)
+    {
+        if(cart[a].id === product.id)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+function checkDuplicatesave(product)
+{
+    for(let a = 0; a < save.length; a++)
+    {
+        if(save[a].id === product.id)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+        cont.append(card);
+        card.append(img,brand,title,price,btnDiv)
+        btnDiv.append(addtocart,wishlist)
+    });
+}
+
+let searchInp = document.getElementById("search")
+let searchbtn = document.getElementById("searchbtn");
+searchbtn.addEventListener("click",()=> {
+    if(searchInp.value === "")return false
+    else{
+       let filteredData = beauty.filter((product)=> {
+        if(product.title.toUpperCase().includes(searchInp.value.toUpperCase()))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    })
+    displayData(filteredData) 
+    }
+    
+})
+
+</script>
+</html>
